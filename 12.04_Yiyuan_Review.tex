@@ -38,6 +38,7 @@
 \section{Methodology}
 对于压力计算下的电子结构，采用了第一性原理密度泛函理论的计算方法(Section \ref{subSec:DFT})；对于压力下的电子迁移率，使用了形变势理论(Deformation potential theory)的计算方法(Section)。
 \subsection{Density Functional Theory \label{subSec:DFT}}
+DFT计算中所使用的主要参数如表\ref{Tab:DFTparameter}所示。
 \begin{table}[b]
     \caption{\label{Tab:DFTparameter} 计算中使用的参数} 
 \begin{ruledtabular}
@@ -57,9 +58,20 @@
 \end{table}
 
 \subsection{Deformation Potential Theory}
-电子有效质量由近自由电子式(\ref{eqn:mass})模型得到。由于
+电子有效质量由近自由电子式(\ref{eqn:mass})模型得到。由于在电子速度在300K附近为$10^{5}$ m/s数量级，对应的波长为7 nm，远大于晶格常数，因此散射机制主要考虑声子散射。因此形变势理论是最广为接受的理论，其采用Boltzmann传导理论的框架，使用弛豫近似，载流子迁移率可以写成式(\ref{eqn:mobility})的形式。
+\begin{subequations}
 \begin{equation}
-    m^{\*} = \hbar^2 [\frac{d^2E}{dk^2}]^{-1}
+    m^{*} = \hbar^2 [\frac{d^2E}{dk^2}]^{-1}
     \label{eqn:mass}
 \end{equation}
+
+\begin{equation}
+    \mu = \frac{e{\hbar}C_{2D}}{k_B Tm^{*}m_d E_1^2}
+    \label{eqn:mobility}
+\end{equation}
+\end{subequations}
+
+\section{Results}
+\subsection{Lattice Structure}
+
 \end{document}
