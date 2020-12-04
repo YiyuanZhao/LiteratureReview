@@ -1,0 +1,301 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{subfigure}
+
+\begin{document}
+
+\title{1T monolayer VSe$_2$ Hubbard model construction\\
+        and high-symmetry K-points validation}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\maketitle
+
+\section{Monolayer Hubbard Model Construction(Kinetic Energy)}
+\subsection{Nearest-neighbor (NN)}
+\begin{figure}[b]
+    \includegraphics[width=2.6in]{./img/1121/20200918_034017343_iOS.png}
+    \caption{\label{fig:NN}Nearest Neighbor Hopping}
+\end{figure}
+
+\begin{equation}
+    \begin{cases}
+        1: & H_1^1 = t_1^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-\boldsymbol{a})m\sigma}\\
+        2: & H_1^2 = t_1^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-\boldsymbol{a}-\boldsymbol{b})m\sigma}\\
+        3: & H_1^3 = t_1^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-\boldsymbol{b})m\sigma}\\
+        4: & H_1^4 = t_1^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+\boldsymbol{a})m\sigma}\\
+        5: & H_1^5 = t_1^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+\boldsymbol{a}+\boldsymbol{b})m\sigma}\\
+        6: & H_1^6 = t_1^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+\boldsymbol{b})m\sigma}
+    \end{cases} \label{NN}
+\end{equation}
+
+where the h.c. denotes Hermitian conjugate. Hamiltonian $H_i^j$ marks the $j^{th}$ hopping contributed in the $i^{th}$ nearest neighbor. Therefore, the NN Kenitic energy denotes as FIG.\ref{fig:NN}
+\begin{equation}
+\begin{aligned}
+    \varepsilon_1=&t_1^m \left[ e^{i \boldsymbol{k} \cdot \boldsymbol{a}}+e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + \boldsymbol{b}) }+e^{i \boldsymbol{k} \cdot \boldsymbol{b}} \right.\\
+    & \left. +e^{-i\boldsymbol{k} \cdot \boldsymbol{a}}+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + \boldsymbol{b}) }+e^{-i \boldsymbol{k} \cdot \boldsymbol{b}} \right]
+\end{aligned}
+\label{NNhopping}
+\end{equation}
+
+\subsection{Next-nearest-neighbor (NNN)}
+\begin{figure}[t]
+    \includegraphics[width=2.6in]{./img/1121/20200918_034121139_iOS.png}
+    \caption{\label{fig:NNN}Next-nearest-neighbor Hopping}
+\end{figure}
+
+\begin{equation}
+    \begin{cases}
+        1: & H_2^1 = t_2^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-\boldsymbol{a}+\boldsymbol{b})m\sigma}\\
+        2: & H_2^2 = t_2^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{a}-\boldsymbol{b})m\sigma}\\
+        3: & H_2^3 = t_2^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{b}-\boldsymbol{a})m\sigma}\\
+        4: & H_2^4 = t_2^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+\boldsymbol{a}-\boldsymbol{b})m\sigma}\\
+        5: & H_2^5 = t_2^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{a}+\boldsymbol{b})m\sigma}\\
+        6: & H_2^6 = t_2^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{b}+\boldsymbol{a})m\sigma}
+     \end{cases} \label{NNN}
+\end{equation}
+
+The NNN kinetic energy denotes as FIG.\ref{fig:NNN}
+\begin{eqnarray}
+    \varepsilon_2 &=& t_2^m[e^{i \boldsymbol{k} \cdot (\boldsymbol{a} - \boldsymbol{b})}+e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + \boldsymbol{b})}+e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + 2\boldsymbol{b})} \nonumber\\
+    &&+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - \boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + \boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + 2\boldsymbol{b})}] \label{NNNhopping}
+\end{eqnarray}
+
+\subsection{Third-nearest-neighbor (NNNN, 4N)}
+\begin{figure}[b]
+    \includegraphics[width=2.6in]{./img/1121/20200918_034231417_iOS.png}
+    \caption{\label{fig:NNNN}Third-nearest-neighbor Hopping}
+\end{figure}
+
+\begin{equation}
+    \begin{cases}
+        1: & H_3^1 = t_3^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{a})m\sigma}\\
+        2: & H_3^2 = t_3^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{a}-2\boldsymbol{b})m\sigma}\\
+        3: & H_3^3 = t_3^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{b})m\sigma}\\
+        4: & H_3^4 = t_3^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{a})m\sigma}\\
+        5: & H_3^5 = t_3^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{a}+2\boldsymbol{b})m\sigma}\\
+        6: & H_3^6 = t_3^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{b})m\sigma}
+    \end{cases} \label{NNNN}
+\end{equation}
+
+The NNNN kinetic energy denotes as FIG.\ref{fig:NNNN}
+\begin{eqnarray}
+    \varepsilon_3 &=& t_3^m[e^{i \boldsymbol{k} \cdot 2\boldsymbol{a}}+e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + 2\boldsymbol{b})}+e^{i \boldsymbol{k} \cdot 2\boldsymbol{b}} \nonumber \\
+    && +e^{-i \boldsymbol{k} \cdot 2\boldsymbol{a}}+e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + 2\boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot 2\boldsymbol{b}}] \label{NNNNHopping}
+\end{eqnarray}
+
+\subsection{NNNNN(5N)}
+\begin{figure}[b]
+    \includegraphics[width=2.6in]{./img/1121/20201021_020308070_iOS.png}
+    \caption{\label{fig:NNNNN}Fourth-nearest-neighbor Hopping}
+\end{figure}
+
+The NNNNN(5N) kinetic energy denotes as FIG.\ref{fig:NNNNN}
+\begin{equation}
+\begin{aligned}
+    \varepsilon_4 = &t_4^m[e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} - \boldsymbol{b})} + e^{i \boldsymbol{k} \cdot (3\boldsymbol{a} + \boldsymbol{b})} + e^{i \boldsymbol{k} \cdot (3\boldsymbol{a} + 2\boldsymbol{b})} \\
+     &+ e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + 3\boldsymbol{b})} + e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + 3\boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - 2\boldsymbol{b})} \\
+     &+ e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} - \boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (3\boldsymbol{a} + \boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (3\boldsymbol{a} + 2\boldsymbol{b})} \\
+     &+ e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + 3\boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + 3\boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - 2\boldsymbol{b})}]
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+    \begin{cases}
+        1: & H_4^1 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{a}+\boldsymbol{b})m\sigma}\\
+        2: & H_4^2 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-3\boldsymbol{a}-\boldsymbol{b})m\sigma}\\
+        3: & H_4^3 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-3\boldsymbol{a}-2\boldsymbol{b})m\sigma}\\
+        4: & H_4^4 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-2\boldsymbol{a}-3\boldsymbol{b})m\sigma}\\
+        5: & H_4^5 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-\boldsymbol{a}-3\boldsymbol{b})m\sigma}\\
+        6: & H_4^6 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+\boldsymbol{a}-2\boldsymbol{b})m\sigma}\\
+        7: & H_4^7 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{a}-\boldsymbol{b})m\sigma}\\
+        8: & H_4^8 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+3\boldsymbol{a}+\boldsymbol{b})m\sigma}\\
+        9: & H_4^9 = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+3\boldsymbol{a}+2\boldsymbol{b})m\sigma}\\
+        10: & H_4^{10} = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+2\boldsymbol{a}+3\boldsymbol{b})m\sigma}\\
+        11: & H_4^{11} = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}+\boldsymbol{a}+3\boldsymbol{b})m\sigma}\\
+        12: & H_4^{12} = t_4^m C_{\boldsymbol{l}m\sigma}^{\dagger}C_{(\boldsymbol{l}-\boldsymbol{a}+2\boldsymbol{b})m\sigma}\\
+    \end{cases} \label{NNNNN}
+\end{equation}
+
+\subsection{Total Kinetic Energy}
+The total kinetic energy can be obtained by the summation of the 1-4 nearest neighbor hopping contribution, which indicates that:
+\begin{equation}
+    H = -\sum_{(i,j)}H_i = -\sum_{i=1}^{4} \varepsilon_i
+\end{equation}
+The $\varepsilon$ denotes the hamiltonian contribution from different nearest hoppings, and here we choose $n = 1 \to 4$. Thus we get equation (\ref{totalHopping}).
+\begin{widetext}
+\begin{eqnarray}
+    \varepsilon&=&t_1^m [e^{i \boldsymbol{k} \cdot \boldsymbol{a}}+e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + \boldsymbol{b}) }+e^{i \boldsymbol{k} \cdot \boldsymbol{b}} + e^{-i\boldsymbol{k} \cdot \boldsymbol{a}}+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + \boldsymbol{b}) }+e^{-i \boldsymbol{k} \cdot \boldsymbol{b}}] \nonumber\\
+    &&+t_2^m[e^{i \boldsymbol{k} \cdot (\boldsymbol{a} - \boldsymbol{b})}+e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + \boldsymbol{b})}+e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + 2\boldsymbol{b})} \nonumber + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - \boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + \boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + 2\boldsymbol{b})}] \nonumber\\
+    &&+ t_3^m[e^{i \boldsymbol{k} \cdot 2\boldsymbol{a}}+e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + 2\boldsymbol{b})}+e^{i \boldsymbol{k} \cdot 2\boldsymbol{b}} \nonumber + e^{-i \boldsymbol{k} \cdot 2\boldsymbol{a}}+e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + 2\boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot 2\boldsymbol{b}}]\\
+    &&+ t_4^m[e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} - \boldsymbol{b})} + e^{i \boldsymbol{k} \cdot (3\boldsymbol{a} + \boldsymbol{b})} + e^{i \boldsymbol{k} \cdot (3\boldsymbol{a} + 2\boldsymbol{b})}+ e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + 3\boldsymbol{b})} + e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + 3\boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - 2\boldsymbol{b})} \nonumber\\
+    &&+ e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} - \boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (3\boldsymbol{a} + \boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (3\boldsymbol{a} + 2\boldsymbol{b})}+ e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + 3\boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + 3\boldsymbol{b})} + e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - 2\boldsymbol{b})}]
+    \label{totalHopping}
+\end{eqnarray}    
+\end{widetext}
+
+\section{Special KPOINT Hubbard Model Construction}
+The model is constructed with lattice hopping and reciprocal lattice vector. The lattice parameter denotes
+\begin{subequations}
+\begin{equation}
+    a = (a_1; a_2; a_3) =
+    \begin{pmatrix}
+        3.329   &-0.000   & 0.000 \\
+        -1.665  &  2.883  & 0.000\\
+         0.000  & -0.000  & 23.118 \\
+    \end{pmatrix}
+\end{equation}
+\begin{equation}
+    a =
+    \begin{pmatrix}
+        a   &0   & 0 \\
+        -\frac{1}{2}a  &  \frac{\sqrt{3}}{2}a  & 0\\
+         0  & 0  & c \\
+    \end{pmatrix}
+\end{equation}
+\end{subequations}
+and the reciprocal lattice vector defines as
+\begin{equation}
+    \begin{cases}
+        \boldsymbol{b}_1 &= \frac{2\pi}{\Omega} \boldsymbol{a}_2 \times \boldsymbol{a}_3 \\
+        \boldsymbol{b}_2 &= \frac{2\pi}{\Omega} \boldsymbol{a}_3 \times \boldsymbol{a}_1 \\
+        \boldsymbol{b}_3 &= \frac{2\pi}{\Omega} \boldsymbol{a}_1 \times \boldsymbol{a}_2 \\
+    \end{cases}
+\end{equation}
+Therefore, we obtain the reciprocal lattice vector
+\begin{subequations}
+\begin{equation}
+    b = (b_1, b_2, b_3) = 
+    \begin{pmatrix}
+        1.8874  &  1.0897  &  0.0000 \\
+        0.0000  &  2.1793  &  0.0000 \\
+        0.0000  &  0.0000  &  0.2718 \\
+    \end{pmatrix}   
+\end{equation}
+
+\begin{equation}
+    b = \frac{2\pi}{a}
+    \begin{pmatrix}
+        1 & \frac{1}{\sqrt{3}} & 0 \\
+        0 & \frac{2}{\sqrt{3}} & 0 \\
+        0 & 0 & \frac{a}{c}
+    \end{pmatrix}
+\end{equation}
+\end{subequations}
+Considering NN and NNN hopping, the Kinetic energy denotes 
+\begin{eqnarray}
+    \varepsilon&=&t_1^m [e^{i \boldsymbol{k} \cdot \boldsymbol{a}}+e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + \boldsymbol{b}) }+e^{i \boldsymbol{k} \cdot \boldsymbol{b}} + e^{-i\boldsymbol{k} \cdot \boldsymbol{a}}+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + \boldsymbol{b}) }+e^{-i \boldsymbol{k} \cdot \boldsymbol{b}}] \nonumber\\
+    &&+t_2^m[e^{i \boldsymbol{k} \cdot (\boldsymbol{a} - \boldsymbol{b})}+e^{i \boldsymbol{k} \cdot (2\boldsymbol{a} + \boldsymbol{b})}+e^{i \boldsymbol{k} \cdot (\boldsymbol{a} + 2\boldsymbol{b})} \nonumber \\
+    &&+ e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} - \boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot (2\boldsymbol{a} + \boldsymbol{b})}+e^{-i \boldsymbol{k} \cdot (\boldsymbol{a} + 2\boldsymbol{b})}] \nonumber\\
+    &=& t_1^m \{ \cos{\boldsymbol{k} \cdot \boldsymbol{a}_1} + \cos{[\boldsymbol{k} \cdot (\boldsymbol{a}_1 + \boldsymbol{a}_2)]} + \cos{\boldsymbol{k} \cdot \boldsymbol{a}_2} \} \nonumber \\
+    &&+ t_2^m \{ \cos{[\boldsymbol{k} \cdot (2\boldsymbol{a}_1 + \boldsymbol{a}_2)]} + \cos{[\boldsymbol{k} \cdot (\boldsymbol{a}_1 - \boldsymbol{a}_2)]} \nonumber \\
+    &&+ \cos{[\boldsymbol{k} \cdot (\boldsymbol{a}_1 + 2\boldsymbol{a}_2)]} \}
+\end{eqnarray}
+
+\subsection{$\Gamma$ Point(0, 0, 0)}
+The reciprocal K-points in $\Gamma$ Point can be written as
+\begin{subequations}
+\begin{eqnarray} 
+    k_{\Gamma} &=& 0 \times \vec{b_1} + 0 \times \vec{b_2} + 0 \times \vec{b_3} \nonumber\\
+    &=& (0, 0, 0)
+\end{eqnarray}
+\begin{equation}
+    \varepsilon = 6(t_1^m + t_2^m) = 0.375
+\end{equation}
+\end{subequations}
+
+\subsection{M Point(0, 0.5, 0)}
+The reciprocal K-points in M Point can be written as
+\begin{subequations}
+    \begin{eqnarray}
+        k_M &=& 0 \times b_1 + 0.5 \times b_2 \nonumber\\ 
+        &=& \frac{2\pi}{a}(1, \frac{1}{\sqrt{3}}, 0) + 0.5 \times \frac{2\pi}{a}(0, \frac{2}{\sqrt{3}}, 0) \nonumber\\
+        &=& (0,\frac{2\pi}{\sqrt{3}a}, 0)
+    \end{eqnarray}
+    \begin{eqnarray}
+        \varepsilon(1) &=& 2t_1 \{1 + \cos{[(0,\frac{2\pi}{\sqrt{3}a}, 0) \cdot (\frac{a}{2}, \frac{\sqrt{3}a}{2}, 0)]} \nonumber\\
+        &&+ \cos{(0,\frac{2\pi}{\sqrt{3}a}, 0) \cdot (-\frac{a}{2}, \frac{\sqrt{3}a}{2}, 0)} \} \nonumber \\
+        &=& 2t_1\{ 1 + \cos{\pi} + \cos{\pi} \} = -2t_1
+    \end{eqnarray}
+    \begin{eqnarray}
+        \varepsilon(2) &=& 2t_2 \{ \cos{[(0,\frac{2\pi}{\sqrt{3}a}, 0) \cdot (\frac{a}{2}, \frac{\sqrt{3}a}{2}, 0)]} \nonumber \\
+        &&+ \cos{[(0,\frac{2\pi}{\sqrt{3}a}, 0) \cdot (\frac{a}{2}, -\frac{\sqrt{3}a}{2}, 0)]} \nonumber \\
+        &&+ \cos{[(0,\frac{2\pi}{\sqrt{3}a}, 0) \cdot (0, \sqrt{3}a, 0)]} \} \nonumber \\
+        &=& 2t_2[\cos{\pi} + \cos{(-\pi)} + \cos{(2\pi)}] \nonumber \\
+        &=& -2t_2
+    \end{eqnarray}
+    \begin{equation}
+        \varepsilon = \varepsilon(1) + \varepsilon(2) = -2(t_1 + t_2)
+    \end{equation}
+\end{subequations}
+
+\subsection{K Point(-1/3, 2/3, 0)}
+The reciprocal K-points in K Point can be written as
+\begin{subequations}
+    \begin{eqnarray}
+        k_K &=& -\frac{1}{3} \times \boldsymbol{b}_1 + \frac{2}{3} \times \boldsymbol{b}_2 \nonumber \\
+        &=& \frac{2\pi}{3a}(-1, \sqrt{3}, 0)
+    \end{eqnarray}
+    \begin{eqnarray}
+        \varepsilon(1) &=& 2t_1\{ \cos{\frac{2}{3}\pi} + \cos{\frac{2}{3}\pi} + \cos{\frac{4}{3}\pi} \} \nonumber \\
+         &=& -3t_1
+    \end{eqnarray}
+    \begin{eqnarray}
+        \varepsilon(2) &=& 2t_2\{ \cos{0} + \cos{(2\pi)} + \cos{(2\pi)} \} \nonumber \\
+        &=& 6t_2
+    \end{eqnarray}
+    \begin{eqnarray}
+        \varepsilon = \varepsilon(1) + \varepsilon(2) = -3t_1 + 6t_2
+    \end{eqnarray}
+\end{subequations}
+
+\section{Numberical Simulation}
+The initial hopping parameters are selected from wannier fitting. We listed the 10-nearest hopping parameter in Table \ref{tab:table1}. It should be noted that lattice potential $(0, 0) \to (0, 0)$ hopping parameter is -2.647770.
+\begin{table}[b]
+    \caption{\label{tab:table1}%
+    First 10$^{th}$ neighbor order hoping parameter in wannier fitting.
+    }
+    \begin{ruledtabular}
+    \begin{tabular}{clcl}
+    \textrm{Neighbor}&
+    \textrm{Value}&
+    \textrm{Neighbor}&
+    \textrm{Value}\\
+    \colrule
+    1 & -0.0257 & 6  & 0.0050   \\
+    2 & 0.0882  & 7  & 0.0032   \\
+    3 & -0.0572 & 8  & -0.0074  \\
+    4 & 0.0170  & 9  & 0.0023   \\
+    5 & -0.0213 & 10 & 0.0047   \\
+    \end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+We choose the first 2, 3 neighbor order hopping parameter to validate our model construction respectively.
+\begin{figure}[b]
+    \centering
+    \subfigure[]{\includegraphics[width=0.22\textwidth]{./img/1121/2ndDFT.png}}
+    \quad
+    \subfigure[]{\includegraphics[width=0.22\textwidth]{./img/1121/3rdDFT.png}}
+    \subfigure[]{\includegraphics[width=0.22\textwidth]{./img/1121/2ndModel.png}}
+    \quad
+    \subfigure[]{\includegraphics[width=0.22\textwidth]{./img/1121/3rdModel.png}}
+    \subfigure[]{\includegraphics[width=0.22\textwidth]{./img/1121/2ndDiff.png}}
+    \quad
+    \subfigure[]{\includegraphics[width=0.22\textwidth]{./img/1121/3rdDiff.png}}
+    \caption{(a), (c), (e) gives the DFT 3D band structure, Hubbard kinetic model simulation, difference between them ($E_{model} - E_{DFT}$) considering 1-2 neighbor hopping. (b), (d), (f) draws the same picture considering 1-3 neighbor hopping.}
+\end{figure}
+DFT calculation has revealed that the eigenenergy at $\Gamma$(0, 0), M(0, 1.0897), K(-0.6291, 1.0897), which gives the $E_{DFT}$at high-symmetry point. i.e.$(k_x, k_y, E_{DFT})$. The corresponding data are (0.0186, 0.0321, 0.0492), (0.0185, 0.9952, -0.6399), (-0.6487, 0.9952, 0.6983).
+
+For the 1-2 neighbor order case, the difference at high-symmetry points gives$(k_x, k_y, E_{diff})$ = (0.0186, 0.0321, 0.3156), M(0.0185, 0.9952, 0.5019), K(-0.6487, 0.9952, -0.1391).For the 1-3 neighbor order case, the difference at high-symmetry points gives$(k_x, k_y, E_{diff})$ = (0.0186, 0.0321, -0.0180), M(0.0185, 0.9952, 0.1971), K(-0.6487, 0.9952, 0.0118).
+
+We also tested the fitting status using 1-20 wannier fitting parameter, The difference gives$(k_x, k_y, E_{diff})$ = (0.0186, 0.0321, 0.1550), M(0.0185, 0.9952, 0.0993), K(-0.6487, 0.9952, -0.1257).
+
+\end {document}

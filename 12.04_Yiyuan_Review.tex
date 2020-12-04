@@ -1,0 +1,65 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Report: Strain-enhanced electron mobility and mobility anisotropy in a two-dimensional vanadium diselenide monolayer}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+通过对2H相VSe$_2$的第一性原理的DFT和形变势理论计算，得到了单轴压缩形变和单轴伸张形变的电子结构性质。在平衡状态，zigzag方向的迁移率($\mu_{zig} \approx 307 cm^2/V s$)大约是armchair方向迁移率($\mu_{arm} \approx 96 cm^2/V s$)的三倍。在zigzag方向施加1\%、2\%、3\%的压缩形变，可以将$\mu_{zig}$提升到原来的2.20、5.25、10.55倍。
+\end{abstract}
+
+\keywords{Strain, anisotropy}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item 结构 \\
+    针对2H-VSe$_2$的第一性原理计算。
+    \item 应力变化 \\
+    单轴压缩形变会激发zigzag方向和armchair方向迁移率的各向异性，较大的单轴压缩形变则会加剧各向异性的发生。
+\end{itemize}
+
+
+\section{Background}
+金属氧化物半导体场效应管(MOSFET)在微电子领域应用广泛，但目前在物理限制下进入了慢速发展的阶段。Moore提出引进一种载流子移动速度大于硅基材料的通道材料来克服这一问题。近期在一些二维单层材料(2DMM)中发现了高的载流子迁移率和大小适中的能隙，并成功进行了器件化。VSe$_2$具有自发的自旋极化和谷极化现象，但理论计算表明，单层2H-VSe$_2$在温度为300K时，zigzag方向和armchair方向的电子迁移率分别为$307 cm^2/V$ s和$96 cm^2/V$ s，小于传统的半导体材料Si和Ge，这种缺陷限制了2H-VSe$_2$的应用。
+
+对于单层材料而言，外界的压力很容易改变其晶格结构，也因此改变了其电子性质。根据理论计算的结果，单层VSe$_2$在单轴压缩形变为3\%和5\%的情况下，zigzag方向载流子迁移率增强为1611 cm$^2$/V s 和5085 cm$^2$/V s。
+
+\section{Methodology}
+对于压力计算下的电子结构，采用了第一性原理密度泛函理论的计算方法(Section \ref{subSec:DFT})；对于压力下的电子迁移率，使用了形变势理论(Deformation potential theory)的计算方法(Section)。
+\subsection{Density Functional Theory \label{subSec:DFT}}
+\begin{table}[b]
+    \caption{\label{Tab:DFTparameter} 计算中使用的参数} 
+\begin{ruledtabular}
+    \begin{tabular}{llll}
+    \textrm{属性}&
+    \textrm{值}&
+    \textrm{属性}&
+    \textrm{值}\\
+    软件包          & QE        & 赝势              & PAW \\
+    截断能\footnote{波函数/电荷密度收敛判据}& 48/645Ry  & 赝势              & PBE \\
+    真空层          & 20 A      & K-mesh            & 12 x 12 x 1 \\
+    力收敛判据      & 5 meV/A   & 自洽能量判据      & $10^{-12}$ Ry \\
+    Hubbard U       & 0         & benchmark 泛函    & HSE06 \\
+    压力形变定义     & $(c_0 - c)/c$ &  &  \\  
+    \end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\subsection{Deformation Potential Theory}
+电子有效质量由近自由电子式(\ref{eqn:mass})模型得到。由于
+\begin{equation}
+    m^{\*} = \hbar^2 [\frac{d^2E}{dk^2}]^{-1}
+    \label{eqn:mass}
+\end{equation}
+\end{document}

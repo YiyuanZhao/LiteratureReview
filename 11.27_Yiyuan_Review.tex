@@ -1,0 +1,149 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Report: Origin of the multiple charge density wave order in 1T-VSe$_2$}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+通过第一性原理计算，Fermi nesting和电声耦合都在体块1T-VSe$_2$的$4 \times 4 \times 3$ CDW超结构的出现贡献良多。不考虑基底的单层1T-VSe$_2$中，具有动量依赖引入电声耦合的$\sqrt{7} \times \sqrt{3}$CDW超结构具有最稳定的结构。在单层中引入基底的压缩力(compressive strain)效应会将基态转变为$4 \times 4$的超结构，而张力(tensile strain)仍然保持$\sqrt{7} \times \sqrt{3}$的超结构。
+\end{abstract}
+
+\keywords{Ground state of the multiple CDW superstructure}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item 机理 \\
+    单层1T-VSe$_2$中CDW的起源由EPC主导，而在体块1T-VSe$_2$中fermi Nesting和EPC都起到了重要的作用。
+    \item 基态 \\
+    在无基底的1T-VSe$_2$中，$\sqrt{7} \times \sqrt{3}$的CDW超结构最稳定。
+    \item 应力变化 \\
+    正压力(compressive strain)会使得CDW基态从$\sqrt{7} \times \sqrt{3}$转变为$4 \times 4$；负压力(tensile strain)仍然保持$\sqrt{7} \times \sqrt{3}$的基态。
+\end{itemize}
+
+
+\section{Background}
+过渡族金属二硫化物(TMDCs)具有多种关联效应，例如CDW、超导态、Weyl半金属态、磁序等。CDW是由联系的周期性晶格扭转和内禀的电子密度模块化组成的联合效应。CDW在TDMCs具有诸多应用，例如振子、内存器件等。TDMCs中的CDW起源最初由费米面嵌套来解释，即源自于与周期性晶格扭转同时发生的电荷重新分布。也有研究指出电荷再分布是由动量依赖电声耦合(EPC)参与的周期性晶格扭转，而费米面嵌套的贡献几乎可以忽略。也有文章使用电声矩阵元的组合和裸反应公式来解释CDW的形成。这种理论对2H-NbSe$_2$和体块1T-VSe$_2$的CDW形成解释的极其完美。激子凝聚(电子-空穴耦合)被视为另一种CDW形成的机制，近期在1T-TiSe$_2$中被探测到。
+
+由于V-Se的共价键和弱层间vdW相互作用，体块1T-VSe$_2$是具有强层内耦合的金属。在110K附近经历CDW相变，形成3D-CDW超结构($4 \times 4 \times 3$)，其CDW波矢为$Q_{CDW} = 0.25a^* + 0.3c^*$。Bonilla et al. 在石墨(Highly oriented pyrolytic graphite)和MoS$_2$上生长了单层的1T-VSe$_2$，测量得到了很强的磁序，与体块情况相反。Chen et al. 使用MBE在双层石墨烯上生长了单层1T-VSe$_2$，找到了不含有铁磁交换劈裂的$\sqrt{7} \times \sqrt{3}$CDW超结构。近期，单层1T-VSe$_2$铁磁序可以由Se缺陷引入的磁矩导致。除此之外出现了诸多的其他CDW构型，例如在转变温度为350K和100K出现的$2 \times \sqrt{3}$和$4 \times \sqrt{3}$的CDW。单层1T-VSe$_2$中出现的CDW序与制备条件有强烈的依赖关系。
+
+\section{Computaional methods}
+计算中使用的相关参数如表\ref{Tab:parameter}所示，计算应力使用改变晶格常数的方式，定义为$\varepsilon = (a - a_0)/a_0 \times 100\%$。
+\begin{table}[b]
+    \caption{\label{Tab:parameter} 计算中使用的参数} 
+\begin{ruledtabular}
+    \begin{tabular}{llll}
+    \textrm{属性}&
+    \textrm{值}&
+    \textrm{属性}&
+    \textrm{值}\\
+    软件包   & QE                             & 赝势    & 超软赝势        \\
+    交换作用  & GGA-PBE                                     & vdW近似 & DFT-D2         \\
+    截断能   & 60/600\footnote{波函数/电荷密度的截断能} Ry & 展宽    & 0.01Ry\footnote{Gauss型展宽} \\
+    力收敛判据 & $10^{-4}$ Ry/A                             & 收敛能量  & $10^{-6}$ Ry  \\
+    真空层   & 18 A                                         & 声子谱   & DFPT          \\
+    K格点   & 24x24x16/32x32x1                              & q格点   & 6x6x4/8x8x1     
+    \end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Discussion}
+\begin{figure}[t]
+    \includegraphics[width=0.45\textwidth]{./img/1127/1}
+    \caption{\label{fig:1} 
+    (a)1T-VSe$_2$的晶格结构；(b)体块1T-VSe$_2$的费米面；实部(c)和虚部(d)在$q_z = 1/3 c^*$平面的电子极化，最大值为$Q_{\parallel}$
+    }
+\end{figure}
+费米面嵌套是CDW的起源之一。如果CDW序是由于费米面嵌套形成，则实部和虚部的电子极化都应该在$Q_{CDW}$处形成一个峰。实部如(\ref{eqn:susceptibility real})所示，虚部如(\ref{eqn:susceptibility img})所示。
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1127/2}
+    \caption{\label{fig: phonon} 
+    (a)体块1T-VSe$_2$的声子谱，$Q_1, Q_1^{'}, Q_2$代表主要的虚频；(b)体块1T-VSe$_2$在$q_z = 1/3 c^*$平面(上)和$+k_{z}({\Gamma}A)$方向(下)的最低声子模式线宽(Phonon linewidth)。    
+    }
+\end{figure}
+
+\begin{subequations}
+    \begin{equation}
+        \chi^{'}(q) = \sum_k \frac{f(\varepsilon_k) - f(\varepsilon_{k + q})}{\varepsilon_k - \varepsilon_{k + q}}
+        \label{eqn:susceptibility real}
+    \end{equation}
+    \begin{equation}
+        \chi^{''}(q) = \sum_k \delta(\varepsilon_k - \varepsilon_F)\delta(\varepsilon_{k + q} - \varepsilon_F)
+        \label{eqn:susceptibility img}
+    \end{equation}
+\end{subequations}
+
+定义前5\%的电子极化实部作为最大值，给出的图像如图\ref{fig:1}所示。由于与嵌套无关的弱色散能带的能带间作用，虚部在零点间始终为最大值。$\chi^{'}$和$\chi^{''}$最大值出现在$Q_{\parallel} = 1/2 {\Gamma}M = 1/4 a^*$，与CDW波矢出现的位置一致。声子谱计算如图\ref{fig: phonon}所示，与以前的报道一致。
+
+可以找到三个软声子模式，$Q_1, Q_1^{'}$投影在平面内具有相同的分量$\frac{1}{4}a^{*}$。对应$4 \times 4 \times 3$的CDW超结构；软声子模式$Q_2$对应$4 \times \sqrt{3}$的CDW超结构。由于较大的EPC将引入晶格扭转和连续的CDW，因此与EPC与声子线宽直接相关。在此处线宽$\gamma$定义为：
+\begin{eqnarray}
+    \gamma_{qv} &=& 2\pi\omega_{qv} \sum_{ij} \int{\frac{d^3k}{\Omega_{BZ}} | g_{qv}(k, i, g) \vert^2 } \nonumber \\
+    && \times \delta(\varepsilon_{q,i} - \varepsilon_F) \delta(\varepsilon_{k+q, j} - \varepsilon_F)
+\end{eqnarray}
+其中$g_{qv}(k, i, g)$为EPC系数。从图\ref{fig: phonon}(b)可以看出，$\gamma$最大值与$Q_{CDW}$十分一致。因此我们认为EPC和费米面nesting在体块1T-VSe$_2$中的CDW出现都有关。
+\begin{table}[t]
+    \caption{\label{Tab:cdw energy} CDW形成所需要的能量(meV/f.u.)} 
+\begin{ruledtabular}
+    \begin{tabular}{rrrrrr}
+    \textrm{}&
+    \textrm{$2 \times 2$}&
+    \textrm{$4 \times 4$}&
+    \textrm{$2 \times \sqrt{3}$}&
+    \textrm{$4 \times \sqrt{3}$}&
+    \textrm{$\sqrt{7} \times \sqrt{3}$}\\
+    −4\%      &   −20.42  &  −51.42 & −21.18 & −29.83 & −38.13 \\
+    Pristine  &   −0.58   &  −4.14  & 3.0    & −1.01  & −9.41  \\
+    +4\%      &    22.97  &  20.44  & 25.67  & 22.99  & −4.73 
+    \end{tabular}
+\end{ruledtabular}
+\end{table}
+在单层1T-VSe$_2$中，出现了多种CDW构型，例如$2 \times 2, 4 \times 4, 2 \times \sqrt{3}, 4 \times \sqrt{3}, \sqrt{7} \times \sqrt{3}$，其形状如图\ref{fig: cdwpattern}(a)-(c)所示。对于寻找基态，首先选取基矢为图\ref{fig: vector}所示的值，根据对称性将V-V之间的距离改变3\% ~ 7\%，最后完全弛豫原胞基矢和原子位置来得到最终的超结构。为了计算CDW基态，定义结合能${\Delta}E = E_{CDW} - E_{1T}$，后者采用无扭转的单层1T-VSe$_2$结构。
+\begin{figure}[t]
+    \includegraphics[width=0.45\textwidth]{./img/1127/3}
+    \caption{\label{fig: vector} 
+    CDW计算基矢的选取。
+    }
+\end{figure}
+从表\ref{Tab:cdw energy}的数据可以得到，$\sqrt{7} \times \sqrt{3}$给出了最低的结合能，因此体系更倾向于$\sqrt{7} \times \sqrt{3}$的CDW构型。
+\begin{figure*}[t]
+    \includegraphics[width=0.7\textwidth]{./img/1127/5}
+    \caption{\label{fig: cdwpattern} 
+    (a)$2 \times \sqrt{3}$，(b)$\sqrt{7} \times \sqrt{3}$，(c)$4 \times 4$ CDW构型；(d)在不同压力下CDW超结构的能量增益(Energy gain)。
+    }
+\end{figure*}
+
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1127/4}
+    \caption{\label{fig: monolayer} 
+    $q_z = 0$平面下单层1T-VSe$_2$电子极化率的(a)实部和(b)虚部；(c)单层1T-VSe$_2$的声子谱，其中$Q_1, Q_2$表示主要的虚频；(d)单层1T-VSe$_2$最低声子模式在$q_z = 0$平面的声子线宽。
+    }
+\end{figure}
+
+为了研究单层1T-VSe$_2$出现的CDW序，我们通过计算电子极化，估计了单层1T-VSe$_2$的费米面嵌套情况。在$q_z = 0$平面计算的极化率$\chi^{'}, \chi^{''}$如图\ref{fig: monolayer}(a)(b)所示。极化率最大值出现在$Q_{\parallel}^{'} = Q_{\parallel}^{''} = \frac{2}{5} {\Gamma}M = \frac{1}{5}a^*$，但$\frac{1}{5}a^*$从来没有在实验上被观测到，因此我们推断费米面嵌套在单层1T-VSe$_2$中无法形成CDW。
+
+图\ref{fig: monolayer}(c)给出了1T-VSe$_2$的声子色散关系，主要有两个不稳定声子模式$Q_1, Q_2$，对应的q矢量为$Q_1 = \frac{1}{2}{\Gamma}M = \frac{1}{4}a^*$，$Q_2 = \frac{3}{5} {\Gamma}K = \frac{1}{5}(a^* + b^*)$。对自旋极化的单层1T-VSe$_2$计算表明非磁性计算已经可以较好的研究CDW态。图\ref{fig: monolayer}(d)给出了最低模式的声子线宽，在实空间中$Q_1, Q_2$分别对应$4 \times 4, \sqrt{7} \times \sqrt{3}$CDW序。与体块情况相比，EPC可能在单层1T-VSe$_2$中形成CDW具有重要的意义。
+
+考虑到实验中单层1T-VSe$_2$生长在不同的基底上，可以计算不同CDW结构中面内双轴张力造成的影响。对于施加在CDW结构上的压应力，如图\ref{fig: cdwpattern}(d)所示，能量随着压力的减小迅速增大。当压缩压力大于2\%时，$4 \times 4$CDW的能量降低将比$\sqrt{7} \times \sqrt{3}$的CDW更剧烈，预示着压缩压力可以将基态从$\sqrt{7} \times \sqrt{3}$转换为$4 \times 4$CDW构型。相反对于负压力(舒张压力)，$\sqrt{7} \times \sqrt{3}$构型始终保持小于零的能量变化，预示着在负压力下，体系仍然可以保持$\sqrt{7} \times \sqrt{3}$的CDW基态。实验中多数基底的晶格常数都小于1T-VSe$_2$的晶格常数，因此单层1T-VSe$_2$中不同的CDW序可能是由于基底引入的压力效应。
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1127/6}
+    \caption{\label{fig: phonon strain} 
+    单层1T-VSe$_2$在正压力(a)(b)和负压力(c)(d)中的声子色散曲线。
+    }
+\end{figure}
+
+我们也同时研究了不同压力条件下，不同CDW序对应声子的稳定性。图\ref{fig: phonon strain}给出了非扭转单层1T-VSe$_2$对应声子的色散曲线。可以得到压缩压力使得软模式$Q_1$变得更大，预示着$4 \times 4$ CDW序的增强，与图\ref{fig: cdwpattern}(d)给出的分析一致。当舒张压力作用在系统上时，与$\sqrt{7} \times \sqrt{3}$CDW超结构有关的软模式$Q_2$逐渐展宽，而$Q_1$略微减小。除此之外，我们还发现当舒张压力增大到6\%时，声子谱具有大面积的虚频，预示着系统在大的压力下完全失去了稳定性。
+
+\section{Conclusion}
+费米面嵌套和电声耦合在形成体块1T-VSe$_2$的CDW结构都有贡献，在单层1T-VSe$_2$中则是电声耦合占主导。\\
+压缩压力可以将基态从$\sqrt{7} \times \sqrt{3}$的CDW态变化为$4 \times 4$CDW态，而舒张压力的基态始终为$\sqrt{7} \times \sqrt{3}$态。
+\end{document}

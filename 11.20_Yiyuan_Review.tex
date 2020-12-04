@@ -1,0 +1,82 @@
+\documentclass[reprint, aps, prb, showkeys, UTF8]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+
+\begin{document}
+
+\title{Metal-insulator transition in organic ion intercalated VSe2 \\
+induced by dimensional crossover}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+在VSe$_2$中，存在$T_{CDW} \approx 110K$的三维CDW结构。在插层有机物后，(TBA)$_{0.3}$VSe$_2$出现了各向异性的电阻，即出现了二维电子态。在此情况下$T_{CDW}$升高到$\approx 165 K$，且变为了绝缘相基态。除此之外还发现了$3a \times 3a$的超结构。
+\end{abstract}
+
+\keywords{Intercalation of organic ions, anisotropy of resistivity}
+
+\maketitle
+
+\section{Background}
+TMDs具有强烈的面内成键，且具有较弱的面外相互作用。在TMDs中发现了许多的CDW态，例如2H-NbSe$_2$中的CDW态、1T-TaS$_2$中的David星型团簇等。理论上CDW相变可以由费米能级嵌套作为驱动力的Peierls不稳定性所解释。然而对于TMDs中的复杂CDW显得过于简单，对于绝缘相的1T-TaS$_2$来说尤为如此。对于TMDs还有q相关的电声耦合、电子-电子相互作用等解释机理，至今业界还没有达成共识。
+
+在体块的1T-VSe$_2$中，在低于$T_{CDW} \approx 110K$时存在3D的$4a \times 4a \times 3c$的CDW相。近期角分辨光电子谱给出3D的CDW态出现费米能级嵌套的机理解释，早期的实验给出了由库伦排斥作用显著影响的电声耦合的重要性。在近期也有计算表明了费米面嵌套和电声耦合应该是体块1T-VSe$_2$出现3D的CDW的原因。也有研究指出1T-VSe$_2$几乎没有费米面嵌套的现象发生。对于许多其他的低维材料，3D到2D的维度变化导致了$T_{CDW}$随层数厚度变化的效应。在2D极限下，$T_{CDW}$会达到130K。ARPES实验表明由于赝能隙的出现，VSe$_2$在单层情况下，可能在低于$T_{CDW}$时出现绝缘态。
+
+对于层状材料，由于插层原子会显著削弱层间耦合，vdW间隙可以发生维度交叉现象。在邻近两层VSe$_2$之间插层SnSe/PbSe后，1T-VSe$_2$会在低于$T_{CDW}$显示微弱的绝缘性质。由于有机分子通常体积很大，插层有机原子可以极大削弱相邻层间的耦合。在插层有机原子后，可以发现强化的CDW转变温度为165K，其基态为绝缘相。很可能与单层VSe$_2$的绝缘相CDW机理一致。除此以外还给出了等大$3a \times 3a$周期的超结构(绝缘相)，这与体块材料中$4a \times 4a \times 3c$的CDW结构不同。DFT计算给出了改进的费米面嵌套是造成超结构和更高CDW温度的原因。迄今，完美的费米面嵌套是否是金属-绝缘体相变的原因仍然难以捉摸，费米面附近VHS也可能起到了重要的作用。
+
+\section{Computational Methods}
+实验所选取的参数此处略去不表，在理论计算中，使用VASP作为DFT计算的工具包。在DFT计算中VASP所使用的主要参数如 表~\ref{tab:table1}所示。
+\begin{table}[b]
+\caption{\label{tab:table1}%
+Related VASP calulation parameters.
+}
+\begin{ruledtabular}
+\begin{tabular}{ccd}
+\textrm{Properties}&
+\textrm{Parameter}\\
+\colrule
+交换关联近似 & GGA\\
+赝势        & PBE\\
+截断能      & 400 eV\\
+能量收敛判据 & $10^{-6}$eV\\
+力收敛判据  & 0.01 eV/A\\
+展宽方式 & ISMEAR = 1, $\sigma = 0.05$ eV\\
+k格点密度 & $15 \times 15 \times 1$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Results}
+VSe$_2$和插层后的(TBA)$_{0.3}$VSe$_2$结构如图\ref{fig:structure}所示。在插层TBA后，c轴的长度由6.11A延展到18.62A，从SAED结果来看，面内晶格常数与体块结构的晶格常数相近。
+\begin{figure}[b]
+    \includegraphics[width=2.6in, height=4in]{./img/1120/1.jpg}
+    \caption{\label{fig:structure}VSe$_2$和插层后的(TBA)$_{0.3}$VSe$_2$的晶格结构}
+\end{figure}
+温度对面内电阻和面间电阻的依赖关系由图\ref{fig:tempture}表示。VSe$_2$表现出金属性质，在110K附近出现反常现象，这是由于体块结构中$4a \times 4a \times 3c$的CDW结构的出现所导致的。不难发现在3D的CDW态中，体块VSe$_2$仍然保持金属性，在CDW相变附近没有发现磁滞现象，预示着二阶相变的出现。除此以外，面内和面间电阻的各向异性给出了与温度无关的平均值为150的各向异性，说明了3D电子结构的各向异性。然而(TBA)$_{0.3}$VSe$_2$中在165K附近发现了显著的金属-绝缘体相变，且在加温/冷却过程中出现了明显的磁滞回线，预示着一阶相变的出现。这与一维情况下的Peierls相变相同。
+\begin{figure}[t]
+    \includegraphics[width=2.6in]{./img/1120/2.jpg}
+    \caption{\label{fig:tempture} (a)面内和(b)面间VSe$_2$的温度-电阻依赖关系。(c)面内和(d)面间(TBA)$_{0.3}$VSe$_2$的温度-电阻依赖关系}
+\end{figure}
+
+为了研究(TBA)$_{0.3}$VSe$_2$发生的金属-绝缘体相变，可以分别测量VSe$_2$和(TBA)$_{0.3}$VSe$_2$的磁滞回线，如图\ref{fig:susceptibility}所示。在测量磁极化率时，磁场是加在ab平面的方向的。对于VSe$_2$，磁极化率几乎与温度无关，由于CDW序在110K以下有所减小。在低温下，磁极化率呈现Curie-Weiss行为，这是由于层间vdW能隙中额外的V原子的贡献。而对于(TBA)$_{0.3}$VSe$_2$，在高于165K时，出现了清晰的磁极化率和温度的依赖关系，这归因于近费米面的VHS的出现。在165K附近磁极化率变为0，且出现磁滞回线，预示着电阻发生了金属-绝缘体的相变。在低于50K的情况下，依然观测到了Curie-Weiss行为，这与VSe$_2$的来源相同。
+\begin{figure}[b]
+    \includegraphics[width=2.6in]{./img/1120/3.jpg}
+    \caption{\label{fig:susceptibility}(a)VSe$_2$和(b)(TBA)$_{0.3}$VSe$_2$在5T测量的磁极化率与温度的关系，(c)VSe$_2$和(d)(TBA)$_{0.3}$VSe$_2$的热容}
+\end{figure}
+
+在热容的测量中，VSe$_2$在110K附近出现了微弱的反常现象；(TBA)$_{0.3}$VSe$_2$在165K附近发现了一阶相变的尖峰，与电阻/磁极化率测量一致。除此以外，与VSe$_2$相比，(TBA)$_{0.3}$VSe$_2$中的Sommerfeld余项($\gamma$)显著减小，即预示着体块基态的绝缘相。理论预言高温下VSe$_2$单层/薄层中会出现高温铁磁相，我们也进行了磁极化强度-磁场的测量，但没有在我们的样品中观察到铁磁性。铁磁相的缺失可能是由于CDW序的竞争所导致的。
+
+为了研究(TBA)$_{0.3}$VSe$_2$基态的绝缘性质，对(TBA)$_{0.3}$VSe$_2$使用TEM进行了电子衍射测量。图\ref{fig:diffraction}给出了不同温度下的电子衍射图样，对于VSe$_2$有实验观察到了在低于110K时，相同的位于ab平面内$4a \times 4a$出现的超结构。在130K的测量中，给出了位于(1/3, 0, 0)的额外超结构反射。这个超结构反射给出了$3a \times 3a$的CDW构型周期性，预示着插层TBA导致了CDW的强化，且造成了不同的超结构构型。
+\begin{figure}[t]
+    \includegraphics[width=2.6in]{./img/1120/4.jpg}
+    \caption{\label{fig:diffraction}(a)300 K时测量的电子衍射图样，(b)130K时测量的电子衍射图样。(c)-(f)给出了层间距为6.12，8.62，11.02，18.62A时的费米面拓扑结构，(g)-(j)给出了层间距为18.62A时提升0.0-0.15eV费米面时的拓扑结构。}
+\end{figure}
+
+
+为了研究插层VSe$_2$绝缘相CDW的机理，我们采用了DFT计算能带变化和能带拓扑随着层间距离的变化，先前研究的ARPES测量给出了体块VSe$_2$中的CDW可能由费米面嵌套的机理所驱动。考虑有机物插层会增大层间距、引入电子跃迁，DFT计算给出但层间距离从6.15增大到18.62A时，$k_z = 0.0$和$k_z = 0.5$处的费米面形貌逐渐接近，在$\Gamma$点处出现星型的空穴波包，而在K点则出现了三角形的电子波包。这预示着层间耦合在层间距增大时逐渐减小。
+\end {document}

@@ -1,0 +1,7 @@
+.vscode/
+templete/
+img/
+*.pdf
+*.gz
+*.log
+*.aux
