@@ -24,7 +24,7 @@
 \section{Highlights}
 \begin{itemize}
     \item 结构 \\
-    针对2H-VSe$_2$的第一性原理计算。
+    针对单层2H-VSe$_2$的第一性原理计算，包含晶格、电子结构、弹性模量等诸多物理性质。
     \item 应力变化 \\
     单轴压缩形变会激发zigzag方向和armchair方向迁移率的各向异性，较大的单轴压缩形变则会加剧各向异性的发生。
 \end{itemize}
@@ -36,7 +36,7 @@
 对于单层材料而言，外界的压力很容易改变其晶格结构，也因此改变了其电子性质。根据理论计算的结果，单层VSe$_2$在单轴压缩形变为3\%和5\%的情况下，zigzag方向载流子迁移率增强为1611 cm$^2$/V s 和5085 cm$^2$/V s。
 
 \section{Methodology}
-对于压力计算下的电子结构，采用了第一性原理密度泛函理论的计算方法(Section \ref{subSec:DFT})；对于压力下的电子迁移率，使用了形变势理论(Deformation potential theory)的计算方法(Section)。
+对于压力计算下的电子结构，采用了第一性原理密度泛函理论的计算方法(Section \ref{subSec:DFT})；对于压力下的电子迁移率，使用了形变势理论(Deformation potential theory)的计算方法(Section\ref{subSec:DP})。
 \subsection{Density Functional Theory \label{subSec:DFT}}
 DFT计算中所使用的主要参数如表\ref{Tab:DFTparameter}所示。
 \begin{table}[b]
@@ -57,7 +57,7 @@ DFT计算中所使用的主要参数如表\ref{Tab:DFTparameter}所示。
 \end{ruledtabular}
 \end{table}
 
-\subsection{Deformation Potential Theory}
+\subsection{Deformation Potential Theory \label{subSec:DP}}
 电子有效质量由近自由电子式(\ref{eqn:mass})模型得到。由于在电子速度在300K附近为$10^{5}$ m/s数量级，对应的波长为7 nm，远大于晶格常数，因此散射机制主要考虑声子散射。因此形变势理论是最广为接受的理论，其采用Boltzmann传导理论的框架，使用弛豫近似，载流子迁移率可以写成式(\ref{eqn:mobility})的形式。
 \begin{subequations}
 \begin{equation}
@@ -73,5 +73,51 @@ DFT计算中所使用的主要参数如表\ref{Tab:DFTparameter}所示。
 
 \section{Results}
 \subsection{Lattice Structure}
+2H-VSe$_2$晶格结构如图\ref{fig:lattice}所示，体块2H-VSe$_2$在层间为ABA型的堆叠，1T-VSe$_2$层间为ABC形式的堆叠。2H-VSe$_2$的结合能小于1T-VSe$_2$。基于人们对二维ZrS$_2$晶格结构的研究，我们使用zigzag和armchair方向来描述其晶格结构。完全弛豫后的晶格常数为3.347 A，V-Se化学键和V-Se-V键角分别为2.51 A和83.8$\deg$。
+\begin{figure}[t]
+    \includegraphics[width=0.45\textwidth]{./img/1204/1}
+    \caption{\label{fig:lattice} 
+    单层2H-VSe$_2$的晶格结构；上层视图(a)和侧面视图(b)。红色为V原子，绿色为Se原子，单轴压力施加在zigzag方向和armchair方向。
+    }
+\end{figure}
+\subsection{Electron Mobility}
+能带结构的得出由DP理论计算得到，电子在zigzag和armchair方向的有效质量分别为$0.315m_0$和$1.274m_0$。两个方向上计算的弹性模量分别为405.68 J/m$^2$和405.07 J/m$^2$，大于MoS$_2$($\approx 120 J/m^2$)和石墨烯($\approx 335 J/m^2$)。在zigzag和armchair方向的形变势常数分别为-3.8 eV和-3.4 eV，与单层ZrS$_2$相近。相对的，可以得到zigzag方向的电子迁移率为307 $cm^2/V$ s，是armchair方向电子迁移率(96 $cm^2/V$ s)的3.2倍。因此2H-VSe$_2$中存在迁移率的各向异性。
+
+如图\ref{fig:mobility}所示，由于armchair方向的大电子有效质量，即便施加了可观的压力，在该方向的迁移率仍然很小，因此在我们的研究中不考虑此项的贡献。而在zigzag方向，压缩形变从0\%增长到4\%以后，电子迁移率从307增长到5085 $cm^2/V$ s，增长迅速。同样的，armchair方向在单轴伸张形变从0\%到5\%变化时，电子迁移率$\mu_{zig}$从307增长到1304 $cm^2/V$ s，在armchair方向压力造成的影响比zigzag方向的影响小。材料的电导率与迁移率成正比，压力的效应对减小电阻、强化电荷转移等方面具有相当的研究价值。
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1204/2}
+    \caption{\label{fig:mobility} 
+    单层2H-VSe$_2$在300K时，zigzag方向的电子迁移率随着压力的变化；压力施加在(a)zigzag方向和(b)armchair方向；对于armchair方向的电子迁移率贡献很小，不在图中列出。
+    }
+\end{figure}
+对于沿着zigzag和armchair方向的压力，电子对于压力方向的电子迁移率趋势相反。由于横向压力将导致纵向的位移。2H-VSe$_2$具有正的泊松系数，沿着armchair方向约5\%伸张形变将导致沿着zigzag方向大约-1.33\%的相位移。从实验角度，在zigzag方向的单轴压缩形变可以由armchair方向的伸张形变造成。
+
+\subsection{Electron effective mass}
+如图\ref{fig:effectiveMass}所示，当zigzag方向的压缩压力从0增长到5\%时，电子有效质量从0.315$m_0$降低到0.108$m_0$；当armchair方向的伸张压力从0增长到5\%时，有效质量从0.315$m_0$变为0.108$m_0$。平均的有效质量在压力沿着zigzag方向时，具有很宽的范围，约为(0.382 ~ 0.874)$m_0$。
+\begin{figure}[t]
+    \includegraphics[width=0.45\textwidth]{./img/1204/3}
+    \caption{\label{fig:effectiveMass} 
+    zigzag方向的电子有效质量随着压力的变化；压力施加在(a)zigzag方向和(b)armchair方向；对于armchair方向的电子迁移率贡献很小，不在图中列出。
+    }
+\end{figure}
+
+\subsection{Elastic modulus}
+沿着zigzag方向施加压缩形变，弹性模量从0到3\%线性增加，最大值为452$J/m^2$。在armchair方向，则情况相反，在5\%的伸张压力下，弹性模量增加了5.83\%。
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1204/4}
+    \caption{\label{fig:elastic}
+    }
+\end{figure}
+\subsection{Deformation potential constant}
+$|E_1|$的值随着压缩形变的增加而降低。由于$|E_1|$与迁移率的倒数成正比，因此其在改进迁移率的过程中具有重要的贡献。如图\ref{fig:elastic}所示，在4\%的压缩压力下，其值是平衡状态下的2.14倍。对于armchair方向的单轴压力，$|E_1|$在伸张压力下，下降了0-3\%。在3\%的压缩单轴压力下，比平衡状态小0.55倍。在zigzag方向的变化与在armchair方向相似。
+\subsection{Band Structure}
+在考虑SOC和不考虑SOC情况下的能带结构如图\ref{fig:band}所示。价带最大点位于$K_2$点，最低导带位于$M_1$点，即2H-VSe$_2$间接带隙的半导体。考虑(不考虑)SOC情况下，能隙大小为0.21(0.25)eV，与PBE的SOC给出的结果相近。我们计算了随压力变化的能量差变化${\Delta}E = E(s) - E(0)$，E(s)是在单轴压力下沿着zigzag方向的能隙，E(0)为平衡状态下的能隙。沿着zigzag和armchair方向的压力单轴形变都能明显的减小能隙。对于HSE06泛函可以给出更精确的结构，还比较了压力对PBE和HSE06两种方法的影响。PBE泛函和HSE06泛函给出的能隙趋势一致。在电子迁移率的计算中，只有能量对压力的导数存在区别。
+\begin{figure}[t]
+    \includegraphics[width=0.45\textwidth]{./img/1204/5}
+    \caption{\label{fig:band}
+    }
+\end{figure}
+值得注意的是在$M_2$点的有效质量分别在zigzag和armchair方向计算，并由能带的曲率确定。通过尺寸效应导致的能带结构修饰有可能存在，且经常在纳米结构的半导体中被发现。在极值点($M_2$)附近的E-k曲线在zigzag方向变得更窄，导致了电子有效质量的减小。除此之外，在压缩压力下，导带底部始终出现在$M_2$点。在导带底部出现的电子有效质量极小值对于寻找新型高电子迁移率材料有很大作用。
+
 
 \end{document}
