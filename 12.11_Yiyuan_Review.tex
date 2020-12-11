@@ -1,0 +1,100 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Dimensional crossover of the charge density wave transition \\
+in thin exfoliated VSe$_2$}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+通过扫描隧道显微镜在实空间中到的电荷强度调制，可以直接观察到局域化的序参数和转变温度。观测结果表明，维度的跨界现象和减小厚度的造成的量子限制效应会导致VSe$_2$中CDW转变温度的非单调变化。因此，在调控VSe$_2$的性质时，厚度是一个不可忽略的因素。
+\begin{description}
+    \item[DOI] \url{https://iopscience.iop.org/article/10.1088/2053-1583/aa86de}
+\end{description}
+\end{abstract}
+
+\keywords{Thickness, CDW}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item 直接观测 \\
+    通过STM直接观察到了局域化的序参数和CDW转变温度，并给出了变化关系的实验结论。
+    \item 厚度 \\
+    较早的给出了厚度这一因素在VSe$_2$系统中的作用，指出了3D $\to$ 2D中已经观测到的物理变化。
+\end{itemize}
+
+
+\section{Background}
+过渡族金属二硫化物(TMDs)可以被简单的剥离成为薄层，甚至到单原子层的厚度，对于研究厚度效应导致的电子性质极为有用。在MoS$_2$中，单层极限下由于直接带隙的出现，光敏相变成为了可能。金属性的TMDs具有多种电子结构，出现了例如超导、CDW的现象。机械剥离为使用厚度效应调控这类晶体的电子基态结构提供了可能性。然而转变温度对厚度的依赖性仍然不清晰。金属相的TMDs大多在空气中分解，因此比半导体相/绝缘相的同类物质研究更少。
+
+在本研究中，主要着眼于厚度对VSe$_2$的CDW结构的影响。金属相VSe$_2$生长在1T晶相，包含vdW相互作用的薄层。其中晶格常数$a = b = 3.36 A$，$c = 6.104 A$。体块1T-VSe$_2$在转变温度$T_c^{CDW} \approx 105 K$经历了CDW相变，转变为在ab平面上相同大小的$4a \times 4a$的超结构，在c轴方向存在$\approx 3.1c$的相同大小超结构。在薄层结构中，CDW转变温度比体块材料中的转变温度变化约30\%，存在相互矛盾的升高/降低趋势，似乎与样品的制备方法有关。
+
+\section{Results}
+图\ref{fig:bulkSTM}(a)给出了105K处的CDW相变，与向前的研究结论一致。77.6K处的傅里叶变换给出额三角形原子晶格常数$a = 3.36 A$和平面的$4a \times 4a$相同大小的CDW构型。隧道光谱(图\ref{fig:bulkSTM}(b))给出了与费米面下V原子d轨道有关的特征峰，和另一个以费米面为中心的不对称U型背景。除了热展宽外，其他光谱特征峰在温度升高到室温情况中保持不变。
+\begin{figure*}[t]
+    \includegraphics[width=0.70\textwidth]{./img/1211/1}
+    \caption{\label{fig:bulkSTM} 
+    体块1T-VSe$_2$的晶格结构。(a)电阻随温度的变化关系，在105K附近出现CDW相变。(b)77.6K处测量的隧道电导率。(c)77.6K处$10 \times 10 nm^2$的STM图像。(d)对应的傅里叶变换，红色和绿色分别代表一阶原子晶格和CDW构型的峰。
+    }
+\end{figure*}
+
+薄层的厚度由STM在重组Au(1 1 1)和要探测的剥离平台之间的地形线直接确定。每个表面都具有单原子的厚度，在薄层之间的边缘部分，可以达到单原子层的厚度。在此处我们主要关注高于77K的STM图像，在此处$T_c^{bulk}$附近，厚度效应对CDW的影响最大。不同薄层和平台中，STM观察到的晶体形貌和CDW的特征(图\ref{fig:flakeSTM})与体块晶体中的情况非常相似。在最薄的薄层(2.2nm)中仍然可以观察到相同的$4a \times 4a$电荷序。然而，77.6K、20nm处给出了所有厚度中最弱的CDW幅度。在95K，接近$T_c^{bulk}$时，CDW在20nm和50nm的薄层中被几乎完全压制。这与体块材料中的现象一致，但是在10nm厚度的薄层中，仍然保留了很大的强度。
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1211/2}
+    \caption{\label{fig:flakeSTM} 
+    不同厚度、不同温度下的1T-VSe$_2$STM图。
+    }
+\end{figure}
+
+与CDW相变结合的在费米面附近的能隙大小应该是一个自然的序参数。然而VSe$_2$扫描隧道光谱在80 - 40 mV的范围内没有发现任何能隙的特征。来自V-d轨道遮挡了CDW的能隙，隧道光谱没有给出费米面附近相变时任何LDOS的明显减小(图\ref{fig:bulkSTM}(b))，因此无法通过能隙的打开来确认相变的发生。
+
+当准粒子能隙难以观测时，备选描述相变的代替方案为CDW调制波理论，该理论在平均场描述下与能隙成线性关系。对于CDW相变，可以引入序参量
+\begin{equation}
+    \psi = \frac{\int_{S_{CDW}I(k_x, k_y) dk_x dk_y}}{\int_{S_{lattice}I(k_x, k_y) dk_x dk_y}}
+    \label{eqn:orderParameter}
+\end{equation}
+在此处$I(K_x, K_y)$是傅里叶空间的振幅，$S_{CDW}$和$S_{lattice}$分别是CDW和lattice峰周围区域的圆形积分区域。对所有的微观形貌，k空间都采用同样的采样方式$( = 0.2 nm^{-2})$。
+\begin{figure*}[t]
+    \includegraphics[width=0.45\textwidth]{./img/1211/3}
+    \caption{\label{fig:orderParameter} 
+    CDW序参量$\psi$对温度与薄层厚度的依赖关系。(a)相变附近体块单晶情况下，$\psi$与温度的依赖关系。实线为BCS近似给出的关系；(b)$\psi$在三种不同厚度条件下与温度的依赖关系；(c)在77.6K时$\psi$与厚度的依赖关系；(d)从3D到2D跨界情况下的三维表示。
+    }
+\end{figure*}
+
+在单晶情况下$\psi$对温度的依赖关系(图\ref{fig:orderParameter}(a))在平均场描述下，可以使用BCS能隙方程来估计：
+\begin{equation}
+    \psi(T) = A \cdot T_c \cdot \tanh \left( 1.74 \cdot \sqrt{\frac{T_c}{T} - 1} \right)
+    \label{eqn:BCSgap}
+\end{equation}
+A是需要被确定的缩放因子。图\ref{fig:orderParameter}(a)给出了式(\ref{eqn:BCSgap})对实验数据的拟合结果，其中$A = 0.0165 \pm 0.0004$。该分析的结果确定了式(\ref{eqn:BCSgap})可以较好的定量描述CDW相变的过程。检验了大量77.6K处来自不同平台薄层的STM图像，我们发现了CDW序参量相对于厚度的非单调依赖性质(图\ref{fig:orderParameter}(c))。当减小薄层的厚度时，$\psi$从体块的值不断减小；在小于20nm厚度时，趋势相反，在此处测量的最薄的薄层中(2.2nm)，$\psi$的值甚至超过了体块的值。缺陷被证明可以在高于（但接近）$T_c$的情况下稳定有限的CDW幅度。然而通过最薄的薄层在77.8K测量的少量缺陷的STM图中可以排除强化相变的解释。
+
+由于热漂移，很难将尖端放在相同的地方，因此$T_c$随着厚度的变化关系很难由STM测量。但是可以使用式(\ref{eqn:BCSgap})来计算在给定$T < T_d$情况下，从STM图像来计算基于$\psi(T)$的局域$T_c$。假设对不同的厚度，缩放因子A都相同，则式(\ref{eqn:BCSgap})给出了$T_c$和$\psi(T)$的直接关系。为了验证上述关系，画出了10nm、20nm、50nm薄层在$T_c = 122K, 87K, 100K$的情况。理论计算与实验的对比如图\ref{fig:orderParameter}(b)所示。
+
+这种理论提供了仅仅基于STM测量的电荷调制波的局域CDW相变温度的方法。在这种弱耦合模型下，期望的CDW能隙大小在3.8 meV到-5.7 meV之间，具体数值取决于晶体的厚度，且在高于77K条件下因为太小很难被隧道光谱准确成像。
+\begin{figure}[b]
+    \includegraphics[width=0.45\textwidth]{./img/1211/4}
+    \caption{\label{fig:thicknessDependence} 
+    1T-VSe$_2$中CDW转变温度对厚度的依赖关系。
+    }
+\end{figure}
+
+CDW在不同厚度情况下的转变温度如图\ref{fig:thicknessDependence}所示，与近期的其他独立研究一致。我们发现厚度对于$T_c$的影响式非单调的，在非常薄的薄层中，$T_c$甚至比体块材料的还要更高。这个现象也由其他的实验所独立给出。这种非单调趋势在该研究中解释为不同的液体/剥离方法所导致的，而在实际上是由于不同的厚度区间所导致的。在图\ref{fig:thicknessDependence}中给出的结果没有环境因素的差异，都是使用相同的机械剥离方法、相同探针得到的。
+
+两种不同的CDW转变温度依赖关系由图\ref{fig:orderParameter}(c)给出，图\ref{fig:orderParameter}(d)给出了体块和薄层中3D$\rightarrow$2D的跨界关系。在其他TMD材料中也发现了很薄的薄层时，$T_c$在减小厚度时增加的现象。然而，这些研究缺乏实空间中评判CDW特征的重要信息。STM给出了明确的CDW对称性和周期性相对于厚度和温度的关系，唯一的修饰部分是修饰的$T_c$和与之相联系的电荷调制波。我们提出在最薄的薄层中，被强化的$T_c$是空间限制效应的结果，在与BCS超导中由能隙方程相类比的式子(式\ref{eqn:BCSgap})。在此情况下，对于高于临界值的势阱U，理论预言在厚度为零的极限之前，超导转变温度$T_{sc}$将随着厚度的减小而增大。在与U有关的最大$T_{sc}$对应的特征厚度$d_{max}$取决于耦合强度和载流子密度。特殊地，只考虑体块和单层情况可能导致不准确的关于维度跨界的结果，甚至在不同制备条件/基底导致$d_{max}$的条件下，相同的材料都会发生上述的不准确性。
+
+随着厚度减小而减小的$T_c$可以通过考虑薄层VSe$_2$的费米面拓扑结构来解释。在$k_z$方向具有eV量级的明显色散现象，这与其他绝大多数层状TMDs不同。光子散射给出了大的以M(L)点为中心的平行费米部分，为所有的$k_z$提供了良好的面内嵌套条件。这种嵌套在特殊的$k_z$最强，导致了体块VSe$_2$面外的有效嵌套矢量和三维CDW。在薄的体块层中，面外嵌套条件由于可用$k_z$点数量的减少，费米面离散化而变得更弱。驱动系统进入更弱的2D电荷序，将被二维情况下强化的涨落所压制。第二种机制将在某个临界厚度以后成为主导作用，标志着量子限制效应在最薄的薄层中发挥的作用。
+
+\section{Question}
+维度的跨界现象和减小厚度的造成的量子限制效应会导致VSe$_2$中CDW转变温度的非单调变化，是否也会导致磁性的非单调变化？
+\end{document}
