@@ -1,0 +1,98 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Unique Gap Structure and Symmetry \\
+of the Charge Density Wave in Single-Layer VSe$_2$}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+由于TMDCs的准静态二维特性，单层TMDCs的CDW通常是其对应体块CDW的平面投影。我们成功在单层VSe$_2$中观察到$\sqrt{7} \times \sqrt{3}$的CDW，而不是对应于体块的$4 \times 4$CDW。单层VSe$_2$的角分辨光电子谱表明在区域边界观察到了~100 meV能隙的$\sqrt{7} \times \sqrt{3}$的CDW结构。转变温度为220K，是对应体块转变温度的两倍，在该情况下与理论预言不存在铁磁交换劈裂(ferromagnetic exchange splitting)的情况一致，该奇异的CDW结构可以由第一性原理解释。实验结论说明了在二维极限下，可以出现一个奇异的CDW现象。
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1103/PhysRevLett.121.196402}
+\end{description}
+\end{abstract}
+
+\keywords{CDW, gap}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item 新$\sqrt{7} \times \sqrt{3}$CDW构型 \\
+    在一般的TMDCs中，2D情况下的CDW都是体块材料的平面投影，但在本研究中观察到了不同于体块的新CDW结构。
+    \item 研究Fermi Nesting对CDW的影响 \\
+    在实验中观察的费米面对应的nesting波矢能够与观察到的CDW构型符合，说明了Fermi nesting是形成该CDW构型的原因。
+\end{itemize}
+
+
+\section{Background}
+单层的过渡族金属二硫化物(TMDCs)具有多种物性结构，例如半导体、半金属、金属、磁性系统、超导、量子自旋霍尔绝缘体和其他非平庸系统。由于TMDCs的准2D结构倾向于在强化费米面嵌套、电声耦合、电子-电子关联时压制电子屏蔽效应，CDW在体块和超薄TMDCs中十分常见。由于CDW可以与其他有序现象相竞争或共生，CDW的研究热度不减。尽管CDW已经被研究了多年，但迄今为止还没有出现解释所有实验现象的统一理论。VSe$_2$由于其体块中在转变温度110K以下尤为长的CDW波长$4 \times 4 \times 3$，而受到关注。先前的实验提出3D Fermi nesting是体块CDW出现的机理，近期也有理论计算提出电声耦合是最重要的原因。
+
+\section{Results}
+$\sqrt{7} \times \sqrt{3}$CDW的出现，引入了三角晶体场的自发对称性破缺，代表了一种额外的情况。其他有趣的现象为单层的CDW转变温度为220K，为体块材料的两倍。我们尝试寻找，但没有找到理论所预言的单层具有很大交换劈裂的室温铁磁基态，该现象有可能是被强CDW序压制所导致的。我们的结果与近期的单层存在铁磁基态的另一项工作不同，可能是环境原因所导致的。在我们的工作中，VSe$_2$生长在6H-SiC(0001)上，基底维持在230 ℃，费米面由拟合多晶金样品的ARPES光谱得到。保护的Se原子层在测量前保持180 ℃。DFT计算使用VASP进行，截断能为320 eV， k格点为$18 \times 18 \times 1$，单层VSe$_2$结构优化使用GGA近似的PBE泛函，真空层厚度为20 A，完全优化后的单层VSe$_2$晶格常数$a = 3.35 A$。声子计算采用了550 eV，$28 \times 28 \times 1$的k格点。
+\begin{figure*}[t]
+    \includegraphics[width=0.80\textwidth]{./img/1218/1}
+    \caption{\label{fig:filmSTM} 
+    (a)1T-VSe$_2$的晶格结构；(b)室温下单层生长的RHEED图样；(c)77K时$\sqrt{7} \times \sqrt{3}$CDW的STM图；(d)图(c)的傅里叶变换；(e)蓝色($1 \times 1$)和红色($\sqrt{7} \times \sqrt{3}$)的布里渊区，$\boldsymbol{q}_1、\boldsymbol{q}_2$是对应的倒格矢；(f)在10K时沿着$\overline{\Gamma M}$路径的ARPES图像。(g)不含自旋极化原胞计算的色散关系。
+    }
+\end{figure*}
+
+正常相单层VSe$_2$的结构如图\ref{fig:filmSTM}(a)所示；如\ref{fig:filmSTM}(b)的RHEED证明单层VSe$_2$有序性良好，体块VSe$_2$是由vdW成键的单层竖直堆叠而成；图\ref{fig:filmSTM}(c)STM图样给出了$\sqrt{7} \times \sqrt{3}$的CDW结构；CDW引发的自发三角对称性破缺导致了各成120°的不同STM区域。
+
+在10K时沿着$\overline{\Gamma M}$路径的ARPES如图\ref{fig:filmSTM}(f)所示，以$\Gamma$点为中心处显示为空穴型的能带，主要源自于Se的4p态。实验得到的色散关系与图\ref{fig:filmSTM}(g)理论计算一致。能带结构的尖峰程度预示着样品的质量。当系统处于CDW态时，没有明显的能带简并，预示这CDW相超胞的微小形变。在10K时，理论预言0.5 eV大小的铁磁交换能带分裂在20 meV的分辨率下没有可观测信号，因此我们推断原始层没有铁磁性。
+\begin{figure}[b]
+    \includegraphics[width=0.40\textwidth]{./img/1218/2}
+    \caption{\label{fig:fermi} 
+    (a)CDW态下300K时单层1T-VSe$_2$的费米面，蓝线给出了$\sqrt{7} \times \sqrt{3}$的CDW基矢；(b)10K时的费米面，黑色区域由$\boldsymbol{q}_1$和CDW结合能形成；(c-d)体块VSe$_2$分别在300K和10K的费米面。
+    }
+\end{figure}
+
+单层结构在300K和10K得到的k空间费米面如图\ref{fig:fermi}所示。在正常相(300K)时在区域中心周围给出了六边形空穴波包，在M点附近给出了椭圆形状的电子波包。对于10K的CDW态，费米面图在椭圆电子波包附近出现了黑色图像，预示着费米面处的能隙结合能。注意到椭圆波包正常态的两个长边几乎是完全的直线，而且彼此平行，提供了绝佳的嵌套条件，nesting vector在图\ref{fig:fermi}(a)中由红色箭头$\boldsymbol{q}_1$标志。这种嵌套可以形成CDW模块化的晶格，且倒格子基矢由$\boldsymbol{q}_1$和$\boldsymbol{q}_2$决定。$\boldsymbol{q}_1$的长度接近$3/5 \overline{\Gamma K}$，恰好可以形成$(\sqrt{7} \times \sqrt{3})$的CDW结构。几何结构的关系可以由(1 x 1)晶胞基矢来表示：
+\begin{eqnarray}
+    \boldsymbol{b}_1 = 2\boldsymbol{q}_1 - \boldsymbol{q}_2 \nonumber\\
+    \boldsymbol{b}_2 = \boldsymbol{q}_1 + 2\boldsymbol{q}_2
+\end{eqnarray}
+
+为了方便比较，VSe$_2$体块在300和10K测量的费米面如图\ref{fig:fermi}(c)~(d)所示，结果与单层情形十分接近，但是波包的宽度减小了16\%，这种不同打破了$\sqrt{7} \times \sqrt{3}$nesting的出现，因此在体块中观察不到该模式的CDW出现，相反体块VSe$_2$遵循($4 \times 4 \times 3$)的对称性。
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/1218/3}
+    \caption{\label{fig:gap} 
+    单层VSe$_2$的CDW能隙打开情况。(a)沿着$\overline{MK}$的ARPES光谱；(b)相对于费米面对称的ARPES图，给出了CDW相；(c)计算的正常态和CDW态的能带结构；(d)体块的APRES图，对称图显示没有能隙。
+    }
+\end{figure}
+
+图\ref{fig:gap}(a)给出了单层在10K和300K时沿着$\overline{MK}$方向的E-k关系ARPES图，可以观察到V型的能带，主要源自于V的3d态。V字型的两支在正常态下会穿越费米面，而在CDW中则存在能隙。图\ref{fig:gap}(b)可以观察到10K附近的能隙大约为100 meV。计算的能带结构如图\ref{fig:gap}(c)所示，此处$\sqrt{7} \times \sqrt{3}$的能带结构已经展开到原胞大小方便比较，其主要区别在于V-3d轨道形成了V字型的80 meV的能隙。体块的CDW计算给出了10K时不存在CDW能隙。
+\begin{figure}[b]
+    \includegraphics[width=0.40\textwidth]{./img/1218/4}
+    \caption{\label{fig:temperature} 
+    CDW能隙与转变温度的依赖关系。(a)能隙位置的EDCs，能隙由自能公式拟合每个EDC得到；(b)10K时的拟合样例；(c)CDW能隙平方与温度的依赖关系，蓝色线为使用平均场计算的拟合曲线。
+    }
+\end{figure}
+
+图\ref{fig:temperature}(a)给出了不同温度对称化的能量分布曲线(EDCs)在动量空间中的能隙位置。能隙由自能公式给出：
+\begin{widetext}
+\begin{eqnarray}
+    A(\boldsymbol{k}, \omega) = \frac{B(\boldsymbol{k})}{\pi} \frac{\Im \sum (\boldsymbol{k}, \omega)}{\left[ \omega - \epsilon(\boldsymbol{k}) - \Re \sum (\boldsymbol{k}, \omega)\right]^2 + \left[ \Im \sum (\boldsymbol{k}, \omega) \right]^2} \\
+    \sum (\boldsymbol{k}, \omega) = -i \Gamma_1 + \frac{\Delta^2}{\left[ \omega + \epsilon(\boldsymbol{k}) + i \Gamma_0 \right]}
+\end{eqnarray}
+\end{widetext}
+此处$A(\boldsymbol{k}, \omega)$是光谱函数，$B(\boldsymbol{k})$是对应的权重，$\sum (\boldsymbol{k}, \omega)$是自能，$\Delta$是能隙。在10K时拟合的EDC如图\ref{fig:temperature}(b)所示，能隙被确定为$101 \pm 5 meV$。提取的能隙与温度的依赖关系使用二阶相变的平均场近似处理：
+\begin{equation}
+    \Delta^2(T) \propto \tanh^2 \left( A\sqrt{\frac{T_C}{T} - 1}\right) \Theta(T_c - T) 
+\end{equation}
+此处A为1.19。拟合结果如图\ref{fig:temperature}(c)所示，其CDW转变温度为$T_c = 220 \pm 5 K$。单层的转变温度是体块的两倍。先前的研究指出纳米尺度、单层的VSe$_2$样品存在互相矛盾的强化/降低的$T_c$，有可能与不同的样品制备方式有关。例如TiS$_2$和NbSe$_2$等，在单层情况下具有更高的$T_c$，但VSe$_2$是唯一的一个单层CDW不是简单的体块CDW对称性平面版本的CDW对称性。
+\section{Conclusion}
+基于的第一性原理计算，($\sqrt{7} \times \sqrt{3}$)的总能量比($4 \times 4$)的更低。单层计算的电子极化和nesting函数，结合具有$(\sqrt{7} \times \sqrt{3})$不稳定性的$\boldsymbol{q}_1, \boldsymbol{q}_2$与ARPES测量一致，且一般在体块中缺失。计算的声子色散关系在($1 \times 1$)相给出了($\sqrt{7} \times \sqrt{3}$CDW对应的波矢$\boldsymbol{q}_1$)，也在($4 \times 4$)的形变中存在软声子模式。明显的是，$\boldsymbol{q}_1$的虚模式导致了($\sqrt{7} \times \sqrt{3}$)结构基态的出现。
+
+现有的理论和实验指出单层VSe$_2$是Peierls系统，即长程的近乎完美的费米面nesting导致了强烈CDW序的出现。($\sqrt{7} \times \sqrt{3}$)对称性打破了正常态的三重简并性，CDW则由电子极化和嵌套方程的特征来分类。近乎一样的nesting在二维和三维情况下都很少出现，单层TMDCs的CDW通常是体块CDW的平面投影。单层VSe$_2$与($4 \times 4$)体块的CDW不同，引入了三角晶体的自发对称性破缺。不同的行为可以通过费米面从二维极限到三维的演化造成。这种敏感性解释了接近费米面的嵌套可能对系统的能量有巨大的影响，而且解释了为什么单层的CDW转变温度是体块的两倍。
+\end{document}
