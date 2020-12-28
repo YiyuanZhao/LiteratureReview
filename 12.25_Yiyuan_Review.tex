@@ -1,0 +1,84 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Predicted 2D ferromagnetic Janus VSeTe \\
+monolayer with high Curie temperature, large \\
+valley polarization and magnetic crystal anisotropy}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+实验中成功合成了单层Janus过渡族金属二硫化物(MoSSe)和铁磁VSe2。采用全局最小搜索方法的DFT计算预言了具有高稳定性的ML Janus 2H-VSeTe。由于空间和时间反演对称性的破缺，该结构具有158 meV的可观谷极化。VSeTe具有铁磁序，居里温度为350K，且具有-8.54 erg cm$^2$的磁各向异性(MCA)。
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1039/d0nr04837b}
+\end{description}
+\end{abstract}
+
+\keywords{CDW, gap}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item 更换原子的DFT计算 \\
+    使用粒子群算法搜索了稳定的VSeTe结构，通过海森堡模型估计了体系的居里温度、电子结构等。
+    \item 谷极化、磁各向异性 \\
+    在进行SOC的计算时，发现了体系具有的磁各向异性，且具有非常大的谷极化现象(~158 meV)，远高于类似结构的TMDs，同样具有可观的(-8.54 erg cm$^{-2}$)的磁各向异性。
+\end{itemize}
+
+
+\section{Background}
+2D的自旋电子学铁磁材料由于Mermin-wagner定理的限制，在近几年才逐渐被发现。然而发现了的2D铁磁材料仍然被限制在两个方面：一是同时存在铁磁序和半导体性质的材料十分稀有，二是居里温度远低于室温。有研究使用混合、合成、设计新型稳定磁性半导体。作为铁磁的半导体，CrI$_3$、Cr$_2$Ge$_2$Te$_6$和VSe$_2$由于其内禀磁性而受到关注。除此之外人们还关注其众多的自旋构型、不同电子性质和更高的磁各向异性能。由于MoSSe被成功合成，Janus 结构有望成为具有优良物理性能的二维材料。2D Janus材料可以作为场效应晶体管、超敏感探测器、自旋电子学和谷电子学器件。 Janus类型的MoSSe和GaInX$_2$(X = S, Se, Te)表现出了强压电效应，TiSO和MoSSe对于光催化作用具有良好的光学氧化还原潜力。在Cr$_2$I$_3$Cl$_3$中预言了内禀的铁磁矩和Rashba类型的自旋劈裂。除此以外，磁skyrmions也在MnSTe(MnSeTe, MnSSe)和MoSSe中被发现。2D磁性的实验发现，对于自旋电子学可能有新的应用。VSe$_2$、VTe$_2$具有本征的铁磁性，且是半导体。因此时间反演对称性在VX$_2$中被打破，Janus VSeTe也打破了镜像和时间对称性，引入了新的物理现象。
+
+\section{Computational Methods}
+2D Janus VSeTe结构的搜索使用了依赖于PSO算法的CALYPSO代码，VSeTe性质的计算使用了VASP，且使用了基于DFT方法的GGA/PBE泛函。强关联由GGA+U方法来考虑V的3d电子。有效格点内库伦作用参数(U)和交换参数(J)设置为2.00和0.84 eV。有效$U - J = 1.16$ eV，重要计算细节由HSE06确定。z方向的真空层设置为16A。动能截断设置为400 eV。结构弛豫的力收敛判据和能量收敛判据分别为 1 meV/A和10$^{-6}$ eV。K格点在结构弛豫、能量计算、DOS计算中分别选取$16 \times 16 \times 1$，$26 \times 26 \times 1$、$36 \times 36 \times 1$。
+
+\section{Results \& Discussion}
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/1225/1}
+    \caption{\label{fig:Structure} 
+    (a-b)优化的2H-VSeTe结构；(c-d)铁磁和反铁磁结构；(e)FM和AFM的能量曲线。
+    }
+\end{figure}
+\subsection{Geometry}
+VSeTe使用PSO算法进行搜索，对应优化的晶格结构为$a = b = 3.486 A$。使用了两种不同的方式来优化几何结构：将能量对晶格参数进行拟合得到优化的晶格常数，与全局优化得到的结果相同。完全优化的结构显示单层Janus VSeTe具有$C_{3v}$点群对称性，与VSe$_2$和VTe$_2$的$D_{3d}$对称性不同。Janus VSeTe打破了面外的结构对称性，两侧分别由Se和Te占据。对应的V-Se和V-Te键长为2.728和2.514 A。从V到其他原子的电子转移为Te(0.28 e)和Se(0.40 e)。与Te原子相比，Se得到了更多的电子，电负性更强。每个V原子贡献了1.22 $\mu_B$的磁矩，在超胞中贡献了1.0 $\mu_B$。在FM序的超胞中($2 \times 2 \times 1$)，其中2个V贡献 1.04 $\mu_B$磁矩，另两个贡献 -1.04 $\mu_B$。FM和AFM的能量差为$\Delta E = E_{AFM} - E_{FM} = 0.523 eV$。因此单层Janus VSeTe是内禀的铁磁材料。
+
+\subsection{Electronic Structure}
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/1225/2}
+    \caption{\label{fig:Electron} 
+    (a-b)2H-VSeTe结构的能带和态密度；(c)第一布里渊区的K和K'点；(d-g)单层MoSSe的电荷密度；(h)单层Janus VSeTe在考虑沿着磁化轴[001]SOC情况下的能带结构；(i)3D结构的VB和CB。
+    }
+\end{figure}
+价带最高点(VBM)由spin-$\alpha$占据，位于布里渊区$\Gamma$点，导带最低点(CBM)由spin-$\beta$占据，位于布里渊区的K(K')点。单层Janus VSeTe是一个双极磁半导体，且其非直接能隙为 0.254 eV。由于spin-$\alpha$和spin-$\beta$ 的能隙通常不同。对于spin-$\alpha$电子，VBM位于$\Gamma$点，CBM位于K点，对应的$E_{g-\alpha}$为0.342 eV。对于spin-$\beta$电子，VBM位于$\Gamma$点，CBM位于M点，对应的$E_{g\-\beta}$为0.481 eV。VBM和CBM主要由V原子贡献，从DOS的分析中，VBM主要包括V原子的$d_{xz}$和$d_{yz}$轨道，而CBM则由V原子的$d_{z^2}$轨道贡献。
+
+\subsection{Valley}
+V原子时中元素是重原子，因此在模拟中考虑了自旋-轨道耦合。这将减少高对称k格点路径上的能带简并度，引入自旋的考虑SOC能带结构如\ref{fig:Structure}(f)所示，大小为158 meV的谷极化在VSeTe中得到了实现，足够在室温下观察到谷霍尔效应。引入的谷极化比VSSe(85 meV)、Cr掺杂的MoSSe(59 meV)、具有缺陷的WSe$_2$(1 meV)、电场调控下的MoS$_2$(3 meV)都要大。更进一步，Janus VSeTe不需要使用电子/空穴掺杂、缺陷、高磁场、高电场这些难以在实验中控制的参量就可以实现谷极化。因此，Janus VSeTe可以使用其谷自由度的特性应用于量子信息处理。
+
+谷极化主要由V原子的$d_{x^2 - y^2}$、$d_{z^2}$、$d_{xy}$轨道贡献，主要位于布里渊区的K和K'点，可以由于SOC和交换作用的结合而产生。与H-VSSe相比，由于具有重元素T呃，H-VSeTe具有更强烈的SOC效应。强SOC强化了位于K/K'点处谷的自旋分裂到158 meV。对应的三维VB和CB图像如图\ref{fig:Structure}(i)所示，VB在K和K'不是全局最大，而是局部最大值。
+
+\subsection{Curie temperature}
+\begin{figure*}[b]
+    \includegraphics[width=0.80\textwidth]{./img/1225/3}
+    \caption{\label{fig:Heisenberg}
+    (a-b)考虑最近邻交换作用的Heisenberg模型，红色和蓝色箭头表示了V原子与最近邻V原子的铁磁耦合和反铁磁耦合；(c)使用经典Heisenberg模型的MD给出的每个原胞的磁矩/热容随温度的变化关系。
+    }
+\end{figure*}
+我们使用经典Heisenberg模型来评估磁交换参量J，考虑的磁性构型如图\ref{fig:Heisenberg}所示，只考虑了最近邻的相互作用。哈密顿量可以写为：
+\begin{eqnarray}
+    H &=& -J \sum_{<i, j>} S_i \times S_j \label{eqn:Heisenberg}\\
+    E_{FM} &=& E_0 - (\frac{1}{2} \times 6 \times 4)J |S|^2 \label{eqn:Fmorder}\\
+    E_{AFM} &=& E_0 + 4 \times ( - \frac{1}{2} \times 2 + \frac{1}{2} \times 4) J |S|^2 \label{eqn:Afmorder}\\
+    J &=& \frac{E_{AFM} - E_{FM}}{16 |S|^2} \label{eqn:exchange}
+\end{eqnarray}
+在此处J和H分别为交换参量和哈密顿量，$S_i$代表自旋算符。每个V原子贡献1.00 $\mu_B$的磁矩。$2 \times 2 \times 1$FM和AFM的超胞所具有的能量可以使用式(\ref{eqn:Fmorder})和式(\ref{eqn:Afmorder})来计算。对应的交换参量可以使用式(\ref{eqn:exchange})来描述。计算的交换序参量为J=32.81 meV。考虑到平均场近似的缺陷，我们使用经典Heisenberg Monte Carlo 方法来计算磁矩对于温度的变化。使用该方法，我们估计的CrI$_3$的转变温度约为51K，与实验值45K接近。如图\ref{fig:Heisenberg}(c)所示每个原胞的总磁据在200K时逐渐从1.00 $\mu_B$开始降低。在400 K时转变为顺磁相。对应的$T_c$预言值为300 K。这预示着内禀的铁磁可以在高于室温的情况下存在。
+\end{document}
