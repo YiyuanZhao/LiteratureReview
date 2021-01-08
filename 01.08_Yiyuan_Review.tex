@@ -1,0 +1,72 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Magnetoelectric Coupling in Multiferroic Bilayer VS2}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+基于第一性原理计算，发现了二维多铁双层材料VS$_2$的磁电耦合现象。3R堆叠类型的基态打破了空间反演对称性，因此引入了与层平面垂直的自发极化。双层VS$_2$层外的铁电极化可以通过面内的层内滑移发生反转。双层VS$_2$两层之间是反铁磁序，而层内是铁磁序。我们发现铁电和反铁磁可以通过铁谷发生耦合，实现磁性的电调控。除此之外减小层内间距可以产生净磁矩，电场也可以实现线性、二阶非线性的磁电耦合。
+\begin{description}
+    \item[DOI] \url{10.1103/PhysRevLett.125.247601}
+\end{description}
+\end{abstract}
+
+\keywords{VS$_2$, Magnetoelectric Coupling}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item VS$_2$多铁 \\
+    同时具有反铁磁性、铁电性等多种性质，相位为H相，堆叠为3R类型。
+    \item SOC \\
+    进行了SOC的计算，发现VS$_2$在$K_{+}$和$K_{-}$高对称点具有谷极化现象，且该现象与多铁性质并存。
+\end{itemize}
+
+\section{Background}
+电子在周期晶格势场调制下满足Bloch定理，考虑电荷和自旋，Bloch电子具有谷自由度。与具有自发电荷极矩/自旋极化被称为铁电/铁磁材料相似，具有自发谷极化被称为铁谷材料。多铁材料具有铁磁性、铁电性、铁弹性、铁谷共存的特性，因为不同铁序的耦合而受到关注。如铁电效应。在过去多铁由于高性能电子学器件的需求而快速发展。二维情况下铁磁、铁电、多铁的原子极限极为稀有，限制了二维材料多功能性的发展。近期有研究发现电场可能控制层状材料的谷自由度，从而实现磁电效应，谷自由度被称之为赝自旋。有几项理论工作预言了磁性和铁电可以在二维材料中共存，主要依赖于掺杂和吸收，至今其他工作缺乏内禀的磁电耦合。近期还发现了具有内禀磁电耦合II型多铁二维化合物Hf$_2$VC$_2$F$_2$，面内120度Y型反铁磁结构引入了铁电极化，可以通过磁场完全调控。更进一步，通过扭转双层系统的堆叠角度，电子结构和物理性质可以发生与体块或单层结构的显著不同。例如单层T$_d$-WTe$_2$不是铁电，双层WTe$_2$则显示出自发的面外铁电极化，方向可以通过外加电场调控。双层H相MoS$_2$也被发现具有铁电极化。反铁磁双层CrI$_3$被预言具有铁电反应效应。在此我们考虑VS$_2$极化的磁性和谷效应，即双层VS$_2$同时具有铁电、铁磁、铁谷效应。通过电子结构和Berry曲率，我们发现铁电和反铁磁可以通过铁谷来实现电场调控的磁性。
+
+\section{Computational Methods}
+DFT使用VASP软件包来实现。采用了GGA和PBE形式的近似，平面波截断能设置为500 eV。对几何优化使用PBE-D3修正来考虑范德瓦尔斯修正。对于d轨道使用GGA + U$_{eff}$修正，$U_{eff} = 3.0$ eV。Kmesh采用$33 \times 33 \times 1$的网格，真空层为15 A。优化的力收敛判据为0.001 eV/A。铁电开关通道由NEB方法寻找，铁电极化值使用Berry相位方法计算。外加电场使用曲面极矩方法施加。
+
+\section{Results \& Disscussion}
+\begin{figure*}[t]
+    \includegraphics[width=0.80\textwidth]{./img/20210108/1}
+    \caption{\label{fig:crystal} 
+    (a)-(b)VS$_2$晶格结构侧视图，铁电极化是反平行的，且平行于z轴正方向。灰色和红色代表上层和下层V原子。考虑SOC的铁电反铁磁构型$P{\downarrow}M{\uparrow\downarrow}$和$P{\uparrow}M{\uparrow\downarrow}$如(c)所示。第一布里渊区的Berry曲率分布如图(d)所示；考虑SOC的构型$P{\downarrow}M{\downarrow\uparrow}$和$P{\uparrow}M{\uparrow\downarrow}$如图(e)所示；对应的曲率如图(f)所示；能带图中，红色(蓝色)线条表示spin up和spin down。
+    }
+\end{figure*}
+
+与先前的研究一致，我们的计算结果表明单层VS$_2$最稳定的结构是铁磁的H相，总磁据为每个V原子$1 \mu_B$。对于双层VS$_2$情况，每层具有铁磁状态，两层之间为反铁磁态，与VSe$_2$情况相似。然而最稳定的双层VSe$_2$采用了2H堆叠的方式，我们计算得到双层VS$_2$的基态堆叠方式为3R，如图\ref{fig:crystal}(a)和(b)所示。
+
+与双层T$_d$-WTe$_2$的极化选择模式相似，层外VS$_2$的铁电极化可以通过层内的滑移发生反转。铁电的来源与T$_d$-WTe$_2$和T$_d$-MoTe$_2$相同。由于S两层之间能隙S原子的环境不同，形成了不受补偿的层间垂直电荷转移和层外磁偶极矩。双层VS$_2$的铁电极化使用Berry相方法计算值为$2.018 \times 10 ^{-3} C/m^2$，比实验值T$_d$-WTe$_2$的$3.204 \times 10 ^{-4} C/m^2$和T$_d$-MoTe$_2$的$5.768 \times 10 ^{-4} C/m^2$更大。双层VS$_2$同时存在铁电和层间反铁磁性质。因此我们考虑了四种不同的构型$P{\downarrow}M{\uparrow\downarrow}$、$P{\uparrow}M{\uparrow\downarrow}$、$P{\downarrow}M{\downarrow\uparrow}$、$P{\uparrow}M{\uparrow\downarrow}$。其中P表示铁电极化方向在+z方向，$M{\uparrow\downarrow}$表示沿着+z方向下(上)层的磁矩为正/负。通过计算，我们发现所有四种构型在能量上都兼并。电子的能带给出了具有反转的铁电极化双稳定态。对于二维蜂窝状晶格结构，导带和价带的极值具有同样的波矢，位于六角布里渊区的角落$K_{+}$和$K_{-}$机制附近的能带结构具有能谷，这些能谷互相由时间反演对称性关联，不可以通过平移对称性反转。
+
+$P_{\downarrow}M_{\uparrow\downarrow}$和$P_{\uparrow}M_{\uparrow\downarrow}$构型如图\ref{fig:crystal}(e)所示，其能带结构如图\ref{fig:crystal}(f)所示。由于铁谷的层内相互作用，导带底部和价带顶部的分裂值不在这$K_{+}$和$K_{-}$点。$P{\downarrow}M{\uparrow\downarrow}$、$P{\uparrow}M{\uparrow\downarrow}$构型具有能量劈裂$\Delta E_{K}^{V} = 0.0013$ eV，$\Delta E_{K_{+}}^{V} = 0.188$ eV，$\Delta E_{K_{-}}^{V} = 0.0013$ eV，$\Delta E_{K_{+}}^{\overline{C} } = 0.0013$ eV；而$P{\downarrow}M{\downarrow\uparrow}$、$P{\uparrow}M{\downarrow\uparrow}$构型具有能量劈裂$\Delta E_{K}^{V} = 0.188$ eV，$\Delta E_{K_{+}}^{V} = 0.013$ eV，$\Delta E_{K_{-}}^{V} = 0.078$ eV，$\Delta E_{K_{+}}^{\overline{C} } = 0.086$ eV。对于$P{\downarrow}M{\uparrow\downarrow}$、$P{\uparrow}M{\uparrow\downarrow}$构型，最高价带的自选投影是自旋向上的，而导带底部是自旋向下的。对于$P{\downarrow}M{\downarrow\uparrow}$、$P{\uparrow}M{\downarrow\uparrow}$而言，自选投影方向则完全相反。对于谷材料，能谷$K_{+}$和$K_{-}$的有时间反演对称性而不是平移对称性而关联起来。因此可以猜想但双层VS$_2$铁电极化切换时，上层和下层的此举方向反转180°来保持能带结构不变。从能带定义的观点来看。自旋投影和外电场的影响，证明了磁性的铁电调控可以通过铁谷耦合实现。
+
+Berry曲率可以被看作动量空间的赝磁场。大致上，磁场写作$B(r) = \nabla \times A$的形式。，贝利曲率的定义具有相似的形式：$\Omega_{n}(k) = \nabla \times C_n(k)$。在此处n是能带序号，$C_n(k) = i \left\langle u_n(k)| \nabla_k | u_n(k) \right\rangle $代表Berry连接；$u_n(k)$代表Bloch波函数的周期部分。与H相VSe$_2$铁谷相近，单层H相VS$_2$也具有自发的谷极化，例如两个能谷之间的贝利曲率结构不再相等。如图\ref{fig:crystal}(f)所示，$K_{+}$和$K_{-}$的贝利曲率分别为19.58 $A^{-2}$和-19.52$A^{-2}$。
+
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/20210108/2}
+    \caption{\label{fig:control} 
+    二维双层多铁VS$_2$的多态调控，其中蓝色箭头代表铁电极化的方向。
+    }
+\end{figure}
+由于双层VS$_2$中层内反铁磁的铁电调控可以通过铁谷耦合，单层仍然是铁磁的，预示着具有再新一代高性能电子功能器件的重要应用潜能。如图\ref{fig:control}(a)和(b)所示，层间距d双层VS$_2$的磁性具有重要的影响。当从平衡位置$d_0$减小d，双层VS$_2$从反铁磁转变为铁磁，总磁矩随着$\delta_d$的增加而增加。更进一步的，当$\delta_d = 0.6 $A 时，净磁矩随着外电场E近乎线性变化，即$\mu_0 \Delta M = \alpha_S E$。当正向电场施加在z轴方向时，通过线性拟合方程$\mu_0 \Delta M = \beta_S E^2 + \alpha_S E$得到$P{\downarrow}M{\downarrow\uparrow}$构型的$\beta_S \approx -4.5 \times 10^{-22} Gcm^3/V^2$，$\alpha_S \approx -4.8 \times 10^{-14}$。对于$P{\uparrow}M{\uparrow\downarrow}$构型$\beta_S \approx -4.5 \times 10^{-22} Gcm^3/V^2$，$\alpha_S \approx 4.8 \times 10^{-14}$。对于其他构型也遵循同样的规律，具有相同的总磁矩绝对值，然而符号方向相反。在电场响应中，如图\ref{fig:field}所示，外加电场大于0.7 V/A时，双层的基态从反铁磁转变为铁磁状态。同时，系统的电子状态从半导体转变为金属。
+\begin{figure}[b]
+    \includegraphics[width=0.40\textwidth]{./img/20210108/3}
+    \caption{\label{fig:field} 
+    双层VS$_2$不考虑SOC情况下的净磁矩与层间距和外磁场变化的关系。红色和蓝色数据点分别为计算值和拟合值。
+    }
+\end{figure}
+
+\end{document}
