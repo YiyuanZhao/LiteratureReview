@@ -1,0 +1,77 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Observation of the charge density wave collective mode\\
+in the infrared optical response of VSe$_2$}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+使用光谱研究了高质量的单晶体块VSe$_2$的电子结构。在低于112K的转变温度进入CDW相时，VSe$_2$的光导率经历了显著的重组。高于转变温度情况下由于大约0.07eV的带间转移，有一种Drude响应被压制。从我们的分析中，我们估计Drude响应的光谱权重转移到CDW相的集体模式。剩余的正常态电荷动力学因为晶格间质量增强因子$m^{*}/m \approx 3$的出现而被显著衰减。加上电子结构发生的变化，我们发现了在低于转变温度下与$4a \times 4a$超晶格重组相结合的红外活跃声子模式的发散。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2101.03048}
+\end{description}
+\end{abstract}
+
+\keywords{optical properties}
+
+\maketitle
+\section{Highlights}
+\begin{itemize}
+    \item 多铁 \\
+    同时具有反铁磁性、铁电性等多种性质，相位为H相，堆叠为3R类型。
+    \item SOC \\
+    进行了SOC的计算，发现VS$_2$在$K_{+}$和$K_{-}$高对称点具有谷极化现象，且该现象与多铁性质并存。
+\end{itemize}
+
+\section{Introduction}
+早期的过渡族金属二硫化物VSe$_2$的研究聚焦在CDW转变中，近期的TMDCs研究展现了其作为2D材料的潜力。除此之外，体块中CDW相的特性，例如CDW能隙的大小、集体激发行为等仍然在争论中。例如角分辨光电子谱和扫描隧道光谱给出能隙的大小在13-130 meV不等。近期CDW敏感性对于缺陷和化学配比的影响也有报道。依赖于样品的生长条件和Se缺陷的迅速扩散，我们也确定了产生化学配比、干净的具有强化的CDW相转变温度的最优生长条件。近期的发展给出了研究体块电子特性的新思路，我们在此给出了VSe$_2$CDW相变的第一例带间光谱。下面将给出高质量单晶VSe$_2$的绝对反射率，并讨论穿越CDW相变的主要特点和变化。除此之外，我们的光谱数据指出发生了电子结构的显著重组。
+
+\section{Results\& Discussion}
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/20210115/1}
+    \caption{\label{fig:reflectivity} 
+    VSe$_2$在选择的温度下的反射率数据。子图表示远红外区域的反射率，光学支声子和其他的有关CDW特点可以清晰的观察到。
+    }
+\end{figure}
+图\ref{fig:reflectivity}给出了在很宽的能量范围中VSe$_2$的反射率，子图放大了低能区域。从输运性质的测量可以得到，尽管温度依赖和CDW相变很接近，但是VSe$_2$在正常态下是金属，即便降低到最低温度，电阻仍然是金属。由于在零频率时，所有的数据外推到单位元，因此可以推断反射率数据也给出了金属的响应。在正常态下，可以使用金属的Drude模型来得到简单的低频反射率的近似来预估直流电导率，此即为Hagen-Rubens关系。
+
+在正常态中，VSe$_2$的反射率小于25 meV，满足Hagen-Rubens近似。在CDW态，实验数据不再服从频率平方根的依赖关系，但是仍然近似外插到单位元。在$T \leq 32K$时更加显著，此时反射率在低于10 meV时与频率无关。这种关系代表存在余辉带（光学能隙），与低于转变温度的超导类似。光学能隙的大小为$2\Delta \approx 10 meV$，仍然与目前扫描隧道光谱给出的最低值小两倍。假设这是BCS关系的能隙和转变温度$T_c$的关系，则能隙值过于小，因此我们将这种光谱特性解释为其他原因。我们还观察到在低于$T_c$出现了四个尖峰，在图\ref{fig:reflectivity}中16K的温度下清晰可见。这些模式在正常态中缺失，在温度降低后极为显著。我们认为这些模式的出现为CDW相中红外活跃的光学声子。且这些尖峰的能量与实验分辨率无关。
+
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/20210115/2}
+    \caption{\label{fig:conductivity} 
+    光导率在对数能量坐标下的实部。虚线为Drude Lorentz模型下的外推值。在室温下清晰的Drude响应在低能区域占主导地位。与此相反，16K的数据因为Drude峰的剩余而出现能隙。短垂直虚线代表了图\ref{fig:weight}综合光谱权重曲线的截断能。
+    }
+\end{figure}
+
+图\ref{fig:reflectivity}给出了使用电介质函数近似下反射率中得到的光导率$\sigma_1(\omega)$。对于我们实验值的外插点，我们使用了Drude-Lorentz模型。基于我们的模型我们观察到至少五个带间过渡，中心位于0.07 eV，0.6 eV，1.1 eV，2 eV，和2.6 eV。最低能量过渡仅在CDW相中出现。我们发现在0.07 eV和1 eV的过渡给出了强烈的温度依赖关系，而其他过渡则没有温度依赖。16K的Drude-Lorentz模型也包含集体模式的贡献，对于得到低温情况下的良好描述极其有用。考虑较小但是有限的集体模式($\gamma \leq 2 meV$)后，可以得到良好的拟合效果。
+
+低于0.2 eV，光导率有室温下的Drude尖峰所主导，在温度降低时变得狭窄。在CDW转变温度以下，远红外光学响应经历了被压制的过程，直到在低于32K的情况下出现可见的光学能隙。光学权重在中心为0.07 eV的光学过渡强化下被联合去除。图\ref{fig:reflectivity}中光导率能隙的打开与接近单位元的反射率证明超导的出现。除此之外，与CDW相结合的平移对称性的破缺产生了GoldStone模式，即广为人知的滑移模式。这种滑移模式允许密度波无损耗的在基础晶格之间移动。这种模式在电介质函数实部中贡献了$\omega^{-2}$的依赖关系，从结果上在低于光学能量范围的能隙情况下将反射率推向单位元。我们因此尝试在低于$T_c$电荷密度波能隙打开时光导率发生的变化，以及与CDW序结合的滑移模式的发散。
+
+在此演绎下有一项重要的问题：APRES实验和理论研究给出VSe$_2$的CDW相中，只有在很少的费米面存在能隙。我们的光学数据在另一方面暗示了整个费米面发生的实质性能隙的出现。需要说明的是，光导率拟合性强烈依赖于反射率接近单位元的程度。
+
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/20210115/3}
+    \caption{\label{fig:weight} 
+    光
+    }
+\end{figure}
+
+\begin{figure}[t]
+    \includegraphics[width=0.40\textwidth]{./img/20210115/4}
+    \caption{\label{fig:weight} 
+    光
+    }
+\end{figure}
+\end{document}
