@@ -1,0 +1,63 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Transition from Schottky-to-Ohmic contacts in 1T VSe$_2$-based\\
+ van der Waals heterojunctions: Stacking and strain effects}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+由于超高电导率，室温下的铁磁性，强稳定性，单层1T-VSe$_2$时自旋电子学器件的有力二维材料。由于肖特基界面上强费米面固定效应的阻碍，与半导体的欧姆接触是高性能器件的理想属性。因此我们使用DFT寻找一系列VSe$_2$基的vdW异质结，由于耗尽区的解构和电子隧穿几率的增大，我们仅仅在多层VSe$_2$和MoSSe构成的异质结中发现了Ohmic接触。除此以外，通过施加合适的双轴压力应变，也可以导致VSe$_2$基金属-半导体异质结中Schottky向Ohmic类型接触的转变。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2101.03048}
+\end{description}
+\end{abstract}
+
+\keywords{Ohmic contact, heterojunctions}
+
+\maketitle
+
+\section{Introduction}
+二维金属-半导体过渡族金属二硫化物垂直异质结在纳米材料设计中扮演了重要的角色。然而金属-半导体结表面的强相互作用通常会导致费米面的固定效应(pinning effect)。除此以外，由于Schottky势垒的形成，化学无序、引入缺陷的能隙态、引入金属的能隙态、表面偶极子是表面处费米面固定效应的主要影响因素。近期，单层1T-VSe$_2$已经通过分子束外延的方法成功合成，其具有室温下的铁磁性、低温的CDW序等性质。除此以外，1T-VSe$_2$具有高达$10^6 S/m$ 的电导率，非常适合用来制作电极材料。需要指出，金属-半导体的金属-半导体结对于材料性能具有主要作用。总体来说Ohmic接触可以通过重掺杂来实现，在大系统中会面临许多困难。除此之外，将竖直电场施加到异质结也会削弱形成Ohmic接触所需要的Schottky势垒。然而，绝大多数所需要的电场强度都大于电子工业能产生的电场。因此通过有效的方法形成Ohmic接触仍然是一个巨大的挑战。
+
+最重要的一种用来区分Ohmic和Schottky接触的方式是Schottky势垒方法(SBH)，在集成电子器件中具有重要的应用。为了实现Ohmic接触，SBH必须减小到小于零。近期的研究证明，由于表面的弱vdW相互作用，Au/MoS$_2$接近Schottky-Mott极限。与传统3D材料相比，二维异质结由于没有悬垂化学键和更小的晶格不匹配性，更容易被人工合成。引入缺陷的能隙态在vdW异质结中可以被忽略。
+
+\section{Theroretical Methods}
+使用VASP工具包，GGA方法的PBE泛函，vdW相互作用使用DFT-D2修正，真空层厚度为15 A，截止能量为320 eV。能量收敛判据为$10^{-5}$ eV，力收敛判据为 0.01 eV/A。K格点密度为$11 \times 11 \times 1$，使用M-K的取样方法。为了得到MSJ的稳定性，使用有限位移法来计算声子谱。SOC和HSE06也被采用来检测异质结电子结构带来的影响。
+
+\section{Results \& Discussion}
+\begin{figure*}[t]
+    \includegraphics[width=0.80\textwidth]{./img/20210122/1}
+    \caption{\label{fig:electronic} 
+    (a)VSe$_2$功函数的能带基准和TMDs的能量面；(b)使用不同VSe$_2$/ML MoSSe堆叠方式的侧视图和对应的能量(c);(d)声子谱；(e)c型考虑和不考虑SOC的能带结构。
+    }
+\end{figure*}
+在我们的情况中，研究了一系列2D-TMDs/ML 1T-VSe$_2$。对于这些MSJs，能带的原理图通过GGA和PBE方法得到(图\ref{fig:electronic}a)，与先前计算的结果一致。优化后的晶格常数(a)和面之间的距离(d)显示了典型的vdW相互作用，其面间距在3.10 ~ 3.16 A之间。在此处，1T-VSe$_2$与ML TMDs的结合能定义为：$E_b = E_{sys} - E_{VSe_2} - E_{sem}$，三个能量分别为VSe$_2$基底结、1T-VSe$_2$和TMDs的总能量。需要注意的是，VSe$_2$/MoSSe和VSe$_2$/MoSeS结明显比VSe$_2$基的MSJ更低，意味着在实验中更容易制造。
+
+首先，我们研究了1T-VSe$_2$/MoSSe的电子结构。完全优化的VSe$_2$、MoSSe平面晶格参数分别为3.33 A和3.25 A，与以前的研究结论一致。VSe$_2$/MoSSe 不同堆叠模式的侧视图如图\ref{fig:electronic}b所示。由于总能量最低，最稳定的结构是c类型。同时，c类型的声子谱由于没有虚频，被证明可以稳定存在。
+
+理论上说，由于Janus MoSSe包含重原子Mo，SOC效应的影响应该在VSe$_2$/MoSSe中被考虑。因此我们计算了单层MoSSe的能带结构，能带结构给出的直接带隙为1.56 eV(PBE)、1.47 eV(PBE + SOC)和2.02 eV(HSE06)。通过PBE得到的1.56 eV能隙与实验值更接近。除此以外我们还得到了使用PBE计算VSe$_2$/MoSSe的能带结构。此时能隙从直接带隙转变为间接带隙，价带最顶端从K滑移到$\Gamma$点。明显地，能带结构在$\Gamma$点处分裂，且该分裂与SOC无关。除此以外，可以通过DOS得到$\Gamma$和K点主要由$d_{3z^2 - r^2}$和$d_{x^2 - y^2} + d_{xy}$分别贡献。因此，我们可以初步推断$\Gamma$点处的分裂主要由铁磁诱导构成。
+
+为了更进一步研究影响费米面固定的因素，我们计算了与层数有光的能带结构。在层数从单层到三层的过程中，只有在VSe$_2$/MoSSe中观察到了Schottky到Ohmic接触的转变。作为测试，我们计算了双层MoSSe/VSe$_2$的HSE06和SOC能带结构，结果都表明其为Ohmic接触，与我们的结果一致。除此以外，VSe$_2$/多层MoSSe的层间距也有少许降低。
+\begin{figure*}[t]
+    \includegraphics[width=0.70\textwidth]{./img/20210122/2}
+    \caption{\label{fig:strain} 
+    (a-b)沿着z方向的1L/2L/3L的VSe$_2$/MoSSe有效势，$\Phi_{TB}$给出了MoSSe($\Phi_{MoSSe}$)、vdW能隙($\Phi_{gap}$)的势能差，黑色虚线表示MoSSe的势能随着层数从单层到三层之间的增长；能带结构(c)、z方向VSe$_2$/MoSSe随着不同双轴应力形变的有效势场变化(d)；V原子的自旋密度在不同应力下在z方向的变化(e)。
+    }
+\end{figure*}
+为了消除不同层间距的影响，我们研究了单层与不同层间距结的能带结构，结果中没有导致Ohmic接触的转变。除此之外，我们还计算了VSe$_2$/MoSSe的PDOS，发现在禁止态中(图\ref{fig:strain}c-d)MoSSe几乎没有贡献，即在表面表现出弱金属-半导体结。在图\ref{fig:strain}e中，我们可以发现平面平均的电荷差分($\Delta \rho$)在单层到三层变化之间的变化。由于VSe$_2$/单层MoSSe是n型Schottky接触，表面的电子主要形成了耗尽层。当层数从双层变为三层时，表面电子主要从VSe$_2$流向MoSSe，这导致了耗尽层被摧毁，显示出弱表面偶极子特性。为了比较，具有相同接触类型VSe$_2$/MoS$_2$的$\Delta \rho$也被测量，结果表明表面电荷转移随着MoS$_2$层数的增加，电荷转移几乎不发生改变。这个结果预示着VSe$_2$/MoS$_2$的耗尽区没有被摧毁，而且不能转变成Ohmic接触。因此，弱引入金属的能隙态(MIGS)和表面偶极矩可以有效的压制费米面固定效应，从而接近Schottky-Mott极限。
+
+然而，在vdW接触中，由于界面不存在强轨道交叠，总是存在隧道势垒(图\ref{fig:strain}f)。小的隧道势垒可以有效提升表面载流子的迁移率。因此，隧道势垒在实现Ohmic接触中扮演了重要的地位。隧道势垒高度($\Phi_{TB}$)和宽度($W_{TB}$)是两个主要的决定量，可以表面的有效势来推测。实际上有效势$V_{eff}$代表了物质与其他电子、外静电场的相互作用，可以通过$V_{eff}(n) = V_H(n) + V_{xc}(n) + V_{ext}(n)$来得到，此处$V_H$时Hartree势、$V_{xc}$是交换关联势、$V_{ext}$则代表外部静电作用。在此我们通过有效势得到了隧穿纪律$P_{TB} = \exp \left( -\frac{2W_{TB}}{\hbar} \sqrt{2m\Phi_{TB}} \right)$，定义关联系数$G = W_{TB} \sqrt{\Phi_{TB}}$，该参数可以用来估计隧穿载流子。较低的G值预示着更小的隧穿载流子和更好的载流子注入效应。图\ref{fig:strain}b给出了单层到三层的有效势，黑色虚线表示MoSSe的势能随着层数从单层到三层之间显著增长。对应的G因子分别为10.9，6.1和5.2。预示着MoSSe层数的增长对于隧道势垒和Ohmic接触的形成具有重要的影响。
+
+除此以外，压力效应也是重要的影响相关电子属性的有效方法。在我们的研究中，考虑了在VSe$_2$/单层MoSSe的从Schottky到Ohmic接触的类型变化。当双轴应变达到 2\% 或更高时，能带结构在$\Gamma$处的劈裂随着双轴应变的增加而增加。而VSe$_2$/单层 MoSeS在不同应力的变化与之相反，原因在于
+\end{document}
