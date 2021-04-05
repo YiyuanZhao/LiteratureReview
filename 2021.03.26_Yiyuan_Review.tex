@@ -1,0 +1,78 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Large-scale preparation of 2D VSe2 through a defect-engineering approach \\
+for efficient hydrogen evolution reaction}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+过渡族金属二硫化物(TMDs)，例如VSe$_2$，在析氢反应的电触媒方向被广泛探索，然而触媒内禀的基底(inert basal planes)面限制了H$_2$的析出。因此我们采用了缺陷工程的方法，通过封口石英管的可控反应条件，在晶格中嵌入Se空位，激活VSe$_2$的内禀基底平面。Se空位通过调控V和Se的摩尔比来实现，即直接形成V$^{3+}$来修补电子构型，暴露更多触媒活性位点，降低氢化吸收的吉布斯自由能($\Delta G_H$)。改良后的VSe$_2$-1.8在现有密度10 mA cm$^{-2}$的情况下具有160 meV的过电势，与其他文献给出的结果相比，显示出其优势。除此之外，小的TaFel斜率(85 mV dec$^{-1}$)和48h的卓越稳定性证明了其快速的反应动能和长时间使用的可应用性。此外，理论计算结果表明，引入合适的Se空缺密度在基平面上实现分立的Se空缺，可以导致最优的$\Delta G_H$，实现更高的内禀HER活性。
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1016/j.cej.2021.128494}
+\end{description}
+\end{abstract}
+
+\keywords{Large-scale preparation, Hydrogen evolution reaction, Defect engineering}
+
+\maketitle
+
+\section{Introduction}
+电触媒水裂解是清洁高效率能量密度氢化燃料的原料。在诸多商用的HER电触媒中，Pt金属和其衍生物迄今为止被认为效率最高。然而，其广泛的应用受制于高成本、稀缺性、在酸性介质中的不可持续性受到阻碍。因此低成本，非贵金属的高性能HER具有迫切的需求。近期，2D TMD材料由于其特殊的层状结构和独特的物理化学性质，是十分有力的Pt基电触媒的替代品。然而触媒的内禀基准面由于绝大多数的HER活性位点存在于暴露的金属边缘，阻碍了其活性。因此有在层状结构中更多暴露活性位点的迫切需求。为了解决低HER性能的问题，我们考虑了包括晶格平面的升级、相调控、缺陷在内的三种类别。首先，高密度的活性边缘位点通过微观/纳米加工方法来控制生长和多种形貌的发展，例如纳米层、纳米管、纳米球、纳米线、纳米点等，来增强其性能。然而形貌控制不能有效激活基面，由于大多数TMDs在自然中以半导体的形式存在，因此第二个原因是使用相调控来提高导电性。这种加工方式包括半导体相2H和金属相1T之间的相变，有助于提高触媒的活性。
+
+然而1T结构的热不稳定性和材料设计的复杂性制约了其在应用上的发展。Tan et al.发展了高百分比的1T相TMD单层纳米点，由于高密度的边缘活性位点，高百分比的1T相该结构给出了强化的HER性能，且MoSSe达到了140 mV的低过电势。然而，热不稳定性是其商用的最大限制。缺陷修饰被考虑为修饰能带结构的等效近似，即修饰电子构型和激活基平面。例如，Ouyang et al.在单层MoS$_2$中引入了16中不同的结构缺陷，包括点缺陷和颗粒状的边界，来激活基平面，不仅改善了HER，与体块材料相比也显著增强了反应能。相似的，Sun et al.在机械剥离的WSe$_2$单层纳米层中，通过不同温度降温的方式引入了Se缺陷。这种降温方式通常用来优化缺陷的数量。理论预言和实验都证明基平面的Se缺陷在HER中以激活位点的形式出现。从上述讨论中，引入缺陷不仅仅改善了激活位点的数量，还激活了基平面，从而提高了整体的性能。典型的，VSe$_2$层状结构由一层V原子被三明治型夹在两层Se原子之间形成，层与层之间通过范德瓦尔斯力连接。由于层状结构更倾向于暴露更多位点，具有高达1000 S m$^{-1}$的超高导电性。VSe$_2$是HER的有力竞争者。在过去的几年中，VSe$_2$基的HER触媒被广泛研究。例如Zhao et al.制备了单层VSe$_2$，其层厚为~0.4 nm，具有金属的性质。其设计的VSe$_2$在10mA cm$^{-2}$ 具有206 mV的过电势。Hu et al.通过化学气相沉积法合成出三元VSSe单晶管，在纯导体态引入了丰富的激活位点。除此之外，不同的沉积材料由于与V$^{3+}$共存和层间距(0 0 1)面的延展，会给出更多的S或Se缺陷。VSSe-V在10 mA cm$^2$显示出180 meV的过电势。理论计算进一步表明转移介质VCl$_3$引入了更多的缺陷，增强了导电性和更低的H吸收能。相同方式，Zhu et al.在羰基上合成并优化了Co掺杂的VSe$_2$纳米层，过电势为230 meV。DFT计算给出Co掺杂剂显著降低了氢化吸收的吉布斯自由能，通过快电子转移和强化反应动能可以达到同样条件。通过这些讨论，可以得出结论缺陷调控可以降低$\Delta G_H$，优化电子构型，提高反应动能并激活基平面的活性位点，因此得到了更好的HER性能。
+
+在这个工作中，缺陷调控的技术由多层VSe$_2$的基平面引入Se缺陷，通过V和Se在850℃的配比，来制造暴露更多的活性位点。Se缺陷的引入通过VSe$_2$的晶格和形貌优化了V和Se之间的结合能，这对于设计合理的电子构型和价态来强化HER性能至关重要。除此以外，进一步的理论计算预示着引入合适的Se缺陷密度，实现分立的基平面缺陷，可以获得最优的$\Delta G_H$，从而实现更高的内禀HER活性。重要的是，得到的最优VSe$_2$-1.8样品具有160 meV的过电势和48h的稳定性。因此缺陷调控的方法可以有效地改善2D TMDs的HER性能。
+
+\begin{figure*}[t]
+    \includegraphics[width=0.5 \textwidth]{./img/20210326/1}
+    \caption{\label{fig:reaction} 
+    (a)反应炉；(b)10种温度环境的反应釜；(c)密封VSe$_2$的石英管；(d)VSe$_2$的合成路线；(e)VSe$_2$-1.8的SEM图像；(f)VSe$_2$-1.8的HRTEM图像；(g)VSe$_2$的HER模型；(h)VSe$_2$的暗区图像和对应的(i)V、(j)Se元素。
+    }
+\end{figure*}
+
+
+\section{Results \& Discussion}
+我们制备的VSe$_2$-1.8样品的形貌由扫描电子显微镜(SEM)给出，图像显示样品具有 ~5 $\mu m$厚度和 ~100 $\mu m$长度的层状结构(图\ref{fig:reaction}e)。作为比较，VSe$_2$-1.6的SEM图像则给出了不同的尺寸和部分。SEM图样给出Se缺陷会对VSe$_2$的形貌造成显著的影响。VSe$_2$-1.8的高分辨率TEM给出(0 1 1)和(1 0 0)面的面间距分别为0.26和0.29 nm(图\ref{fig:reaction}f)。制备的VSe$_2$样品可以作为氢化反应的有效电触媒，HER模型如图\ref{fig:reaction}g所示。图\ref{fig:reaction}h-j确定了V和Se在多层结构中分布均匀。
+\begin{figure*}[t]
+    \includegraphics[width=0.5\textwidth]{./img/20210326/2}
+    \caption{\label{fig:xrd} 
+    不同配比的XRD图样。
+    }
+\end{figure*}
+
+为了确定样品的晶格结构，我们还进行了XRD的测试。测试结果表明样品具有纯相(图\ref{fig:xrd}a)衍射在VSe$_2$-1.6处的尖峰预示着大量Se缺陷的出现可能损害了晶格结构的周期性。相反，在VSe$_2$-1.8附近出现的尖峰则表示Se缺陷与晶格的结合良好。相对较弱的(0 0 l)衍射峰可以归结于TMD的典型空间结构。VSe$_2$-2.0位于(0 0 l)的尖峰被显著强化，而其他的则被削弱。强烈的峰意味着VSe$_2$-2.0沿着c轴具有高晶格取向，这与单晶的性质相似。观察到的衍射峰位于14.5， 29.2，44.5和60.6°，因此可以确认Se空位对于晶体的演化具有显著影响。除此之外， Se空位的出现由电子顺磁共振谱给出，如图\ref{fig:xrd}b所示。对于VSe$_2$-1.6和VSe$_2$-1.8，明显地EPR信号可以在g=2.0027处找到，预示着Se缺陷的出现。化学配比与Se缺陷的密度经过计算可以得到，对应的Se缺陷分别为21\%、11.45\%和1.75\%。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210326/3}
+    \caption{\label{fig:HER} 
+    VSe$_2$样品的HER性能。(a)VSe$_2$-1.8，VSe$_2$-1.6，VSe$_2$-2.0的极化曲线。(b)通过极化曲线得到的Tafel斜率。(c)VSe$_2$-1.8在1000CV循环前后的极化曲线；(d)VSe$_2$-1.8在48h后的长期稳定性曲线；(e)VSe$_2$-1.6，VSe$_2$-1.8，VSe$_2$-2.0的Nyquist图像；(f)VSe$_2$-1.8的过电势与其他文献的比较。
+    }
+\end{figure*}
+
+HER反应能通过计算Tafel斜率给出。VSe$_2$-1.8给出了更低的Tafel斜率。更低VSe$_2$-1.8的Tafel斜率给出了与其他材料更快速的反应动能。更进一步，触媒稳定性是大规模商用不可避免的因素，因此VSe$_2$-1.8样品记录了1000个CV循环前后的极化曲线，曲线显示出过电势损失最小的结构偏向于VSe$_2$-1.8，(图\ref{fig:HER}c)。相似的，长程稳定性给出了在经过48h后，电流密度产生了不可忽略的减小。电流密度的减小可能与系统中质子的消耗和氢气在触媒表面产生气泡积累的方式有关。反应的动能通过测量Nyquist来实现，如图\ref{fig:HER}e所示。电路包括一系列的电阻($R_S$)、电荷转移电阻($R_{CT}$)和常数相位单元(CPE)。更小的电荷转移电阻意味着更快的电荷转移，和更优的HER反应速率。源于$R_{CT}$值的VSe$_2$-1.6，VSe$_2$-1.8，VSe$_2$-2.0拟合值为38，18，和16$\Omega$。当Se缺陷增加，VSe$_2$晶格的周期结构被破坏，导致了更坏的结晶性(图\ref{fig:xrd}a)。因此，内禀的VSe$_2$电导降低，反映了更大的$R_{CT}$值。然而，Se缺陷的出现可以作为激活位点出现，导致VSe$_2$-1.8比VSe$_2$-2.0具有更好的HER活性。因此通过缺陷操控来增强HER来达到最优的Se缺陷浓度和VSe$_2$晶体的导电性是十分重要的。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210326/4}
+    \caption{\label{fig:CV} 
+    不同VSe$_2$配比的CV(Cyclic voltammogram)曲线。(a)VSe$_2$-1.6, (b)VSe$_2$-1.8, (c)VSe$_2$-2.0。(d)VSe$_2$-1.6，VSe$_2$-1.8和VSe$_2$-2.0的双层电容值；(e)N$_2$的吸收-释放曲线；(f)H$_2$的理论与实际数量曲线。
+    }
+\end{figure*}
+
+为了进一步的确定有效位点的暴露性，电化学有效表面区域(ESCA)使用双层电容的方式也被计算。如图(\ref{fig:CV}a-c)所示，VSe$_2$-1.6，VSe$_2$-1.8，VSe$_2$-2.0的CV曲线给出了矩形的形状，预示着电化学中发生的简单电子和离子的转换。通过绘制不同电荷密度($\Delta J$)阴极和阳极的线性拟合曲线，VSe$_2$-1.6，VSe$_2$-1.8，VSe$_2$-2.0给出的$C_{dl}$值为8.95，18.1和8.74。基于ECSA与$C_{dl}$成正比的原因，ECSA值可以写成：
+\begin{equation}
+    ECSA = RF \times S = \frac{C_{dl}}{C_s}
+\end{equation}
+VSe$_2$-1.8处的ECSA几乎是VSe$_2$-1.6和VSe$_2$-2.0的两倍。除此之外，三种VSe$_2$样品的总表面积由N$_2$吸收/释放测量(图\ref{fig:CV}e)。BET结果证明VSe$_2$-1.8具有最大的总电化学活性表面积，导致了最大的HER性能。
+
+除此以外，VSe$_2$-1.8在氢化反应的的法拉第效率通过文献报道的方式进行了测量。为了确定VSe$_2$-1.8的法拉第效率，在HER收集氢气的反应中，施加了120 min的常电流，其大小为50 mA/cm$^2$。如图\ref{fig:CV}f所示，VSe$_2$-1.8的法拉第效率计算值约为97\%。为了研究三种VSe$_2$样品的内禀触媒活性，我们计算了转置频率。在同样的250 mV过电势的条件下，VSe$_2$-1.6，VSe$_2$-1.8和VSe$_2$-2.0的计算值为0.7，1.8和0.15 s$^{-1}$。有效表面位点密度给出了VSe$_2$-1.8具有更高的触媒活性。
+\end{document}
+

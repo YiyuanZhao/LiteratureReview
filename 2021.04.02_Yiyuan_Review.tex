@@ -1,0 +1,65 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Crossover from Kondo to Fermi-liquid behavior induced by high magnetic field \\
+in 1T-VTe2 single crystals}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+研究了金属相1T-VTe$_2$单晶在1.3-300K和0-35T的磁场下的磁性和磁输运性质。通过施加高磁场，我们发现在低温下电阻率出现了单杂质Kondo效应的对数发散到Fermi液体的交叉。高于Kondo温度$T_K = 12 K$布里渊区范围内的负磁阻预示着Kondo特征源自于插层的$S = 1/2$的V原子，磁极化率和Hall效应在$T_K$附近反常。通过修饰的Hamann表达式，我们成功描述了在不同磁场下的温度依赖的电阻，即由于Kondo共振的分裂，在小于$T_K$方向出现的特征。
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1103/PhysRevB.103.125115}
+\end{description}
+\end{abstract}
+
+\keywords{Kondo Effect}
+
+\maketitle
+
+\section{Introduction}
+层状过渡族金属二硫化物(TDMCs)由于众多物理性质和广阔的应用前景而受到广泛关注。体块TDMCs具有广泛的输运性质，例如通过CDW出现的正常超导、低温下超大的正磁阻等。除此以外，层状TMDCs很容易通过金属原子实现插层。例如Cu插层的TiSe$_2$在掺杂下表CDW-超导的相变；当磁性的3d过渡族金属(Co, Ni, Fe)插层到TiSe$_2$，在稀释极限下就会引入Kondo效应。相似地，在体块VSe$_2$中也有报道Kondo效应的出现，可能是插层V原子所导致的。除此之外，TMDCs是研究插层对电子性质和晶格维度影响的理想材料。随着剥离法和外延法的发展，单层TMDCs可以成功被制备出来，单层与体块结构具有明显不同的性质。与体块VSe$_2$的顺磁性不同，单层VSe$_2$在室温下具有磁性。单层VTe$_2$情况类似，CDW相变被压制。在体块VTe$_2$中，在冷却穿过480K时会发生CDW相变，同时伴随着从高温相1T结构向低温单斜相的相变出现。使用蒸汽转移法，单晶VTe$_2$具有单斜结构，对应于低温的形貌。与此相反，高温形态的1T-VTe$_2$单晶可以通过molten-salt方法制备。进一步地，Kondo效应的特点在1T-VTe$_2$纳米盘中被发现。
+
+我们研究了高磁场情况下1T-VTe$_2$单晶Kondo效应的演化。金属局域的杂质和内禀电子之间的自旋交换作用在费米面产生了新的态，被称之为Kondo共振/Abrikosov-Sulh共振峰。新态的出现预示着低于Kondo温度$T_K$会发生的反常电阻的反转，这是一种能量范围对自旋交换耦合的依赖效应，限制了Kondo效应的活性。特别地，Kondo系统温度依赖的电阻$\rho(T)$给出了在略低于$T_K$小范围内，随着温度的降低而近似对数增长，而在$T \ll T_K$区域则表现为Fermi液体。除此之外，Kondo共振在施加外磁场后的分裂与温度和磁场依赖的电阻$\rho(T, B)$的特征峰有关。对于单个Kondo杂质，这些输运性质可以通过非微扰近似来计算，例如数值重整化群方法。然而除去这些手段，低温电导行为的系统性理解仍然十分匮乏，尤其时在高磁场的情况下。
+
+我们系统的研究了1T-VTe$_2$单晶在高磁场情况下的输运和磁性。磁矩、电阻和霍尔效应随着温度和磁场的依赖性揭示了在$T_K = 12 K$条件下Kondo效应的特性。磁极化率和MR测量确定了在$S = 1/2$情况下插层V原子的局域磁矩。在低于$T_B$出现的$\rho(T, B)$特征峰可以通过修饰的Hamann表达式来分析。在磁场增加到35T时，Kondo效应逐渐被压制，Fermi液体的行为在低温逐渐扩散。
+
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210402/1}
+    \caption{\label{fig:XRD} 
+    1T-VTe$_2$单晶的X射线衍射图样。(内图)1T-VTe$_2$的原子结构。橄榄色和紫色分别代表V和Te原子。
+    }
+\end{figure}
+
+\section{Results \& Discussion}
+\subsection{X-ray diffraction}
+1T-VTe$_2$单晶在室温下的XRD图样可以由图\ref{fig:XRD}所示，VTe$_2$单晶给出了三角CdI$_2$-类型的结构(1T相)。V-Te层沿着c轴通过vdW力堆叠，通过输运和磁性性质，在低至1.3 K不存在额外的结构相变。尖锐的(0 0 l)布拉格峰清晰可见，遵循晶格常数c = 6.456 A。通过蒸汽转移法植被的单晶，CDW态导致了单斜结构，其c = 9.069 A。EDX分析指出1T-VTe$_2$的V:Te成分比接近$(1.01 \pm 0.03) : 2$。
+\subsection{Resistivity \& magnetic susceptiibility}
+\begin{figure}[b]
+    \includegraphics[width=0.4\textwidth]{./img/20210402/1}
+    \caption{\label{fig:Resistivity} 
+    (a)VTe$_2$面内的电导率随温度的依赖关系，红色是公式的拟合结果，内图是低温区域的半对数绘图，蓝线代表$- \ln T$依赖关系；(b)VTe$_2$磁极化率随着温度依赖关系的半对绘图，红线是Curie-Weiss拟合，内图是在2K处测量的磁矩随磁场的变化关系。蓝线使用公式的布里渊公式计算得到的$M(B)$。
+    }
+\end{figure}
+电导率$\rho(T)$与温度的依赖关系如图\ref{fig:Resistivity}(a)所示。在300K时，$\rho$的大小为$172.5 \mu\Omega$ cm。与在单晶$V_{1-X}Ti_xTe_2$中观察到的CDW相变不同，单晶VTe$_2$在低至2K的过程中没有发现相变的显著证据。$\rho(T)$在从室温降温开始逐渐降低，在16K附近达到最小值。与金属相似的，电阻在温度低于最小值情况下，随着温度的降低而增加。图\ref{fig:Resistivity}(a)内图给出了半对数的行为。对数增加是Kondo系统的特征，其原因为电子-磁性杂质相互作用传导的贡献。除此以外，在低于5K的情况下，从对数增加变为发散，主要由于自旋补偿态或磁性杂质之间的Ruderman-Kittel-Kasuya-Yosida(RKKY)相互作用而出现。余阻率$\rho(300K)/\rho(16K)$相对较小，在单晶中预估值为2.2。这与Kondo系统中少量杂质的情况一致。因此测量的电阻是典型的电子-声子和电子-电子相互作用、导电子的自旋散射的和。首先我们聚焦于电阻的高温行为，此时考虑Kondo项为常数。如图\ref{fig:Resistivity}(a)所示，我们使用下式来拟合电阻率：
+\begin{eqnarray}
+    \rho(T) &=& \rho_0 + \rho_K + aT^2 + \rho_{ph}(T)\label{rho} \\
+    \rho_{ph}(T) &=& \alpha \left( \frac{T}{\Theta_R} \right)^5 \int_0^{\frac{\Theta_R}{T}} \frac{x^5}{(e^x - 1)(1 - e^x)} dx\label{rhoph}
+\end{eqnarray}
+在该模型中，$\alpha$是正比于电子声子耦合的常数，$\Theta_R$是居里温度。从我们的电阻分析中得到的居里温度为$\Theta_R = 274 K$接近实际的$\Theta_R = 167 \pm 20$ K。这种近似在低温下失效。图\ref{fig:Resistivity}(b)给出了磁极化率与温度的依赖关系。随着温度在1T磁场中增加，极化率单调递增。在温度低至2K的情况下，没有观测到磁序。如红线所示，极化率在5-300K的情况可以通过修饰的Cuire-Weiss公式给出：
+\begin{equation}
+    \chi(T) = \chi_0 - fT + \frac{C}{T - \theta} \label{Cuire-Weiss}
+\end{equation}
+此处$\chi_0 = 1.45 \times 10^{-3}$ emu/mol是VTe$_2$导电子Pauli极化率。一般来说，金属样品的Pauli极化率与温度无关。然而在我们的情况下，需要在拟合项增加$-fT$的额外项。温度依赖的Pauli极化率可能源自于费米面和布里渊区的相关尺寸效应。在此处，磁各向异性随着温度的增高而变小。例如，在$\alpha-U$单晶中，可以观察到类似的现象。关于$\chi$类似的线性温度依赖关系也在NiTe$_2$中被观测到，即观察到了自旋极化的拓扑表面态。
+\end{document}
+
