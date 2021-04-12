@@ -1,0 +1,73 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Electronic and magnetic characterization of epitaxial VSe$_2$ monolayers\\
+ on superconducting NbSe$_2$}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+二维范德瓦尔斯材料的异质结在近期受到了广泛的关注。在垂直异质结集成不同的量子基态被预言具有单组份层状所不具有的新奇电子结构。在此处，我们给出了超导-磁性混杂的异质结的直接合成方法，通过将超导NbSe$_2$和单层VSe$_2$结合起来的方式。超高真空下的分子束外延法给出了清洁、原子层厚度的界面。结合不同的表征手段和DFT计算，我们给出了在NbSe$_2$基底生长的单层VSe$_2$的电子和磁性结构。低温扫描隧道显微镜给出了典型的VSe$_2$中CDW的缺失，证明了NbSe$_2$基底的VSe$_2$超导能隙的减小。这意味着VSe$_2$层存在至少在居于范围内的磁化。
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1038/s42005-020-0377-4}
+\end{description}
+\end{abstract}
+
+\keywords{heterostructure}
+
+\maketitle
+
+\section{Results \& Discussion}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210409/1}
+    \caption{\label{fig:Electronic} 
+    (a)远程实验$dI/dV$谱；(b)在NbSe$_2$表面顶部常数距离的局域态密度积分给出的模拟扫描隧道光谱，实线和虚线给出了不同能量展宽下的谱线；(c)体块NbSe$_2$计算的DOS。
+    }
+\end{figure}
+
+\subsection{Electronic properties of VSe$_2$}
+图\ref{fig:Electronic}a给出了DFT和扫描隧道光谱的典型微分电导。对于NbSe$_2$反应，在正偏差(空态区)，体块NbSe$_2$在~0.3 V和~ 1.8 V具有宽广的响应峰。在负偏差区域，$dI/dV$展宽增大，且增长。第一个正方向的展宽特征峰可以通过源自于Nb的能带产生，而负方向的展宽特征则主要由费米面之下的Se贡献。模拟和实验的电子结构如图a-f所示。在图\ref{fig:STS}d中，在正负两边靠近费米面处都出现了峰值，在双层情况下更为明显。其间隔的能隙为~0.2 V。在更大的偏移方向，单双层具有不同的特征峰。谱线在VSe$_2$岛的中心并不是位置依赖的。在非磁态，计算的能带结构部分填充d能带(图\ref{fig:STS}a)。在$\Gamma$和K之间，出现了平带，且出现在费米面附近，这导致了费米面处DOS的强峰值，这与实验光谱给出的结论相违背。非磁态在计算中不稳定，可能导致CDW、磁性等，主要取决于不同的情况(压力、掺杂、缺陷等)。在CDW态，DOS在略高于费米面具有明显的赝能隙结构。模拟的STS与实验值相一致，我们没有在实验中探测到CDW，因此没有发现费米面附近的能隙。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210409/2}
+    \caption{\label{fig:STS} 
+    (a)非磁性态VSe$_2$能带的计算值；(b), (c)投影DOS和模拟$dI/dV$谱；(d)单/双层VSe$_2$的典型长程实验$dI/dV$谱；(e)计算的投影DOS；(f)铁磁基态的DOS。
+    }
+\end{figure*}
+
+在FM态，自旋向上/下的能带结构仅仅在能量上有平移，磁矩的计算与压力、计算参数有温和依赖关系。因此DOS和模拟STS的峰都有劈裂，这与NM相不同。由于费米面处DOS的分裂，更低的分支可以解释n1/n2略高于费米面更高分支的衰减。FM相的模拟和实验结论相距更近，拟合效果更好。VSe$_2$谱线在接近费米面处最重要的特征被预言来自于近$\Gamma$点处的高态密度。我们没有观测到$dI/dV$光谱的强变化。
+
+\subsection{Magnetic properties of VSe$_2$}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210409/3}
+    \caption{\label{fig:Magnetic} 
+    (a)在$T = 10 - 300K$测量的磁滞回线；(b)剩磁$M_s$和矫顽力$H_c$与温度的依赖关系。
+    }
+\end{figure}
+我们进行了不同温度下的磁性测量。所有VSe$_2$样品都给出了面内的磁响应，如图\ref{fig:Magnetic}a所示，循环具有较小的矫顽力和剩磁，但是具有~200-300 mT的穿透，与线性背景无关。与图\ref{fig:STS}b有关，矫顽力很小，剩磁在10-300K的范围内，与温度无关，我们在图\ref{fig:STS}a中拟合了T = 10 K的布里渊公式，与先前文献记载一致，即顺磁背景信号的出现。拟合的好坏程度预示着这样的背景对于磁性测量具有显著的影响。在图\ref{fig:STS}b中，小的铁磁信号也在样品中出现。由于顺磁的贡献，我们无法定量评估体块磁性测量的铁磁响应。
+
+化学剥离的VSe$_2$层显示铁磁响应，其居里温度为470K。由于在基底和VSe$_2$层之间不存在严格的对齐，MBE生长的结果显示出2D多晶性质，且该性质会被与基底的相互作用所影响。DFT计算给出不同基态的能量差很小(CDW和磁性)。基底出现的小微扰、互相覆盖、样品质量都可能导致观测行为的变化。然而局域测量(例如STM)可以给出铁磁。有争论称在石墨上生长的VSe$_2$不存在传统的磁性。在此处，我们的样品与石墨上生长的样品的最可能的区别来自于基底的NbSe$_2$。我们的DFT计算也给出了CDW的稳定性对压力、掺杂、缺陷数量十分敏感。除此以外，单层VSe$_2$样品在$T = 100 K$显示出最大的剩磁和矫顽力。这种非单调的行为归结于CDW相变。这与我们的磁性随温度的变化趋势不一致。CDW相变的出现从零场冷却和场冷却的磁性测量独立得出，我们没有观察到ZFC和FC曲线斜率的显著变化。样品在超导转变温度下的磁性响应主要由超导NbSe$_2$基底所贡献。$M(H)$在2K的曲线给出了超导抗磁性。在这些磁化曲线之间，不存在明显的变化，预示着信号主要由体块NbSe$_2$贡献。$T_c$对磁性掺杂非常敏感，在金属原子掺杂下，$T_c$剧烈下降。这意味着在正常生长温度下，由于插层，不会有任何V原子的损失。将生长温度提高至$T > 300 $℃，将导致V的插层，进一步导致了长程NbSe$_2$的CDW的出现。
+
+\subsection{Proximity-induced superconductivity in monolayer VSe$_2$}
+超导近邻效应可以自发的驱动非超导材料进入超导态。然而这种图景在超导体与磁性层状材料接触时，会有所不同。在铁磁的情况，超导序参量会在超导-铁磁表面的超短相干长度$\zeta_F$(通常为nm级别)指数衰减。除此之外，铁磁的配对势能$\Delta_p$给出了强振荡，且由于内在的铁磁交换场逐渐衰减。这种现象也可以发生在VSe$_2$/NbSe$_2$。
+\begin{figure*}[b]
+    \includegraphics[width=0.8\textwidth]{./img/20210409/4}
+    \caption{\label{fig:dIdV} 
+    dI/dV 谱。
+    }
+\end{figure*}
+图\ref{fig:dIdV}a给出了不同厚度的dI/dV曲线。在NbSe$_2$，我们观察到了典型的超导能隙：在费米面处观察到了DOS的凹陷，在能隙的两边都存在相干峰。在单层和双层VSe$_2$层测量的谱线给出了超导能隙，但能隙的宽度与裸NbSe$_2$相比显著减小。由于VSe$_2$没有足够的厚度，我们没有观察到配对势能的振荡现象。为了进一步研究SC能隙宽度，我们使用了简单的解析关系$\Delta \approx \Delta_{NbSe_2} e^{-d/\lambda}$。我们通过拟合的方式提出能隙的宽度，并在图\ref{fig:dIdV}b中给出。能隙的减小服从指数衰减关系，其衰减特征长度为$\lambda = 1.3 \pm 0.1$ nm。然而衰减长度与NbSe$_2$基底的Bi$_2$Se$_3$实验值$\lambda = 8.4$ nm相比远大于该值。更加快速的可能解释为VSe$_2$的磁性导致的。在这种情况下，VSe$_2$层状结构的磁性会给出更短的相干距离$\zeta_F$，而不是通过散射机制(即NbSe$_2$基底的Bi$_2$Se$_3$情况)。减小的能隙在VSe$_2$岛上分布均一。即期与单层VSe$_2$的体块性质相关，而不是简单的掺杂效应所引起的。
+
+\section{Questions}
+实验中出现了许多与其他文献不匹配的现象(如没有观察到CDW等)，VSe$_2$可能具有繁多的状态(有无CDW、有无磁性)，是否与DFT中不同相能量相差很小的计算结果相匹配？即不同状态的小能量差距，导致了不同的基态产生，从而使得不同实验条件下的结果出现不同？
+\end{document}
+
