@@ -5,4 +5,5 @@ img/
 *.gz
 *.log
 *.aux
-*.doc*
+*.docx
+*.doc

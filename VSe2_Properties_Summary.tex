@@ -1,0 +1,322 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{VSe$_2$ ground state determination \\
+and magnetic properties
+}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+VSe$_2$的理论计算、实验文章给出的材料性质各异，在不同的实验条件/理论计算参数下，VSe$_2$具有不同的性质。本文汇总了近期不同理论、实验的文献中，对VSe$_2$基态相的确定和相关的磁性性质，同时也对该文献研究的主要问题和亮点予以列出。
+\end{abstract}
+
+\keywords{VSe$_2$, ground state, magnetic property}
+
+\maketitle
+
+\section{Literature Review}
+文献\cite{Kezilebieke2020}给出，VSe$_2$的基态相可能是H或T相、FM或AFM构型、存在或不存在CDW。计算结果取决于选择的泛函，压力或掺杂。近期使用MBE的实验结果都给出了1T相的结构，目前没有成功合成2H相的证据出现。表\ref{table:Kezilebieke2020_FunctionTest}给出了该文献对不同泛函的T相测试结果，表\ref{table:Kezilebieke2020_PhaseTest}给出了该文献对一些测试泛函中H相与T相的能量差。给出的磁矩为0.5-1.6 $\mu_B$。该文献同时还在不同温度进行了磁矩测量的实验，具体可见图\ref{fig:Kezilebieke2020_Magmum}，给出的磁矩是以emu cm$^{-2}$为单位的，根据磁矩转换的推导式\ref{eqn:Appendix2dCaseMagmum}得到的磁矩如表\ref{table:Result_Summary}所示。文献还进行了不同赝势的测试，测试结果如表\ref{table:Kezilebieke2020_FunctionTest}所示，不同赝势给出了差距很大的磁矩($0.5-1.6 \mu_B$)，其中LDA给出了CDW基态，其他则给出了FM基态(未计算AFM态)。表\ref{table:Kezilebieke2020_PhaseTest}给出，revB86b赝势在加U条件下给出T相基态，而其他赝势则给出了H相的基态。文献给出在低温STM下，VSe$_2$会缺失CDW态，且NbSe$_2$基VSe$_2$的出现会减小超导NbSe$_2$的gap。
+
+文献\cite{Bonilla2018}发现单层VSe$_2$具有室温下的铁磁性。单层VSe$_2$分别在HOPE和MoS$_2$两种基底上生长，两种不同基底具有不同的磁矩。在HOPE测量的磁矩如图\ref{fig:Bonilla2018_VSe2onHOPG}所示，在MoS$_2$基底上生长的样品测量的磁矩如图\ref{fig:Bonilla2018_VSe2onMoS2}所示，在MoS$_2$生长的样品具有更强的磁性。直到室温下，依然具有~2500 emu cm$^{-2}$的磁矩。
+
+文献\cite{PhysRevB.96.235147}测试了多种赝势对不同相的影响，图\ref{fig:PhysRevB.96.235147_ML}、图\ref{fig:PhysRevB.96.235147_Bilayer}和图\ref{fig:PhysRevB.96.235147_Bulk}分别给出了单层、双层和体块VSe$_2$的T/H相能量计算结果。对于单层、双层结构，在U较小时，绝大多数赝势都给出H相是物质的基态，LDA给出的基态是T相，在U较大时，所有赝势都给出T相是材料的基态，U为零时，T相和H相之间的能量差为几十meV数量级；对于体块结构，DFT-D2给出了T相的基态，其余赝势都给出了H相的基态。随着U的增大，大多数赝势都给出了H相基态到T相基态，再到H相基态的变化趋势。除此以外，文献还使用PBE和optPBE弛豫的晶格对比(表\ref{table:PhysRevB.96.235147_LatticeConst})，作为该文章选择赝势的标准。该文章还进行了单层和双层情况下，多个不同磁性构型(图\ref{fig:PhysRevB.96.235147_MagConfiguration})的计算，计算结果如表\ref{table:PhysRevB.96.235147_MagConfiguration}所示。对于单层结构，1T和2H都给出了铁磁基态的结果；对于双层结构，T相给出铁磁基态($\Delta E = 2 meV$)，而H相给出层间反铁磁基态($\Delta E = -1 meV$)，层内反铁磁始终能量更高。具体不同相的计算汇总如表\ref{table:Result_Summary}所示，文献给出的数据如表\ref{table:PhysRevB.96.235147_Hubbard-U_Monolayer}(单层结构)和表\ref{table:PhysRevB.96.235147_Hubbard-U_Bilayer}所示。在该计算中，采用了optPBE进行计算，并给出了优化过后的晶格结构。从表\ref{table:PhysRevB.96.235147_Hubbard-U_Monolayer}中，$U_{eff}$从0增加到1，原胞的磁矩显著增大，体系始终处于H相基态；从表\ref{table:PhysRevB.96.235147_Hubbard-U_Bilayer}中，$U_{eff}$从0增加到1，体系仍然处于H相基态。
+
+文献\cite{doi:10.1021/acs.nanolett.8b01649}使用角分辨光电子谱对双层石墨烯/SiC基底上生长的单层VSe$_2$进行了表征，在低于$T_c = 140 \pm 5$ K时，会在费米面之上出现能隙，同时发现了电荷序的存在。该样品的磁性测量没有给出磁性序。在40K和200K测量的CDW如图\ref{fig:acs.nanolett.8b01649_CDW}c所示，汇总结果如表\ref{table:Result_Summary}所示。
+
+文献\cite{doi:10.1021/acs.jpcc.9b04281}在HOPE和MoS$_2$上生长出了单层VSe$_2$样品，APRES测量(图\ref{fig:acs.jpcc.9b04281_APRES})给出了缺失的自旋极化能带，体块和单层的APRES结构几近相同，且与DFT非磁性计算能带结果接近，可以得到单层结构是非磁性的。在MoS$_2$基底上，如图\ref{fig:acs.jpcc.9b04281_STM}所示，发现了Moire结构的CDW($\sqrt{3}R30 \times \sqrt{7}R19.1$)。Spin-restricted DFT的声子谱(图\ref{fig:acs.jpcc.9b04281_Phono}a)给出了若干虚频，而自旋极化的DFT声子谱(\ref{fig:acs.jpcc.9b04281_Phono}b)则给出了稳定的构型，因此可以推断CDW和磁性存在着竞争关系。
+
+文献\cite{Kim_2020}使用DMFT的方式给出，单层VSe$_2$在无CDW情况下是序温度为250 K的铁磁态(图\ref{fig:Kim_2020_OrderParameter}a)，且铁磁序对外界电荷掺杂极为敏感(图\ref{fig:Kim_2020_ChargeChange})，作者提出不同实验之间的结果矛盾，可能是由不同电荷掺杂的原因所导致的。
+\section{Result Summary}
+\begin{table*}
+    \caption{\label{table:Result_Summary} DFT计算的结果汇总}
+    \begin{ruledtabular}
+        \begin{tabular}{llllllllll}
+            Source                                                             & Pseudopotential & Phase & Material        & Magnetic Phase & Hubbard-U(eV) & U-Type             & a     & M($\mu_B$) & Ground Phase \\
+            \hline
+            文献\cite{Kezilebieke2020},   表\ref{table:Kezilebieke2020_PhaseTest} & PBE             & H     & ML-Vse$_2$      & FM             & 0.00          & Unknown            & 3.335 & 1          & H            \\
+                                                                               & revB86b         & H     & ML-Vse$_2$      & FM             & 0             & Unknown            & 3.295 & 1          & H            \\
+                                                                               & revB86b(U = 2)  & H     & ML-Vse$_2$      & FM             & 2.00          & Unknown            & 3.339 & 1          & T            \\
+                                                                               & revB86b(U = 5)  & H     & ML-Vse$_2$      & FM             & 5.00          & Unknown            & 3.454 & 1.1        & T            \\
+                                                                               & HSE             & H     & ML-Vse$_2$      & FM             & 0.00          & Unknown            & 3.312 & 1          & H            \\
+            文献\cite{PhysRevB.96.235147}                                        & optPBE          & T     & ML-Vse$_2$      & FM             & 0.00          & Dudarev & 3.37  & 0.64       & H            \\
+                                                                               &                 & H     & ML-Vse$_2$      & FM             & 0.00          & Dudarev & 3.363 & 1          & H            \\
+                                                                               &                 & T     & ML-Vse$_2$      & FM             & 1.00          & Dudarev & 3.441 & 1.07       & H            \\
+                                                                               &                 & H     & ML-Vse$_2$      & FM             & 1.00          & Dudarev & 3.375 & 1          & H            \\
+                                                                               &                 & T     & Bilayer-VSe$_2$ & FM             & 0.00          & Dudarev & 3.379 & 0.66       & H            \\
+                                                                               &                 & H     & Bilayer-VSe$_2$ & FM             & 0.00          & Dudarev & 3.367 & 0.98       & H            \\
+                                                                               &                 & T     & Bilayer-VSe$_2$ & AFM            & 0.00          & Dudarev & 3.376 & -          & H            \\
+                                                                               &                 & H     & Bilayer-VSe$_2$ & AFM            & 0.00          & Dudarev & 3.367 & -          & H            \\
+                                                                               &                 & T     & Bilayer-VSe$_2$ & FM             & 1.00          & Dudarev & 3.447 &            & H            \\
+                                                                               &                 & H     & Bilayer-VSe$_2$ & FM             & 1.00          & Dudarev & 3.378 &            & H            \\
+                                                                               &                 & T     & Bilayer-VSe$_2$ & AFM            & 1.00          & Dudarev & 3.446 & -          & H            \\
+                                                                               &                 & H     & Bilayer-VSe$_2$ & AFM            & 1.00          & Dudarev & 3.379 & -          & H            \\
+            文献\cite{Kim_2020}                                                  & DMFT            & T     & \multicolumn{2}{l}{ML-Vse$_2$}   & -             & -                  & -     & ~0.35      & -           
+            \end{tabular}
+    \end{ruledtabular}
+\end{table*}
+
+\begin{table*}
+    \caption{\label{table:Result_Summary} 实验的结果汇总}
+    \begin{ruledtabular}
+        \begin{tabular}{llllllll}
+            Source                                    & Phase & Sample              & a              & Measure Condition & M(Gauss Unit)      & M($\mu_B$/atom) & Notes                                \\
+            \hline
+            文献\cite{Kezilebieke2020}                  & T     & ML-Vse$_2$/NbSe$_2$ & 3.5$\pm$0.1 A  & 10 K              & 2.485 emu cm$^-2$  & \multicolumn{2}{l}{$\approx 25.88$}                    \\
+            文献\cite{Bonilla2018}                      & -     & ML-Vse$_2$/HOPG     & -              & 10 K              & 2925 emu cm$^{-3}$ & $\approx 19.00$ & $a \approx 3.35 $A, $c \approx 6.2$A \\
+                                                      & -     & ML-Vse$_2$/HOPG     & -              & 300 K             & 2775 emu cm$^{-3}$ & \multicolumn{2}{l}{$\approx 18.03$}                    \\
+                                                      & -     & ML-Vse$_2$/MoS$_2$  & -              & 10 K              & 8250 emu cm$^{-3}$ & \multicolumn{2}{l}{$\approx 53.60$}                    \\
+                                                      & -     & ML-Vse$_2$/MoS$_2$  & -              & 300 K             & 2500 emu cm$^{-3}$ & \multicolumn{2}{l}{$\approx 16.24$}                    \\
+            文献\cite{doi:10.1021/acs.nanolett.8b01649} & T     & ML-Vse$_2$/Gr       & 3.31$\pm 0.05$ & Multiple T        & 0                  & 0               &                                     
+            \end{tabular}
+    \end{ruledtabular}
+\end{table*}
+
+\appendix 
+
+\section{Magnetic Unit Transformation}
+文献中实验的测量值主要采用高斯制，在考虑与理论计算的结果进行对比时，需要考虑到单位制之间的换算 (emu $\rightarrow \mu_B$)，二维情况下，高斯单位制向SI制的转换如式\ref{eqn:Appendix2dCaseTrans}所示；三维情况下则如式\ref{eqn:Appendix3dCaseTrans}所示。
+\begin{subequations}
+\begin{eqnarray}
+    \because& \frac{emu}{A \cdot m^{2}} &= 10^{-3} \nonumber\\
+    \therefore& \frac{emu \cdot cm^{-2}}{A} &= \frac{emu \cdot 10^4 \cdot m^2}{A \cdot m^2 \cdot m^{-2}} = 10^1 \label{eqn:Appendix2dCaseTrans} \\
+    &\frac{emu \cdot cm^{-3}}{A \cdot m^{-1}} &= \frac{emu \cdot m^{-3} \cdot 10^6 \cdot m^{-3}}{A \cdot m^2 \cdot m^{-3}} = 10^3 \label{eqn:Appendix3dCaseTrans}
+\end{eqnarray}
+\end{subequations}
+因此，假设实验测得的磁矩为 N $emu \cdot cm^{-2}$(二维情况)和 N $emu \cdot cm^{-3}$(三维情况)，则每个原胞对应的磁矩为：
+\begin{subequations}
+    \begin{eqnarray}
+        M_{2D} &=& N[emu \cdot cm^{-2} ] \times S[m^2] \nonumber \\
+        &=& 10 NS [A \cdot m^2] = 10N \times \frac{\sqrt{3}}{2}a^2[A \cdot m^2] \nonumber \\
+        &=& \frac{5\sqrt{3}a^2N}{\mu_B} \label{eqn:Appendix2dCaseMagmum}\\
+        M_{3D} &=& N[emu \cdot cm^{-3}] \times V[m^3] \nonumber \\
+        &=& 10^3 NV [A \cdot m^2] \nonumber = 10^3 \times \frac{\sqrt{3}}{2}a^2c[A \cdot m^2] \nonumber \\
+        &=& \frac{5\sqrt{3}a^2cN}{\mu_B} \times 10^2 \label{eqn:Appendix3dCaseMagmum}
+    \end{eqnarray}
+\end{subequations}
+公式\ref{eqn:Appendix2dCaseMagmum}描述了在二维情况下的磁矩换算，公式\ref{eqn:Appendix3dCaseMagmum}描述了三维情况下的磁矩换算。其中，$a$代表六角原胞的晶格常数，$c$代表两层之间的距离(原胞基矢c)，所有代入计算的单位都采用国际单位制。
+
+\section{Lattice Parameter \& Magnetic Momentum}
+
+\begin{table}[]
+    \caption{\label{table:Kezilebieke2020_FunctionTest} The calculated lattice constants and magnetic moments of monolayer VSe2. The experimental lattice constants are also shown and taken from the bulk. $\Delta E_{CDW}$ is the energy difference between $\sqrt{3}R30 \times \sqrt{7}R19.1$ charge-density wave (CDW) phase and ferromagnetic (FM) phase (positive value means FM phase is lower in energy).}
+    \begin{ruledtabular}
+    \begin{tabular}{llll}
+                   & a(A)  & M($\mu_B$) & $\Delta E_{CDW}$ (eV) \\
+    \hline
+    Expt.a         & 3.355 &            &                       \\
+    PBE            & 3.336 & 0.6        & 0.013                 \\
+    PBE(U = 1)     & 3.405 & 1.1        &                       \\
+    PBE(U = 2)     & 3.406 & 1.2        &                       \\
+    PBE-D2         & 3.321 & 0.6        &                       \\
+    revB86b        & 3.306 & 0.5        & 0.004                 \\
+    revB86b(U = 1) & 3.356 & 0.9        &                       \\
+    revB86b(U = 2) & 3.408 & 1.2        & 0.161                 \\
+    revB86b(U = 3) & 3.451 & 1.3        &                       \\
+    revB86b(U = 4) & 3.468 & 1.5        &                       \\
+    revB86b(U = 5) & 3.488 & 1.6        &                       \\
+    LDA            & 3.22  & 0.2        & -0.007                \\
+    HSE            & 3.396 & 1.0        &                      
+    \end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+\begin{table}[]
+    \caption{\label{table:Kezilebieke2020_PhaseTest} 单层H-VSe$_2$在不同泛函得到的晶格常数和磁矩，能量差为正表示1T相的能量更低。}
+    \begin{ruledtabular}
+    \begin{tabular}{llll}
+                   & \multicolumn{3}{c}{H-VSe2}          \\
+                   & a(A)  & M($\mu_B$) & $\Delta E_H/T$ \\
+    \hline
+    PBE            & 3.335 & 1          & -0.045         \\
+    revB86b        & 3.295 & 1          & -0.017         \\
+    revB86b(U = 2) & 3.339 & 1          & 0.001          \\
+    revB86b(U = 5) & 3.454 & 1.1        & 0.623          \\
+    HSE            & 3.312 & 1          & -0.033        
+    \end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/1}
+    \caption{\label{fig:Kezilebieke2020_Structure} 
+    Growth of VSe2 on NbSe2. a Large-scale scanning tunneling microscopy (STM) image of submonolayer VSe2 on NbSe2. Scale bar: 25 nm. b Line profile along the blue line shown in panel a. c, d Atomically resolved images on VSe2 (c) and NbSe2 (d). Scale bars: 1 nm. e Line profiles along the lines in panels c and d (VSe2 (black), NbSe2 (red)) showing the atomic periodicities and the charge-density wave modulation on the NbSe2 substrate. f Computed structure of VSe2 on NbSe2.
+    }
+\end{figure*}
+
+\begin{figure}
+    \includegraphics[width=0.4\textwidth]{./img/VSe2_Properties_Summary/2}
+    \caption{\label{fig:Kezilebieke2020_Magmum} 
+    Magnetic measurements on monolayer (ML) VSe2 on NbSe2. a Magnetization curves (sample magnetization M as a function of external field H) taken at T = 10–300 K along with a Brillouin fit to the 10-K data. b The temperature dependencies of the saturation magnetization Ms and
+the coercive field Hc.
+    }
+\end{figure}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/3}
+    \caption{\label{fig:Bonilla2018_VSe2onHOPG} 
+    Magnetic properties of VSe2 films on HOPG substrates. a, M–H hysteresis loops taken at 10 and 330 K. The inset shows the in-plane L-MOKE loop at 300 K. b, The in-plane and out-of-plane M–H loops at 300 K for monolayer VSe2 on HOPG. The inset shows the reproducible values of Ms at 300 K for different VSe2 monolayer samples grown on HOPG. c, Temperature dependences of Hc and Ms for monolayer VSe2 islands. The variation in Ms and Hc around 120 K is indicative of the coupling of magnetism to the CDW that is enhanced in the monolayer. d, Variations in MS and variation of the nonmonotonous behaviour associated with TCDW with the number of layers of VSe2 film. The inset shows the temperature dependence of MS for all samples studied. The error bars for Hc, Ms and TCDW are standard deviations obtained by repeating the measurements three times for the same sample. In d, uncertainties in the layer thickness derived from XPS (see Supplementary Fig. 1) and STM surface roughness are also indicated.
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/4}
+    \caption{\label{fig:Bonilla2018_VSe2onMoS2} 
+    a, M–H loops taken at 100 K and 300 K for monolayer VSe2. b, The strong temperature dependences of Hc and Ms. c, Variations of Ms and Hc with the number of layers of VSe2 film. The inset shows the M–H loops for the mono-, bi- and multilayer samples. d, Anomalous Hall-effect measurements. Magnetic field dependences of resistance (R) and voltage (V) taken at 100 K and 200 K show clear hysteresis with larger loops at lower temperature (100 K versus 200 K), consistent with the temperature dependence of M–H loops observed by VSM.
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/5}
+    \caption{\label{fig:PhysRevB.96.235147_ML} 
+    (a) Energy difference $\Delta E$ between 1T and 2H–VSe2 monolayers as a function of Ueff, exchange-correlation and van der Waals functional. Positive $\Delta E$ indicates that 2H is more stable. (b) Magnetization m of monolayer 1T–VSe2 and (c) 2H–VSe2 as a function of Ueff, exchange-correlation and van der Waals functional. (d) In-plane lattice parameters a of monolayer 1T–VSe2. The gray shades represent the range of experimental values found for ferecrystals.
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/6}
+    \caption{\label{fig:PhysRevB.96.235147_Bilayer} 
+    (a) Energy difference $\Delta E$ per formula unit (f.u.) between 1T and 2H–VSe2 bilayers as a function of Ueff, exchangecorrelation and van der Waals functional. Positive $\Delta E$ indicates that 2H is more stable. (b) Magnetization m per f.u. of bilayer 1T–VSe2 and (c) 2H–VSe2 as a function of Ueff, exchange-correlation and van der Waals functional. (d) In-plane lattice parameters a of bilayer 1T–VSe2. The gray shades represent the range of experimental values found for ferecrystals
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/7}
+    \caption{\label{fig:PhysRevB.96.235147_Bulk} 
+    (a) Energy difference $\Delta E$ per formula unit (f.u.) between bulk 1T and 2H–VSe2 as a function of Ueff, exchangecorrelation and van der Waals functional. Positive $\Delta E$ indicates that 2H is more stable. (b) Magnetization m per f.u. of bulk 1T–VSe2 and (c) 2H–VSe2 as a function of Ueff, exchange-correlation and van der Waals functional. (d) a-axis lattice parameters a, (e) c-axis lattice parameters c, and (f) c/a ratio of bulk 1T–VSe2. The gray shades represent the range of experimental values found for the bulk.
+    }
+\end{figure*}
+
+\begin{table}[]
+    \caption{\label{table:PhysRevB.96.235147_LatticeConst} Lattice parameters of the relaxed bulk structure of 1T-VSe2 with Ueff = 1.0 eV using standard PBE, vdW-DF-optPBE, and vdW-DF-optB88 functionals.
+    }
+    \begin{ruledtabular}
+    \begin{tabular}{lllll}
+        & Experiment & PBE  & optPBE & optB88 \\
+    \hline
+    a   & 3.35       & 3.42 & 3.46   & 3.44   \\
+    c   & 6.1        & 6.84 & 6.3    & 6.13   \\
+    c/a & 1.82       & 2    & 1.82   & 1.78       
+    \end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+\begin{figure}
+    \includegraphics[width=0.4\textwidth]{./img/VSe2_Properties_Summary/8}
+    \caption{\label{fig:PhysRevB.96.235147_MagConfiguration} 
+    Spin densities for VSe2 layers. (a) 1T -VSe2 monolayer with ferromagnetic (FM) spin structure. (b) 2H-VSe2 monolayer with FM spin structure. (c) 1T -VSe2 monolayer with antiferromagnetic (AFM) spin orientation. (d)–(g) 1T -VSe2 bilayer with AFM ordering (AFM 1–AFM 4). For 2H-VSe2, AFM 3 and AFM 4 are identical. For AFM structures, light red and dark blue spin densities denote opposite spin orientations. The isosurface values are set to $0.01e/a^3_0$ , where $a_0$ is the Bohr radius.
+    }
+\end{figure}
+
+\begin{table}[]
+    \caption{\label{table:PhysRevB.96.235147_MagConfiguration} Energy differences $\Delta E_{mag}$ in meV per formula unit with reference to the ferromagnetic order for the nonmagnetic (NM) and antiferromagnetic (AFM) configurations using$U_{eff}$ = 1.0 eV. For the bilayer, four and three different antiferromagnetic cells can be created for the 1T - and 2H-polytype, respectively. 
+    }
+    \begin{ruledtabular}
+    \begin{tabular}{llllllll}
+             & \multicolumn{2}{c}{Monolayer} & \multicolumn{5}{c}{Bilayer}     \\
+    Polytype & NM            & AFM           & NM  & AFM1 & AFM2 & AFM3 & AFM4 \\
+    1T       & 97            & 25            & 94  & 2    & 25   & 24   & 25   \\
+    2H       & 157           & 106           & 148 & −1   & 102  & 102  & –   
+    \end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+\begin{table}[]
+    \caption{\label{table:PhysRevB.96.235147_Hubbard-U_Monolayer} 
+    }
+    \begin{ruledtabular}
+        \begin{tabular}{lllll}
+            \multicolumn{5}{c}{Monolayer}                                                                      \\
+            \hline
+                               & \multicolumn{2}{c}{$U_{eff} = 0 $ eV} & \multicolumn{2}{c}{$U_{eff} = 1 $ eV} \\
+            Polytype           & 1T                & 2H                & 1T                & 2H                \\
+            \hline
+            a                  & 3.37              & 3.363             & 3.441             & 3.375             \\
+            d(V-Se)            & 1.581             & 1.606             & 1.559             & 1.608             \\
+            mcell              & 0.64              & 1                 & 1.07              & 1                 \\
+            m(V)               & 0.69              & 1                 & 1.27              & 1.1               \\
+            m(Se)              & -0.05             & -0.07             & -0.13             & -0.1              \\
+            $\Delta E_{1T-2H}$ & \multicolumn{2}{c}{39}                & \multicolumn{2}{c}{33}               
+            \end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+\begin{table*}[]
+    \caption{\label{table:PhysRevB.96.235147_Hubbard-U_Bilayer} 
+    Comparison of the structural parameters, and magnetic moments for isolated VSe2 monolayers and bilayers with and without the Hubbard parameter Ueff = 1.0 eV. The structural parameters include the in-plane lattice parameter a, the distance between the V and Se planes d(V-Se), and the distance between the two VSe2 layers in the bilayer d(VSe2-VSe2). The magnetic moments m are given for the unit cell (mcell), and for the contributions from the V and Se atoms m(V) and m(Se), respectively. $\Delta E$ denotes the energy difference between the 1T and 2H polytype (positive when 2H is more stable).
+    }
+    \begin{ruledtabular}
+        \begin{tabular}{lllllllll}
+            \multicolumn{9}{c}{Bilayer}                                                                      \\
+            \hline
+                         & \multicolumn{4}{c}{$U_{eff} = 0 $ eV}   & \multicolumn{4}{c}{$U_{eff} = 1 $ eV}   \\
+            Magnetic Order     & \multicolumn{2}{c}{FM} & \multicolumn{2}{c}{AFM} & \multicolumn{2}{c}{FM} & \multicolumn{2}{c}{AFM} \\
+            Polytype     & 1T    & 2H    & 1T         & 2H         & 1T    & 2H    & 1T         & 2H         \\
+            \hline
+            a            & 3.379 & 3.367 & 3.376      & 3.367      & 3.447 & 3.378 & 3.446      & 3.379      \\
+            d(V-Se)      & 1.582 & 1.608 & 1.584      & 1.609      & 1.559 & 1.611 & 1.56       & 1.61       \\
+                         & 1.574 & 1.601 & 1.574      & 1.601      & 1.553 & 1.607 & 1.554      & 1.605      \\
+            d(VSe2-VSe2) & 3.252 & 3.337 & 3.245      & 3.307      & 3.23  & 3.393 & 3.261      & 3.334      \\
+            mcell        & 0.66  & 0.98  & 0          & 0          & 1.07  & 1     & 0          & 0          \\
+            m(V)         & 0.71  & 0.99  & $\pm 0.68$ & $\pm 1.01$ & 1.27  & 1.1   & $\pm 1.27$ & $\pm 1.01$ \\
+            m(Se)              & -0.05      & -0.07     & $\pm 0.05$ & $\pm 0.07$ & -0.13      & -0.1      & $\pm 0.13$ & $\pm 0.10$ \\
+            $\Delta E_{1T-2H}$ & \multicolumn{2}{c}{32} & \multicolumn{2}{c}{32}  & \multicolumn{2}{c}{22} & \multicolumn{2}{c}{25} 
+            \end{tabular}
+    \end{ruledtabular}
+\end{table*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/9}
+    \caption{\label{fig:acs.nanolett.8b01649_CDW} 
+    Charge-density wave order of monolayer VSe2. (a, b) Low-energy electron diffraction of (a) bilayer Graphene/SiC and (b) following additional growth of ML-VSe2 (T = 170 K, E = 150 eV). (c) Differences of ML-VSe2 LEED (E = 100 eV) at T = 40 and 200 K, revealing the emergence of additional charge-order peaks at low temperatures, as shown as magnified and with enhanced contrast in the inset. (d, e) Corresponding evolution of the measured electronic structure (hν = 21.2 eV) from (d) T = 170 K to (e) T = 20 K, revealing the opening of a charge-density wave gap at the Fermi level. (f) This is clearly evident in EDCs at kF along the M̅−K̅ direction (at the position marked in panels d and e). (g) The temperature-dependent shift of the leading edge midpoint (LEM) of these EDCs, Δ (left), is in good agreement with the intensitydependence of the charge-order superstructure from LEED, plotted as ICO−IBG to take account of temperature-dependent background variations, in which the charge order and background regions are defined in panel c. The solid line in panel g shows a fit to a semiphenomenological mean-field form for the gap opening, $\Delta(T) \propto \tanh \left( C \sqrt{\frac{T_C}{T} - 1} \right)$ , where C is a constant.
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/10}
+    \caption{\label{fig:acs.jpcc.9b04281_APRES} 
+    ARPES and band structure calculations for monolayer and surface of bulk VSe2. The ARPES spectra for bulk VSe2 surface along Γ−M and Γ−K directions are shown in (a) and are compared to non-spin-polarized and spin-polarized DFT calculations shown in (b) and (c), respectively. The corresponding ARPES for monolayer VSe2 is shown in (d). The bands originating from the MoS2 substrate are indicated as dashed lines in (d). Non-spin-polarized and spin-polarized DFT simulations for monolayer VSe2 are shown in (e) and (f), respectively. The measured Fermi surface for the monolayer is shown in (g), and calculated non-spin-polarized and spin-polarized Fermi surfaces are shown in (h) and (i). The experiment clearly displays a lack of spin-split bands, in apparent contradiction to spin-polarized calculations. In contrast, the experimental results are in good agreement with non-spin-polarized calculations. All the experiments shown here are acquired with 53 eV photon energy.
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/11}
+    \caption{\label{fig:acs.jpcc.9b04281_STM} 
+    Low-temperature STM images of CDW order in monolayer VSe2. On the MoS2 substrate the CDW is superimposed on the moiré structures (a, b). Different rotational domains are observed (c), and the unit cell can be identified as a √3R30 × √7R19.1 superstructure with respect to the VSe2 unit cell. The same structure can be described by two mirrored unit cells as illustrated in (e). An alternative unit cell is that described by the unit-cell diagonals of the two mirrored primitive unit cells as illustrated in (g). Often antiphase domain boundaries are observed in the CDW structure as shown in (f), giving rise to only small domains.
+    }
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.8\textwidth]{./img/VSe2_Properties_Summary/12}
+    \caption{\label{fig:acs.jpcc.9b04281_Phono} 
+    Calculated phonon band structure of 1T monolayer structure of VSe2 (a) using spin-restricted DFT and (b) using spinpolarized DFT. The phonon soft modes with imaginary frequencies are highlighted by red color.
+    }
+\end{figure*}
+
+\begin{figure}
+    \includegraphics[width=0.4\textwidth]{./img/VSe2_Properties_Summary/13}
+    \caption{\label{fig:Kim_2020_OrderParameter} 
+    (a) The calculated ferromagnetic order parameter $m = \mu_B(\left\langle n_{\uparrow} \right\rangle - \left\langle n_{\downarrow} \right\rangle)$ as a function of temperature. The magenta line with squares and the blue with circles present the result for monolayer and bulk VSe2 , respectively. For monolayer, ferromagnetic transition is clearly identified at around 250 K. (b) The calculated local spin susceptibility $\chi_m = \int^{\beta}_0 d \tau \left\langle m(\tau)m(0) \right\rangle $ as a function of temperature. The inset shows the inverse susceptibilities which clearly show Curie- and Pauli-like behavior for monolayer and bulk, respectively. (c) The calculated non-interacting local spin susceptibility (U =JH =0) of bulk (blue circles) and monolayer (magenta squares) in their paramagnetic phases. The inset presents its inverse. (d) The spin susceptibility calculated within bubble approximation.
+    }
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=0.4\textwidth]{./img/VSe2_Properties_Summary/14}
+    \caption{\label{fig:Kim_2020_ChargeChange} 
+    (a) The calculated ferromagnetic order parameter $m = \mu_B(\left\langle n_{\uparrow} \right\rangle - \left\langle n_{\downarrow} \right\rangle)$ for monolayer VSe2 with a varying system charge at two different temperatures. The hole-like and electron-like extra charges have been introduced through the DFT system charge option (and the updated DMFT chemical potential accordingly). (b) The calculated m with a varying system charge together with nominal double-counting charge at T = 100 K. The seven different values for V-d occupations in the nominal double-counting choice have been considered ranging from −0.3 to +0.3 (the same with system charge range).
+    }
+\end{figure}
+
+\bibliography{VSe2_Properties_Summary_Ref}
+\end{document}
