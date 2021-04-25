@@ -1,0 +1,107 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Electronic structures, charge transfer and charge orders in \\
+twisted transition metal dichalcogenide bilayers}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+双层过渡族金属二硫化物的Moire超结构已经证明具有关联电子态，这种电子态是由长波moire势和长程库伦的相互作用产生的。在此处我们在理论上研究了旋转双层TMD蜂窝状双层结构的单粒子电子结构。从大范围的DFT计算和具有层自由度的连续模型，我们发现层外门电场第一和第二moire价带在狄拉克点产生了可调控的电荷转移能隙。我们进一步研究了分数能带占据的电荷序。在平带极限，我们发现MC模拟了一系列具有电荷序的绝缘态，且具有不同的占据数$n = 1/4, 1/3, 1/2, 2/3, 1$。我们预测门电场在不同电子晶体之间引入了相变，且占据数为固定值$1/2, 2/3$。在半占据态$n = 1$，基态时具有电子驱动的铁电Mott绝缘体。我们的工作证明了蜂窝状双层TMD在可调控电荷转移绝缘体和电荷序方向具有应用前景。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2009.14224}
+\end{description}
+\end{abstract}
+
+\keywords{Charge Order}
+
+\maketitle
+
+\section{Results \& Discussion}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210423/1}
+    \caption{\label{fig:structure} 
+    (a)MM，MX，XM的AA堆叠方式异质结双层晶格结构；(b)MoS$_2$的DFT能带结构；(c)弛豫层间距的MoS$_2$。
+    }
+\end{figure}
+Moire超晶格是实现可控关联电子态的重要平台，例如扭转双层石墨烯(TBG)和三层石墨烯-hBN异质结。近期基于过渡族金属二硫化物(TMD)的moire家族材料吸引了人们的注意。他们在一系列分数占据具有丰富的关联绝缘态。在双层TMD，moire能带由独立层的抛物线型能带形成。在扭转双层TMD中，moire带宽可以通过减小扭转角度而被制成任意小，这造成了不需要精细调控的强关联效应。这些moire能带内的电子和空穴在高对称堆叠区域具有强烈的局域化性质，这可以通过一个简单的有效紧束缚模型来描述。这种描述给出了在有限密度下，研究相互作用引入的态一个方便的起始点。除了观念上的简洁性，TMD中moire能带的定量化建模十分重要。例如，TMD异质结双层WSe$_2$/WS$_2$的moire带宽只有10 meV的数量级，且高度依赖于晶格弛豫。
+
+在这项工作中，使用大面积的DFT、连续模型近似和Monte Carlo模拟，我们研究了扭转TMD双层在moire能带结构结构弛豫和电场造成的影响，并且预测了在分数占据条件下，在强关联区域出现的电荷序。我们聚焦于源自于$\Gamma$袋装结构的moire能带。由于层间隧穿和弛豫，这些moire能带源自于MX和XM堆叠区域的局域轨道。我们在mini布里渊区的$K, K^{'}$找到了一对无质量的狄拉克费米子，它们由moire超结构的$D_3$点群对称性所保护。通过施加层外电场打破蜂窝状晶格的子晶格的对称性，并在狄拉克点打开可调控的能隙$\Delta$。
+
+我们通过AA staking的小角度扭转来研究双层TMD，在此处顶层的每个金属(M)或硫族元素(X)原子与底层的相同类型原子对齐。在扭转双层结构的局域区域，原子构型与非扭转的双层构型相同，层间距为$d_0$。因此，TMD双层的moire能带结构可以通过不同$d_0$组合得到，都具有$1 \times 1$的原胞。
+
+尤其的，$d_0 = 0, -(a_1 + a_2)/3, (a_1 + a_2)/3$，此处$a_{1,2}$代表非扭转双层的原胞基矢，对应于MM，XM，MX。在MM(MX)staking方式中，顶层M原子与底层M(X)原子对齐，如图\ref{fig:structure}a所示。例如XM，双层结构在绕着z轴的三度旋转保持不变。
+
+在双层TMD中，价带中自旋简并的$\Gamma$袋在双层之间的电子隧穿中出现，$k \cdot p$具有形式：
+\begin{equation}
+    \mathcal{H}(d_0) = \
+    \begin{pmatrix}
+        -\frac{\hbar^2 k^2}{2m^{*}} + \epsilon_b(d_0)& \Delta_T(d_0) \\
+        \Delta_T^{\dagger}(r)& -\frac{\hbar^2 k^2}{2m^{*}} + \epsilon_t(d_0)
+    \end{pmatrix}
+\end{equation}
+在此处，$m^* = 1.07 m_e$，代表价带的有效质量。$\Delta_T(d_0)$是层间隧穿强度，与两层之间的层内位移有关。与K袋复杂的隧穿强度不同，在此处$\Gamma$点袋的时间反演对称性强化了$\Delta_T$为实数。势能项$\epsilon_{b,t}(d_0)$代表了缺失隧穿时的价带最高点。
+
+我们将$\Delta_T(d_0)$展开为傅里叶项，且展开到二阶谐振项：
+\begin{equation}
+    \Delta_T(d_0) = \omega_0 + 2\omega_1 \sum_{j = 1}^3 \cos (G_j \cdot d_0) + 2\omega_2 \sum_{j = 1}^3 \cos (2G_j \cdot d_0) \label{eqn:expansion}
+\end{equation}
+
+在此处$G_i(i = 1, 2, 3)$是单层TMD的倒格矢。由于三度旋转对称性，$\Delta_T$是MM，MX的极值，其值的大小为：$d_0 = 0$(MM)情况下$\Delta_T = \omega_0 + 6\omega_1 + 6\omega_2$，$d_0 = \pm (a_1 + a_2)/3$(MX/XM)的情况下$\Delta_T = \omega_0 - 3\omega_1 - 3\omega_2$。零动量转移隧穿项$\omega_0$对大成键能和反键能在所有$d_0$上的能量分裂都有贡献，而$\omega_1, \omega_2$表征了了隧穿强度在不同水平位移的变化。层间隧穿强度显著取决于层间距$d$。通过DFT计算，我们发现非扭转双层TMD在MM，MX和XM堆叠的平衡层间距为：$d_{MM} = 6.63 A, d_{MX} = d _{XM} = 5.97 A$。10\%层间距的变化与双层石墨烯的情况一致，显著影响了$\Gamma$袋处能带的分裂。
+
+通过计算功函数，我们在图\ref{fig:structure}中画出了MM和MX堆叠的双层结构的能带图，$E = 0$对应了绝对真空能级。对于更宽的层间距，我们发现由于层间距更小，MX堆叠的能量分裂比MM堆叠的能量更强。在图\ref{fig:structure}c中，得到的隧穿参数$\omega_0 = 338$ meV，$\omega_1 + \omega_2 = -18$ meV。如果对MX和MM堆叠使用同样的层间距，则会得出相反的结论(见图\ref{fig:structure}b)。因此晶格弛豫对于得到正确moire能带非常重要。
+
+扭转双层TMD的结构可以通过空间中缓变的水平位移$d_0$表示：$d_0 = \theta \widehat{z} \times r$。因此可以构建$\Gamma$处moire能带的两能带kp模型的连续型哈密顿量：
+\begin{equation}
+    \mathcal{H}(d_0) = \
+    \begin{pmatrix}
+        -\frac{\hbar^2 k^2}{2m^{*}} + \epsilon_b(r)& \Delta_T(r) \\
+        \Delta_T^{\dagger}(r)& -\frac{\hbar^2 k^2}{2m^{*}} + \epsilon_t(r)
+    \end{pmatrix}
+\end{equation}
+与位置有关的隧穿项可以通过将式（\ref{eqn:expansion}）的$d_0$换为$\theta \widehat{z} \times r$，即：
+\begin{equation}
+    \Delta_T(r) = \omega_0 + 2\omega_1 \sum_{j = 1}^3 \cos (G_j^m \cdot r) + 2\omega_2 \sum_{j = 1}^3 \cos (2G_j^m \cdot r) \label{eqn:expansionInR}
+\end{equation}
+此时$G_i^m = G_i \theta \times \widehat{z}$(i = 1, 2, 3)是moire超结构的三个倒格矢。层间势可以写为moire倒格矢的一阶傅里叶展开：
+\begin{equation}
+    \epsilon_{t,b}(r) = 2V_0 \sum_{j = 1, 2, 3} \cos \left( G_j^m \cdot r \pm \phi \right)
+\end{equation}
+相因子的符号$\phi$在层交换的情况下发生改变，被$C_{2y}$对称性所增强，如图\ref{fig:moirePattern}a所示，对于面外门电场的水平建模，势能项十分重要。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210423/2}
+    \caption{\label{fig:moirePattern} 
+    (a)双层TMD异质结在实空间下的moire图样；(b)$d_{far}, d_{near}$层间距随扭转角度的依赖变化。
+    }
+\end{figure}
+将连续模型得到的能带结果和大面积DFT计算结果进行比较，moire超结构使用vdW-DF(optB86)泛函充分弛豫。将扭转角依赖的层间距$d_{far}/ MM, d_{near}/MX$画出，如图\ref{fig:moirePattern}b所示。在小扭转角($\theta ~ 0$)，两层成波纹状，三种不同堆叠方式的层间距与非扭转结构相近。层间隧穿强度在MX和XM区域最大，这是由$C_{2c}$对称性所决定的。作为结果，低能moire能带从MX和XM区域的层间杂化所形成，因此形成了蜂窝状的晶格，且格点势一致。我们将大面积的DFT计算在不同扭转角的能带结构画出，如图\ref{fig:bandStructure}所示。我们发现在$\theta = 3.89°$附近具有$L_m ~ 4.7 nm$的小moire周期，顶部两条moire能带与其他能带显著分离。相似的结构在DFT的MoS$_2$、WS$_2$的计算中同样被发现。将DFT的moire能带拟合到连续模型，得到的参数为在$\theta = 2.876°$情况下，$\omega_0 = 338 meV, \omega_1 = -16 meV, \omega_2 = -2 meV, V_0 = 6 meV, \phi = 121°$，这些结果与非扭转结构的一致。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210423/3}
+    \caption{\label{fig:bandStructure} 
+    (a)在$\theta = 3.89°$的DFT能带；(b)前两个扭转角依赖的moire带宽；DFT和连续模型在$\theta = 2.876°$和$\theta = 2.876° + 0.5V/nm$面外门电场的能带。
+    }
+\end{figure}
+
+如图\ref{fig:bandStructure}(a, c)所示，moire能带在moire布里渊区的$K,K^{'}$显示出Dirac点的特性。这些Dirac点由扭转双层TMD的$D_3$对称性所保护，即$K,K^{'}$形成一个二维E表象。当扭转角从6°到3°变化时(如图\ref{fig:bandStructure}b所示)，Dirac能带的带宽在250 meV到10 meV单调变化。这在每个moire原胞在占据数$n = 2$的情况下体哦国内了研究Dirac电子可调节关联效应提供了良好的平台。在扭转双层石墨烯中，低能Dirac费米子被$C_{2z}$的对称性所保护，不能被面外电场打破。然而，MoS$_2$中MX和XM区域，波函数在不同层之间的权重不同。因此，面外门电场打破了$C_{2y}$对称性，并在Dirac费米子外打开了能隙。简化的连续模型对于最高moire能带的反键轨道描述很好，但不能描述考虑层间自由度后的能带结构和电荷分布。对于双层MoS$_2$moire超结构增加了门极电场，如图\ref{fig:bandStructure}d所示，面外0.5$V/nm$的电场在K点打开了2.4 meV的能隙。而第一个能量分离的moire能带的带宽为12 meV。在带边的K点，第一条能带的波函数局域在MX区域，第二条则局域在XM区域。对于小扭转角度$\theta = 2°$，具有波长$L_m = 9.1 nm$，门极电场$E_d = 1V/nm$引入了电荷转移能隙$\Delta$到5 meV，甚至比最高moire能带的带宽大。更大的电场引入的$\Delta$可以通过减小层间隧穿的扭转双层TMD来实现。这可以通过在上下两层之间插层hBN来实现。
+
+在TMD超晶格中，周期性moire势场的局域最小可以被看作是具有电荷的有效moire原子。在谐振子近似下，最高moire能带的annier轨道的尺寸可以通过$\xi = \sqrt{\frac{\hbar}{m^{*}\omega}} = 2(\pi)^{-\frac{1}{2}}\sqrt{L_m}(\frac{\hbar^2}{m^{*}V_m})^{\frac{1}{4}}$给出。在不考虑晶格mismatch的双层系统中，最近邻相互作用的动能项可以为任意小，因此经典模型在足够小的旋转角情况下依然适用。不考虑动能项的有效延展Hubbard模型可以给出：
+\begin{equation}
+    H_0 = \sum_{j \in B}\Delta n_j + \sum_i U_{n_{i \uparrow} n_{i \downarrow}} + \frac{1}{2} \sum_{i \neq j} V_{ij} n_i n_j
+\end{equation}
+此处$\Delta$是两种子晶格A和B的电荷转移能隙，$V_{ij}$是i格点和j格点之间的延展相互作用。在扭转双层MoS$_2$中，门极电场引入了电荷转移能隙$\Delta$。我们首先讨论了在大的$\Delta$下的情况。在占据数$n < 1$时，有效紧束缚模型减小到三角晶格模型，与WSe$_2$/WS$_2$的情况一致，表现出相似的电荷序。在分数占据数$n = 1/4, 1/3, 2/5, 1/2, 3/5, 2/3$都有观察到不同绝缘相的出现。由于强烈的库伦排斥$U \gg \Delta$，系统在$n = 1$应当被看作是电荷转移绝缘体。当掺杂到更高的占据数$n > 1$时，更多的电荷转移到了其他子晶格/层。
+
+结论上，我们给出了考虑晶格弛豫、单粒子的电子结和扭转双层MoS$_2$的基态电荷序。不同于先前的WSe$_2$和WS$_2$中发现的moire电荷转移绝缘体，面外门极电场打破了$C_{2y}$对称性，并引入了可控的电荷转移能隙。在MC模拟下，在占据数为$1/2, 2/3$时预测了额外的条纹状电荷序，且其$\Delta = 0$。当增加$\Delta$，这些电子晶体变化到完全极化的子晶格态。进一步预测表明在$n = 1$的Mott绝缘态，允许超快电子极化的切换。我们的工作证明在两个moire区间的层间作用会导致电荷转移的绝缘体。
+
+\section{Question}
+文章使用未扭转的双层结构来近似扭转角度很小时的结构，从而规避了原胞大小的问题，这种近似会抹去原子位置略微变化导致的层间相互作用，这在旋转结构中是十分重要。直接采用非扭转原胞进行计算的近似是否具有合理性？
+\end{document}
