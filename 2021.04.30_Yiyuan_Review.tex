@@ -1,0 +1,81 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Coexisting charge-ordered states with distinct driving mechanisms \\
+in monolayer VSe2}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+薄到二维的晶体材料为电子的相提供了丰富的平台，包括电荷、自旋、超导、拓扑序等。具有电荷密度波的体块材料在厚度下降到超薄层时，显示出了CDW增强和可调节性。然而，完全限制在2D情况下的电荷序十分难以寻找。在此处我们报告了在单层极限下的1T-VSe$_2$出现的清晰CDW序。系统的STM实验揭示了双层VSe$_2$大部分得到了体块的电子结构，具有三方向的CDW。然而，单层VSe$_2$显示出维度的交叉，具有两种清晰波长的CDW。电子结构计算揭示了一种CDW是体块类型的，源自于广为人知的Peierls机制，另一种则非寻常。观察到的CDW-晶格解耦合和宽能带的出现预示着新的CDW从强化2D极限下电子-电子相互作用中出现。这些发现建立了单层VSe$_2$作为具有不同起源的电荷序共存的第一个宿主。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2104.12420}
+\end{description}
+\end{abstract}
+
+\keywords{Charge Order Coexistance}
+
+\maketitle
+
+\section{Introduction}
+晶体材料中的电荷序通常作为电子密度的静态调制，即为原子晶格静态调制伴随出现的CDW。CDW的原型源自于由CDW传播矢量$Q_{CDW}$连接的平行费米面区域嵌套的(准)一维系统。由于实际材料没有显示完美的嵌套，在实际情况中CDW的形成由电子-晶格相互作用、集体激发、电子-电子相互作用所支持。在层状结构中，由于相互作用竞争的不平衡，CDW经常在其他有序相的周围出现(例如超导、磁性等)。接近二维极限通过减小电子-电子相互作用的投影强化了这种相互作用的势能。值得注意的是，二维极限下的电子-电子相互作用被期望引入不同CDW驱动力/有序态之间的竞争。在实践中，由维度减小驱动的面向电子序的维度交叉仍然等待探索。
+
+过渡族金属二硫化物(TMDCs)是传统/新型CDW的宿主。在超薄极限，集中TMDCs的CDW都被发现是可调控的，这预示着他们与实际电子器件应用的关联。1T-VSe$_2$是具有层状六角晶格结构的金属(图\ref{fig:structure}a)所示。体块1T-VSe$_2$是具有3D FS的顺磁。在低于特征温度$T_{CDW}^b ~ 110$ K时，具有三重Q(三斜)的3D结构的CDW。其周期性$\lambda_{CDW} \approx 4a \times 4a \times 3c + \delta$与面内晶格常数$a$匹配，但与层间距离$c$不匹配，对应于弱的嵌套FS区域，被体块电声耦合所支持。在小于 20nm 的厚度，1T-VSe$_2$的FS转换到2D结构，同时保留了三斜Q电荷序的$\lambda_{CDW} \approx 4a \time 4a$。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210430/1}
+    \caption{\label{fig:structure} 
+    VSe$_2$的晶格结构与STM图像。(a)生长在石墨基底上的1T-VSe$_2$的原子结构；(b)STM大面积图样，内图给出了层间的高度曲线；(c-d)原子层分辨率在78K时的STM形貌图，每种形貌都给出了清晰的可分辨六角超结构。
+    }
+\end{figure*}
+
+同时，近期工作中通过外延法生长的单层VSe$_2$，据称具有伴随的电荷和自旋序，通常他们的自然是相冲突的。首先，一些宣称在低温下4a的电荷序发生缺失，其他的则提出直到室温下还能观察到的持续性。第二，几种报告中超结构的形状不匹配，周期性有$\sqrt{3}a \times 2a$, $\sqrt{3}a \times \sqrt{7}a$, $~ 2a \times 3a$等，提出的起源从内禀晶格畸变到完美嵌套。最终，磁性在单层VSe$_2$中应当出现，而在体块中缺失。但其存在性和与电荷序的关系仍然在争论中。解纠缠这些矛盾的观测对于揭露VSe$_2$的电荷序具有重要的意义。尤为关键的是，这种观察需要可控而系统的在不同热力学条件下给出的CDW研究。
+
+在此处，我们报告了完整的超薄1T-VSe$_2$的实验/理论结果。STM实验给出双层VSe$_2$的CDW与体块中的相近，而单层VSe$_2$中的电荷序就定量不同。通过系统的改变基底、薄层厚度和温度，我们发现单层VSe$_2$具有两种单方向的(单Q)的CDW，分别具有周期$4a$和$2.8a$，这具有完全不同的实验现象。能带计算阐明4a的CDW可以通过FS nesting和EPC稳定存在，而2.8a的CDW则不能通过这些机制来解释。替代的，我们发现 2.8a 的不稳定性源自于平带区，在此处电子-电子相互作用被强化。
+
+\section{Results \& Discussion}
+\subsection{STM成像}
+我们使用MBE方法，在超真空条件下，将VSe$_2$生长在HOPE和MoS$_2$基底上。两种基底都被人们熟知，可以用来生长稳定的VSe$_2$1T构型，其晶格结构如图\ref{fig:structure}a所示。薄层通过在77-200K的STM来表征。如图\ref{fig:structure}b所示，平均厚度为1.5层的可控生长导致了单层和双层VSe$_2$结构的同时出现，且在STM图中区域可见。在78K进行的拓扑表征给出第一层0.9 nm，第二层0.6 nm的高度阶梯，与先前人们的估计一致。图\ref{fig:structure}c-d给出单层和双层区域得到拓扑结构的原子分辨结构，给出的六角原子晶格常数为$~ 0.34$ nm的高度阶梯，与先前人们的估计一致。单层和双层VSe$_2$原子级别的超结构看起来不同。对于双层VSe$_2$，超结构是三方向的（在一个长度范围内，三个晶格方向都被显示出来）。总的效果与体块和薄层1T-VSe$_2$报道的三重Q的CDW相似。相反，单层VSe$_2$中，超结构显示出单方向性，并且具有多个长度范围。关键的是，使用非接触原子力显微镜对单层结构的直接成像在这些原子晶格中没有观察到皱纹，即排除额结构畸变。因此我们推测STM观察到的超结构一定是来源于电子的。
+
+收到超薄VSe$_2$中CDW现象的启发，我们在图\ref{fig:CDW}中系统地研究了单层/双层的傅里叶空间调制。对于双层VSe$_2$结构，图\ref{fig:CDW}b给出了典型STM的傅里叶变换(FT)。在此处我们找到的首要峰位于$Q_1 \approx 0.25 a^{*}$。这个观测与之前三重Q完全一致，即4a的CDW。其次，单层VSe$_2$最重要的傅里叶峰位于$Q_2 \approx 0.36 a^{*}$，相对于Bragg方向夹角为30°。ML的FT给出所有的傅立叶峰都可以被看作是$Q_1$和$Q_2$的更高阶振荡/Bragg反射。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210430/2}
+    \caption{\label{fig:CDW} 
+    双层/单层VSe$_2$的CDW。(a-d)STM图样和其傅里叶变换。(a, c)中的虚线代表实空间CDW波前，对应在(b, d)中的圈代表了CDW波矢$Q_1$和$Q_2$，红色圈代表了所有FT图像中的Bragg峰。(e)116K得到的单层VSe$_2$STM图像的FT，紫红色代表$Q_2$峰，$Q_1$峰则发生缺失。虚线代表$Q_2$的方向与Bragg峰的对应关系。(f)单层VSe$_2$在78 K时的FT，绿色和紫红色代表主要的CDW峰。有颜色的箭头代表其与Bragg峰的对应关系。
+    }
+\end{figure*}
+
+\subsection{Temperature Dependence}
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210430/3}
+    \caption{\label{fig:Temperature} 
+    超薄VSe$_2$中温度依赖的CDW关系。
+    }
+\end{figure*}
+为了进一步建立双层/单层VSe$_2$的特点，我们在不同温度下研究了CDW峰的变化。值得注意的是更高温度下单层VSe$_2$的FT只给出了单个傅里叶调制$Q_2$，这指出$Q_1$和$Q_2$属于不同的CDW，同时，相对于晶格$Q_2$方向的轻微热扰动指出$Q_2$的CDW与晶格耦合不强。也暗示着由$Q_1$连接的$Q_2$的谐振与反射而出现的两种CDW之间的相互作用势可能降低能量的消耗。STM显示出的CDW强度的热演化是CDW相变的热力学标记。在其他TMDs上进行的STM测量发现局域CDW调制甚至在高于$T_{CDW}$上也能出现，主要固定在$T \gg T_{CDW}$周围的缺陷。在图\ref{fig:Temperature}中，我们给出了不同温度下HOPG基底上单层VSe$_2$的STM形貌。由于热漂移，温度之间的数据记录在不同的视野之下。为了方便比较，图中的CW峰值密度根据每个STM对应的Bragg峰进行了归一化。为了考虑对称性关联的峰变化的强度，我们给出了error bar。在双层/单层VSe$_2$中，我们发现$Q_1$的强度(4a CDW)在110 K附近迅速下降到可忽略的值，与其体块部分的热演化相同。更高温度下，小而有限的双层VSe$_2$可能在缺陷附近的CDW袋中出现。同时，对于单层VSe$_2$，$Q_2$的强度在高于110 K仍然保持一定的尺寸，在140 K时迅速降为0。在204 K附近没有发现CDW的迹象，排除了室温下CDW的存在。
+
+\subsection{Nesting and Correlated Instabilities}
+位于波矢量$Q_{CDW}$普通的CDW不稳定性源自于$q = Q_{CDW}$处的电子极化率$D_2(q)$。在弱电声耦合极限下，$D_2(q)$可以表达为：
+\begin{equation}
+    D_2(\boldsymbol{q}) = -\sum_{k \in BZ} \vert g_{k, k+q} \vert^2 \frac{f(E_k) - f(E_{k+q})}{E_k - E_{k+q} + i\delta}
+\end{equation}
+此处$f(E)$是Fermi-Dirac函数，$E_k$是裸电子散射，$\delta$是一个小的扰动(本工作中为0.1 meV)。EPC矩阵元$\vert g_{k,k+q} \vert$通常近似为单位矩阵，导致了Lindhard/裸极化率$\chi(q)$。然而对于TMDCs，接近费米能级处的行为由d能带控制，已经有一些工作建立了更加接近现实的EPC矩阵元近似。在此处，我们使用TB拟合来计算裸$\chi(q)$和结构化的($D_2(q)$)电子极化率，分别如图\ref{fig:Susceptibility}(a), (b)所示。图\ref{fig:Susceptibility}(b)中的绿色圆圈给出了最大极化率，基本位于$Q = (0, 0.28) \approx Q_1$，其近似匹配的值给出，由于CDW-晶格相互作用，对应的CDW将被锁定在0.25 rlu($\lambda = 4a$)。为了说明观察到的CDW中FS的作用，我们在\ref{fig:Susceptibility}(c-d)中画出了对于$\boldsymbol{q} = \boldsymbol{Q_1}$处，对$\chi(Q)$和$D_2(q)$的k-分辨的贡献。如图\ref{fig:Susceptibility}(b)所示，对$\chi(\boldsymbol{Q}_1)$通过K中心的平行边缘出现，而$\Gamma$中心的FS区域起到的作用则不重要。具有相反群速度的嵌套良好的K袋边是内禀不稳定的，会形成Peierls-like CDW。EPC矩阵元进一步强化了这些与$\boldsymbol{Q}_1$连接的区域到$D_2(\boldsymbol{Q}_1)$。确认了单层VSe$_2$的$\boldsymbol{Q}_1$CDW的起源。
+
+相反，对于$\boldsymbol{q} = \boldsymbol{Q}_2$不满足常规的CDW框架。由图\ref{fig:Susceptibility}(a,b)的品红色圈所启示，这个波矢位于极化的高原，缺乏定义完全的的最大值。在$\boldsymbol{q} = \boldsymbol{Q}_2$处对裸极化率主要的贡献来自于$\Gamma$中心的平带区域和少量K中心的贡献。然而。对应的$D_2(\boldsymbol{k},\boldsymbol{Q}_2)$给出。EPC矩阵元强烈的抑制了这些区域的强度，在EPC协助的Peierls图景下，其余的贡献不足以驱动$Q_2$的CDW。对于使用微扰展开进行结构化的极化率计算，可能不足以抓住平带中的EPC。在例如1T-VSe$_2$的层状TMDCs的2D极限下，电子之间的库伦相互作用投影被严重削弱。非投影的相互作用在平带和van Hove奇点的作用下被显著增强。实际上，测量的线宽、自能或是费米面附近的能带远比实验的分辨率大，确定了强电子相互作用的存在。这些相互作用可以相重整化电子和声子性质，同时允许不对应于常规极化率($\chi(q), D_2(q)$)的CDW序的存在。实际上，这些关联驱动的CDW已经被预言在TMDCs中存在，包括单层VSe$_2$，与非正常的$Q_2$状态一致。关键的是，关联驱动的$Q_2$CDW机制给出了不同于嵌套对应$Q_1$和FS完全gapping以外的独立解释。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210430/4}
+    \caption{\label{fig:Susceptibility} 
+    单层VSe$_2$中CDW的动量空间诊断。
+    }
+\end{figure*}
+
+\end{document}

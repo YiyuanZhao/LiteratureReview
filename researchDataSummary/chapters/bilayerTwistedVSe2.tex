@@ -1,0 +1,243 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Crystal structure in twisted bilayer vanadium diselenide}
+\labch{Crystal structure in twisted bilayer vanadium diselenide}
+
+\section{Supercell Determination}
+\labsec{sec:Supercell Determination}
+
+Supercell is constructed by staking different V atom in primitive cell into the same place on horizontal position(aligned with c-axis). The periodical structure is divided into meshes which marks every V atom. The c-axis aligned staking (AA staking) will be achived under rotation operation. Thus constructs a supercell with a given lattice parameter $L$.(See in \reffig{fig:case1_2}).
+
+We denotes $(m,n)$ \sidenote{$(m,n)$ is divided into two diffent rotation type, marked as $(m,n)$(Rotation Case 1) and $(m^{'}, n^{'})$(Rotation Case 2) seperately.} pair to describe the selected V atoms that to be stacked into AA type. The top layer rotates $\theta/2$ clockwise while the bottom layer rotates $\theta/2$ counterclockwise.Varities of pairs can be chosen to gain the supercell structure, each pair gives a rotaion degree $\theta$ and supercell lattice parameter $L$, which is the feature to construct a supercell we need.
+\begin{figure}[ht]
+	\includegraphics{case1_2}
+	\caption[Supercell mesh in case 1-2]{
+		Supercell mesh in case 1-2. m(n) labels horizontal(vertical) V atoms in bilayer periodical lattice on the top view. The blue line indicates two V atoms awaiting to be rotated(One from the bottom layer and another from the top layer). These two V atoms will be AA staked after rotation. Lattice parameter of this supercell is defined as the length of blue line.}
+	\labfig{fig:case1_2}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics{case3_4}
+	\caption[Supercell mesh in case 3-4]{
+		Supercell mesh in case 3-4. m(n) labels horizontal(vertical) V atoms in bilayer periodical lattice on the top view. The blue line indicates two V atoms awaiting to be rotated(One from the bottom layer and another from the top layer). These two V atoms will be AA staked after rotation. Lattice parameter of this supercell is defined as the length of blue line.}
+	\labfig{fig:case3_4}
+\end{figure}
+
+The rotation in \reffig{fig:case1_2} doesn't include every possible supercell configuration. (\eg the rotation $(1, 2)$ rotaion in \reffig{fig:case3_4} can not be achived with y-axis symmetry.) An extra x-axis rotation axis is needed for completeness.
+
+Considering these rotation method, we would be able to gain the rotation degree $\theta$ and lattice parameter $a$ in each $(m,n)$ condition. For Case 1-2:
+\begin{eqnarray}
+	\tan \frac{\theta}{2} &=& \frac{\frac{a}{2}(2n - 1)}{\frac{\sqrt{3}a}{2}(2m - 1)} = \frac{2n - 1}{\sqrt{3} (2m - 1)} \label{eqn:thetaCase1} \\
+	L &=& \frac{a}{2} \sqrt{(2n - 1)^2 + 3(2m - 1)^2} \label{eqn:lengthCase1}\\
+	\tan \frac{\theta^{'}}{2} &=& \frac{na}{\sqrt{3}ma} = \frac{n}{\sqrt{3}m}\label{eqn:thetaCase2} \\
+	L^{'} &=& a\sqrt{3m^2 + n^2} \label{eqn:lengthCase2}
+\end{eqnarray}
+
+The same methods can be applied to Case 3-4:
+\begin{eqnarray}
+	\tan \frac{\theta}{2} &=& \frac{\frac{a}{2}(2m - 1)}{\frac{\sqrt{3}a}{2}(2n - 1)} = \frac{2m - 1}{\sqrt{3} (2n - 1)} \label{eqn:thetaCase3} \\
+	L &=& \frac{a}{2} \sqrt{(2m - 1)^2 + 3(2n - 1)^2} \label{eqn:lengthCase3}\\
+	\tan \frac{\theta^{'}}{2} &=& \frac{ma}{\sqrt{3}na} = \frac{m}{\sqrt{3}n}\label{eqn:thetaCase4} \\
+	L^{'} &=& a\sqrt{3m^2 + n^2} \label{eqn:lengthCase4}
+\end{eqnarray}
+
+Specific $\theta, L$ has been determined np to now. However Varities of $(m,n)$ may be responsible for the same rotation degree.(See in \reffig{fig:ConfigureRepetition}). The smallest supercell lattice parameter at each rotation degree is what we concerned about.(\ie The 'primitive' supercell). The filtered supercell lattice(preserve only the smallest lattice parameter at each rotation degree) shows at \reffig{fig:ConfigureRepetitionFiltered}, which shouws periodicity with 30 degree. This 30 degree period indicates that exploring properties at 0~30° would give a complete description for all rotation degree if we only consider V atoms.
+
+\begin{marginfigure}[]
+	\includegraphics{ConfigureRepetition}
+	\caption[Supercell lattice parameter from different $(m,n)$ rotation in Case 1-2.]{
+		Supercell lattice parameter from different $(m,n)$ rotation in Case 1-2. Y-axis describes superlattice in unit cell length($a_0$), X-axis describes the rotation degree $\theta$.It can be found that multiple superlattice length corresponds to one specific rotation degree.
+	}
+	\labfig{fig:ConfigureRepetition}
+\end{marginfigure}
+
+\begin{marginfigure}[]
+	\includegraphics{ConfigureRepetitionFiltered}
+	\caption[Filtered supercell lattice parameter from different $(m,n)$ rotation for all cases(Case 1-4).]{
+		Filtered supercell lattice parameter from different $(m,n)$ rotation for all cases(Case 1-4). Y-axis describes superlattice in Angstrom, X-axis describes the rotation degree $\theta$. The superlattice shows periodicity with 30 degree.
+	}
+	\labfig{fig:ConfigureRepetitionFiltered}
+\end{marginfigure}
+
+Once we completed filtering, we gained unique $\theta, L$ at each rotaion degree.It is possible to construct the supercell with given parameter from bilayer primitive cell. Rotation of the top/bottom layer will give rise to twisted bilayers stucture. The last step is cutting twisted bilayer into supercell. The detailed MATLAB code is posted in \refsec{sec:generateSupercell}.
+
+In summary, we need 4 steps to gain the feature of a supercell via rotation:
+\begin{description}
+	\item[Gain suppercell feature] Obtain the supercell $\theta, L$ from eqn(\ref{eqn:thetaCase1})-(\ref{eqn:lengthCase4}).
+	\item[Filter the configuration] Find the minimum supercell lattice length in each rotation degree.
+	\item[Construct supercell] Construct the supercell with known $\theta, L$.
+	\item[Cut supercell] Cut the layers into supercell with constructed configuration and lattice parameter $L$.
+\end{description}
+
+\section{Supercell Analysis}
+
+VSe$_2$ is triangular lattice, which hints that three-fold symmetry is always satisfied. We select $\theta \in [0, 60]$° as our range of analysis, which fulfills the completeness of this issue. We lists all possible configurations constructed in this research in \reftab{tab:supercell}. Relation between the number of atoms and rotation degree is ploted in \reffig{fig:ConfigurationRepetitionPlot}.
+
+\begin{table}[ht]
+	\caption[Supercell lattice parameter length]{
+		Supercell lattice parameter length with rotation degree/atom number.
+	}
+	\labtab{tab:supercell}
+	\begin{tabular}{lll}
+	\toprule
+	Rotation Degree/° & Supercell Length/A & Atom Number \\
+	\midrule
+	6.008983          & 32.82505           & 546         \\
+	7.340993          & 26.87507           & 366         \\
+	9.430008          & 20.93079           & 222         \\
+	10.41744          & 32.82505           & 546         \\
+	11.63505          & 29.39992           & 438         \\
+	13.17355          & 14.99897           & 114         \\
+	15.17818          & 22.56415           & 258         \\
+	16.42642          & 24.087             & 294         \\
+	17.89655          & 19.15868           & 186         \\
+	21.78679          & 9.10403            & 42          \\
+	24.4327           & 28.1658            & 402         \\
+	26.00782          & 30.58428           & 474         \\
+	27.79577          & 12.4067            & 78          \\
+	29.40931          & 33.88992           & 582         \\
+	30.59069          & 33.88992           & 582         \\
+	32.20423          & 12.4067            & 78          \\
+	33.99218          & 30.58428           & 474         \\
+	35.5673           & 28.1658            & 402         \\
+	38.21321          & 9.10403            & 42          \\
+	42.10345          & 19.15868           & 186         \\
+	43.57358          & 24.087             & 294         \\
+	44.82182          & 22.56415           & 258         \\
+	46.82645          & 14.99897           & 114         \\
+	48.36495          & 29.39992           & 438         \\
+	49.58256          & 32.82505           & 546         \\
+	50.56999          & 20.93079           & 222         \\
+	52.65901          & 26.87507           & 366         \\
+	53.99102          & 32.82505           & 546         \\
+	60                & 3.441              & 6           \\
+	\bottomrule
+	\end{tabular}
+	\end{table}
+
+	\begin{kaobox}[frametitle=Notes]
+		\reftab{tab:supercell} and \reffig{fig:ConfigurationRepetitionPlot} filters supercell lattice parameter $L \le 10 a_0$, which indicates a smaller supercell.
+	\end{kaobox}
+
+	\begin{marginfigure}[]
+		\includegraphics{ConfigurationRepetitionPlot}
+		\caption[Each roation degree and its corresponding number of atoms]{
+			Each roation degree(x-axis) and its corresponding number of atoms(y-axis) presented in \reftab{tab:supercell}.
+		}
+		\labfig{fig:ConfigurationRepetitionPlot}
+	\end{marginfigure}
+
+From \reffig{fig:ConfigureRepetitionFiltered} we would find that rotation configuration usually contains hundreds of atoms in a supercell. The scaling of supercell hinders our systematic DFT exploration. VSe$_2$ primitive cell holds six-fold rotation symmetry, which gives 60° periodicity. In practice, the shape of supercell holds 30° periodicity(See in \reffig{fig:ConfigurationRepetitionPlot}) while the exact lattice holds 60° symmetry because of the presence of Se atoms.(\ie The presence of Se atoms decreases the symmetry of supercell). We select configurations with total number of atoms between 42-186 to proceed DFT calculation after balancing variaty and efficiency. The configuration used in DFT calculation lists in \reftab{tab:supercellSelection}.
+
+The supercell lattice length is determined by DFT structure optimization. Details will be discussed in \refsec{sec:Primitive_cell_struture}. Structure with rotation degree 60° exhibits 1T structure, but with different staking method. Bilayer VSe$_2$ is AA-stacked in experiment data.
+
+\begin{table}[h]
+	\caption[Filtered supercell structure that will be explored in DFT calculation]{
+		Filtered supercell structure that will be explored in DFT calculation.
+	}
+	\labtab{tab:supercellSelection}
+	\begin{tabular}{lll}
+	\toprule
+	Rotation Degree/° & Supercell Length/A & Atom Number \\
+	\midrule
+	13.174            & 14.999             & 114         \\
+	21.787            & 9.104              & 42          \\
+	27.796            & 12.407             & 78          \\
+	32.204            & 12.407             & 78          \\
+	38.213            & 9.104              & 42          \\
+	46.826            & 14.999             & 114         \\
+	\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\section{Primitive Cell Struture}
+\labsec{sec:Primitive_Cell_Struture}
+
+We use primitive cell to construct DFT supercell in the \refsec{sec:Supercell Determination}. Optimizing twisted bilayer VSe$_2$ supercell via DFT is time comsuming, while the optimized structure may lose its symmetry, which leads to incorrect physical meaning. Thus we optimize structure of the bilayer primitive cell at first, then build supercell by total relaxed primitive cell directly.
+
+\begin{figure}[]
+	\includegraphics{primitiveCell}
+	\caption[Untwisted AA staking bilayer VSe$_2$ primitive cell.]{
+		Untwisted AA staking bilayer VSe$_2$ primitive cell. We assume this structure is free standing. \ie Layers are grown without base material( \eg HOPE, MoS$_2$ etc.). $D$ denotes distance between layers and $d$ denotes vertical distance between V and Se atom.
+	}
+	\labfig{fig:primitiveCell}
+\end{figure}
+
+\reffig{fig:primitiveCell} shows structure of the bilayer primitive cell. Fractional coordination of V, Se atoms in XY plane are fixed by its space group symmetry(1T structure configuration). Thus lattice parameter$a_0$, layers spacing $D$ and V-Se vertical spacing $d$ fully determines bilayer structure. These parameters are gained by a DFT structure optimization with non-magnetic 1T bilayer configuration. Hubbard-U is set to 0, tense convergence criteria is set as EDIFFG=-1.0E-3, energy convergence criteria is set as EDIFF=1.0E-8. The fully relaxed structure is given in \reftab{tab:primitiveCellStructure}. Constructed POSCAR file can be seen in \refsec{sec:primitiveCell}. The thickness of the film is $~ 6.28$ Å. 
+
+\begin{figure}[ht]
+	\caption[VSe$_2$ configuration in experiment data]{
+		VSe$_2$ configuration in experiment data.
+	}
+	\labfig{fig:experimentConfig}
+	\subfigure[Structure in Ref \cite{C9NR06076F}]{
+		\includegraphics[width=0.42\linewidth]{thicknessRef1}
+	}
+	\subfigure[Structure in Ref \cite{adma.201903779}]{
+		\includegraphics[width=0.42\linewidth]{thicknessRef2}
+	}
+	\subfigure[Structure in Ref \cite{PhysRevMaterials.4.084002}]{
+		\includegraphics[width=0.42\linewidth]{thicknessRef3}
+	}
+	\subfigure[Structure in Ref \cite{C8NR09258C}]{
+		\includegraphics[width=0.42\linewidth]{thicknessRef5}
+	}
+\end{figure}
+
+\begin{marginfigure}
+	\includegraphics{thicknessRef4}
+	\caption[Structure in Ref \cite{PhysRevB.102.115149}]{
+		Structure in Ref \cite{PhysRevB.102.115149}.
+	}
+\end{marginfigure}
+
+For varifying the reliability of our structure, we compare our structure data (lattice parmater $a$, film thickness) with other works. Discovery of structure \sidecite{C9NR06076F} gives thickness with 6.8 Å. Chemically exfoliated VSe$_2$ monolayers research \sidecite{adma.201903779} gives layerthickness of $1.0 \pm 0.1$ nm and $a = 3.35 \pm 0.01$ Å. MBE growth from ML up to 30ML \sidecite{PhysRevMaterials.4.084002} gives the thickness of ~18.3 nm(30MLs) and $a = 3.356$ Å. Research on electronic and magnetic properties of mono- and bilayer VSe$_2$ \sidecite{PhysRevB.102.115149} gives layer thickness $0.6$ nm and $a = 0.34$ nm. Atomistic real-space observation of the van der Waals layered structure of VSe$_2$ for the first time \sidecite{C8NR09258C} gives the thickness\sidenote{Note that the total thickness of the film is 100 nm} of $6.27 \pm 0.3$ Å and $a = 3.26 \pm 0.2$ Å .
+
+A summary of these experiment data shows in \reftab{tab:experimentData}. The total relaxed structure consists with current experiment data in the lattice constant and ML(Monolayer) layer thickness. Once we determined structure of primitive cell, we' re able to expand the primitive cell to gain the supercell structure using methods in \refsec{sec:Supercell Determination}.
+
+\begin{margintable}
+	\caption[Structure of the primitive cell and its lattice properties considering space group symmetry]{
+		Structure of the primitive cell and its lattice properties considering space group symmetry.
+	}
+	\labtab{tab:primitiveCellStructure}
+	\begin{tabular}{ll}
+	\toprule
+	Property & Value (Å)\\
+	\midrule
+	$a$ 	& 3.317131 \\
+	$D$ 	& 3.121228 \\
+	$d$ 	& 1.581061 \\
+	$D + 2d$& 6.283351 \\
+	\bottomrule
+	\end{tabular}
+\end{margintable}
+
+\begin{table}
+	\caption[Structure information about VSe$_2$ extracted from experiment data]{
+		Structure information about VSe$_2$(Lattice constant and layer thickness) extracted from experiment data. Our DFT calculation parameter shows in the first line.
+	}
+	\labtab{tab:experimentData}
+	\begin{tabular}{lll}
+	\toprule
+	Source                          & Lattice Constant & Layer Thickness \\
+	\midrule
+	Our DFT Calculation             & 3.317 Å          & 6.283 Å         \\
+	Duvjir et. al, Nanoscale, 2019  & /                & 6.8 Å           \\
+	Wei Yu et. al, Nanoscale, 2019  & 3.35 ± 0.01 Å    & 1.0 ± 0.1 nm    \\
+	Phys. Rev. Materials, 2020(07)  & 3.356 Å          & ~1ML(6.1 Å)     \\
+	Phys. Rev. B 102, 115149 (2020) & 0.34 nm          & 0.6 nm          \\
+	Nanoscale, 2019(02)             & 3.26±0.2 Å       & 6.27±0.3 Å  	 \\
+	\bottomrule
+	\end{tabular}
+\end{table}
+
+\chapter{DFT calculation of twisted bilayer vanadium diselenide}
+\labch{DFT calculation of twisted bilayer vanadium diselenide}
+
+\section{Primitive Cell Testing}
+\labsec{Primitive Cell Testing}
+
+DFT calculation works with varities of control parameters, which each parameter may play crucial role in calculation. Thus, several tests should be applied to enhance strength of our reliability. References \sidecite{PhysRevB.96.235147} tested the effect of pseusopotential in relaxed lattice parameter. Here we tests the exchange-correlation type, pseudopotential, vdW correlation and Hubbard-U in our primitive cell configuration to evaluate their effects in DFT calculation.
+
+\subsection{Hubbard-U term}
+Hubbard-U

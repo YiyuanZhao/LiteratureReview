@@ -1,0 +1,94 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Spin-valley locked instabilities in moire transition metal dichalcogenides with \\
+conventional and higher-order Van Hove singularities}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+近期的实验在奴转双层TMDs中观察到了绝缘相、可能存在的超导态。除此之外，还包括了由于内禀Ising自旋-轨道耦合产生的自旋谷锁定的moire能带。moire TMDs也在费米面附近具有可以由电场调控对数/指数发散的范霍夫奇点(VHS)，前后两种发散分别被称为常规和高阶VHS。在此处我们进行了微扰重整化群(RG)的方式来研究双层TMDs中常规和高阶VHS的主要不稳定性。我们发现自旋谷锁定极大的改变了RG流，相对于被广泛研究的石墨基底的moire系统而言，导致了意料之外的不稳定性，例如自旋/谷极化的铁磁性、宇称混合的拓扑超导。对于高于二阶的VHS，我们发现自旋谷锁定驱动的金属态尽管裸极化率发散，但没有打破对称性。我们的结果说明自旋谷锁定极大的影响了RG，并证明了moire TMDs是实现多种引入相互作用的自旋谷锁定相的合适平台，这与石墨烯基底的moire系统物理原理不同。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2105.02415}
+\end{description}
+\end{abstract}
+
+\keywords{Charge Order Coexistance}
+
+\maketitle
+
+\section{Introduction}
+扭转双层vdW材料由于发现了超导和诸多自发对称性破缺的关联相而备受关注。尤其是VI族单层TMD由于反演对称性破缺所允许的大自旋-轨道耦合出现的moire系统和其实验调控而受到关注。这种谷依赖的自旋-轨道耦合在两种相反的谷面外方向会表现出类似有效Zeeman场的行为，这样导致了自旋和谷自由度之间的有效锁定。这种自旋-谷锁定，使得双层扭转TMDs不仅允许谷自由度的光调控，也可以导致奇异的拓扑和对称破缺相。实际上，一些关于扭转异质结的实验已经报道了在WSe$_2$中，多个分数占据数的关联绝缘相和远离这些绝缘相的小掺杂给出的金属态，同样还在临近出现可能的超导态。这种自旋谷锁定的特点定量的将TMD的moire系统与石墨烯基的moire系统区分开来，后者的自旋、谷、子晶格对称性都会在单粒子石墨烯哈密顿量中出现。除了自旋-谷锁定，其他双层TMD的特点是其具有两种类型的VHS，可以通过外位移场调控。第一种是常规的VHS，在此处DOS是对数发散的，尽管费米面完美嵌套，只有库珀的不稳定性是对数平方发散的。第二种是更高阶的VHS，在此处DOS具有更强的幂级数规律发散，库珀和粒子-空穴通道的裸极化率也是幂级数发散的。在通常的位移场下的双层TMD具有六个常规的VHS，每个谷贡献三个，位于moire布里渊区边缘的场调控位置。尽管如此，在确定的场大小下，相同谷的三个传统VHS发散成为更高阶的VHS，在谷中心具有指数$\alpha = 3$。我们记录VHS是对数发散的传统类型，还是更高阶的幂级数，是通过施加外界的位移场得到的，因此与实验相关联。更高阶幂指数的VHS存在的可能性是另一个将其与传统石墨烯系统区分开来的方式。
+
+在此处，我们研究了六个常规VHS和高阶VHS的费米面不稳定性。我们使用微扰重整化群近似的复合重整化群，可以在关联能隙小于带宽(弱耦合)条件下可信的预测相图，并在石墨烯基的moire系统得到了广泛应用。给出的DOS主要来自于VHS的贡献，我们仅仅考虑在VH中心附近而不是moire布里渊去的波包。复合RG公式允许我们将波包内和之间驱动的粒子-空穴和粒子-粒子不稳定性不稳定性一同考虑，而且提供了准确的关于引入不稳定性相互作用的主要部分和与之相关的量子相变的实验信息。
+
+我们发现自旋-谷锁定显著的改变了RG流，并导致了与石墨烯基moire系统不同的相。对于自旋简并的RG分析与自旋谷锁定能带的主要不同在于：(1)后一种情况下，包内与包间相互作用给出了源自费米统计的额外约束。(2)费米子从两种变为一种。由于这些不同，六个包的传统VHS情况下，我们发现自旋、谷极化的相和宇称混合的拓扑超导态有可能能量更低，取决于裸包内和包间相互作用是排斥还是吸引。相反的，在六度自旋简并的VH的moire系统中，使用相同方法发现的具有确定的自旋和谷特征的对密度波和所有的电荷/磁性不稳定性在现在的情况下会被自旋-谷锁定所压制。对于两个片段的更高阶VHS情况中，由自旋-谷锁定引入的，包含两个包的粒子-空穴嵌套在对称性约束下扮演了重要的角色。在完美嵌套极限下，由于小的谷间和密度-密度相互作用，我们发现了高到二阶微扰的不具有对称破缺的金属态。当嵌套角度从完美偏移时，我们发现了当裸密度-密度相互作用是排斥时的另一个不打破对称性的金属态。这个系统内的金属态与低温下出现的非长程序的一/三自旋简并的高阶VHS中的超金属类似，尽管裸极化率发散。除此之外，两种金属态在流动到有限确定点的同时不同，在此处，驱动粒子-空穴不稳定性的相互作用在低能极限变得不相关。我们发现的情况下的对称性破缺的缺失是自旋-谷锁定的结果，压制了自旋简并情况下的允许的其他相互作用的结果。另一个来自单个高阶VHS的自旋简并情况的不同是，当裸密度-密度相互作用是吸引时，我们发现宇称混合的超导态占主要地位。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210514/1}
+    \caption{\label{fig:moire} 
+    moire conduction band
+    }
+\end{figure}
+
+\section{THE TWO TYPES OF VAN HOVE PATTERNS}
+我们首先考虑模型$H_0 = \sum_{s = \uparrow, \downarrow} H_0^s$作为双层TMD第一个moire价带。由于$s_z$不变的自旋-轨道耦合，自旋$s = \uparrow, \downarrow$分别与$\tau = K, K^{'}$绑定。两个哈密顿量$H_0^{\uparrow}, H_0^{\downarrow}$由时间反演对称性关联。在较小的面外位移场下，低于半空占据数moire布里渊区边缘的每个自旋非等效的VHS有三个。当我们增大位移场时，具有$\uparrow(\downarrow)$自旋的三个VHS的位置朝着mBZ的角落($\kappa_{+}, \kappa_{-}$)移动，在临界场强发散到单个高阶VHS。两种情况的不同之处除了数目不同外，还在于先前六度VHS的DOS是对数发散的，而后面的两个VHS是幂指数$\alpha = 3$的幂指数发散。在六度VHS情况中，自旋向上接近VH点$P_n, n=1, 2, 3$的低能色散的哈密顿量为：
+\begin{eqnarray}
+    \epsilon_k^1 &\approx& \sum_{\alpha = x, y} \sum_{\beta = x, y} \omega_{\alpha\beta}(k - P_1)_{\alpha}(k - P_1)_{\beta} \nonumber \\
+    \epsilon_k^2 &=& \epsilon_{\hat{\mathcal{R}}_3^-1 k }^1, \epsilon_k^3 = \epsilon_{\hat{\mathcal{R}}_3 k }^1 \label{eqn:dispersion}
+\end{eqnarray}
+在此处，k、VH点的位置$P_1, P_2 = \hat{\mathcal{R}}_3 P_1, P_3 = \hat{\mathcal{R}}_3^{-1} P_1$都是相对于mBZ中心$\bar{\Gamma}$而言的，$\hat{\mathcal{R}}_3$则是$+2\pi/3$旋转矩阵。在此处我们仅仅保留到动量k的二阶项。VH点和系数矩阵$\omega$通过位移场调控，此时$\omega$是对称的实矩阵。由于$\omega$在鞍点附近面熟了色散关系，因此满足$Det(\omega)<0$。这个自旋向下的色散关系的哈密顿量仍然可以通过公式\ref{eqn:dispersion}给出，但$P_{\bar{n}} = -P_n$。当这六个VHS位于费米面时，由于DOS主要由接近VHS的FS部分贡献，因此可以使用块近似，仅考虑大小为$k_{\Lambda }$的VH点$P_n, P_{\bar{n}}$的动量块。我们主要考虑与能带宽度相比很小的块大小的紫外截断能$\Lambda$，即弱耦合区域。这导致了六块单粒子模型与自旋简并的扭转双层石墨烯情况相似。
+
+对于两个VHS的情况，来自两个谷VH点附近的低能色散可以表示为：
+\begin{eqnarray}
+    &\epsilon_k^K = \kappa(k_x^3 - 3k_xk_y^2) \nonumber \\
+    &\epsilon_k^{K^{'}} = \kappa(k_x^3 - 3k_x k_y^2) \label{eqn:TwoVHS_dispersion}
+\end{eqnarray}
+$\kappa$表示能量的scaling。重要的是，接近两个更高阶的VHS附近的FS在动量$q = 2Q$处完美嵌套($\epsilon_k^K = \epsilon_k^{K^{'}}$)。除此以外，接近高阶VH点的DOS表现出指数发散：
+\begin{equation}
+    \mu(E) = \bar{\mu} | E |^{-1/3}
+\end{equation}
+此处$\bar{\mu} = \frac{1}{4\sqrt{3} \pi^{3/2}} \frac{\Gamma(1/3)}{\Gamma(5/6)} | \kappa |^{-2/3}$。
+
+\section{BARE SUSCEPTIBILITIES}
+我们现在对六种常规、两种高阶VHS都进行RG分析。第一步是研究粒子-空穴和粒子-粒子通道的块间和块内非相互作用的静态极化率：
+\begin{eqnarray}
+    \Pi_{ph}^{nm}(q) &=& -\int dk \frac{f_{\epsilon_k^n} - f({\epsilon_{k+q}^m})}{\epsilon_k^n - \epsilon_{k+q}^m} \nonumber \\
+    \Pi_{pp}^{nm}(q) &=& \int dk \frac{1 - f_{\epsilon_k^n} - f({\epsilon_{-k+q}^m})}{\epsilon_k^n + \epsilon_{-k+q}^m} \label{eqn:Non_interacting_susceptibility}
+\end{eqnarray}
+n和m是块的编号。对于六块的情况，每个通道有四个不等效极化率，分别位于$q = 0, Q_n^{'}, Q_{nm}^{+}, Q_{n\bar{m}}^{-}$。后面三种动量将n与相反的块$\bar{n}$、相同谷的另一块$m \neq n$、相反谷的另一块$m \neq n$连接起来。在这八种裸极化率中，DOS$\pi_{ph}^{nn}(0)$和Cooper不稳定性$\Pi_{pp}^{n\bar{n}}(0)$表现出对数和对数平方根发散的关系，即：
+\begin{eqnarray}
+    \Pi_{ph}^{nn}(0) &=& \mu_0 \ln \frac{\Lambda}{max(T, |\mu|)} \nonumber \\
+    \Pi_{pp}^{n\bar{n}} &=& \frac{\mu_0}{2} \ln \frac{\Lambda}{max(T, |\mu|)} \ln \frac{\Lambda}{T}
+\end{eqnarray}
+此处$\mu_0$取决于公式\ref{eqn:dispersion}，$\mu$为实验值的化学势，T为温度，$\Lambda$是块模型的紫外截断。给出对于相同自旋和相反自旋双层扭转TMDs块的FS是弱嵌套后，我们可以使用DOS分析对应的极化率：
+\begin{eqnarray}
+    \Pi_{ph}^{n\bar{m}}(Q_n\bar{m}^{-}) &=& \gamma_{ph}^{-}\Pi_{ph}^{nn}(0), \Pi_{ph}^{n\bar{n}}(Q_n\bar{n}^{'}) = \gamma_{ph}^{'}\Pi_{ph}^{nn}(0) \nonumber \\
+    \Pi_{ph}^{nm}(Q_{nm}^{+}) &=& \gamma_{ph}^{+}\Pi_{ph}^{nn}(0), \Pi_{pp}^{nm}(Q_{\bar{n}m}^{-}) = \gamma_{pp}^{-}\Pi_{ph}^{nn}(0) \nonumber \\
+    \Pi_{pp}^{nn}(-Q_n^{'}) &=& \gamma_{pp}^{'}\Pi_{ph}^{nn}(0), \Pi_{pp}^{n\bar{m}}(Q_{\bar{n}\bar{m}}^{+}) = \gamma_{pp}^{+}\Pi_{pn}^{nn}(0)
+\end{eqnarray}
+在此处，$\gamma_{ph}^{-}, \gamma_{ph}^{'} \ge 0$区分了不同谷袋之间的粒子-空穴通道的嵌套角度。这些嵌套参数原则上没有被固定为1。对于两块的情况，通过使用公式\ref{eqn:Non_interacting_susceptibility}的$\epsilon_k^K$和$\epsilon_k^{K^{'}}$来计算极化率。我们发现DOS和Cooper不稳定都是幂指数发散的。
+\begin{eqnarray}
+    \Pi_{ph}(0) = \bar{\mu}_{ph} T^{-1/3} \nonumber \\
+    \Pi_{pp}(0) = \bar{\mu}_{pp} T^{-1/3}
+\end{eqnarray}
+此处$\mu_{ph} = \frac{\bar{\mu}}{4} \int d\epsilon |\epsilon|^{-1/3} \cosh ^{-2} (\epsilon/2) \approx 1.14 \bar{\mu}$，而且$\bar{\mu}_{pp} = \frac{\bar{\mu}}{2} \int d\epsilon | \epsilon |^{-4/3} \tanh(\epsilon/2) \approx 3.4 \bar{\mu}$。除此之外，由于两个块以内的FS的完美嵌套，位于动量$q = Q$粒子-空穴极化率也表现出幂级数发散，与Cooper不稳定性具有相同的系数$\Pi_{ph}(Q) = \Pi_{pp}(0)$。这些罗极化率证明了确定不稳定性的主导地位与两块的情况相关。
+
+\section{INTER-PATCH EFFECTIVE INTERACTIONS}
+对于六个块的情况，由动量和自旋谷锁定导致的$s_z$-自旋守恒只允许四种不同的相互作用：
+\begin{eqnarray}
+    H_{int}^{(6)} &=& \sum_{n=1}^3 \tilde{g}_2 \psi_n^{\dagger} \psi_n \psi_{\bar{n}}^{\dagger} \psi_{\bar{n}} + \sum_{n=1}^3 \sum_{m \neq n} \left[ \tilde{g}_3 \psi_m^{\dagger} \psi_{\bar{m}}^{\dagger} \psi_{\bar{n}} \psi_n \right. \nonumber \\
+    &+& \frac{1}{2} \tilde{g}_6 \left( \psi_n^{\dagger} \psi_n \psi_{m}^{\dagger} \psi_{m} + \psi_{\bar{n}}^{\dagger} \psi_n \psi_{m}^{\dagger} \psi_{m} \right) \nonumber \\
+    &+& \left. \tilde{g}_6^{'} \psi_n^{\dagger} \psi_n \psi_{\bar{m}}^{\dagger} \psi_{\bar{m}} \right]
+\end{eqnarray}
+此处$\psi_n$是块n = 1, 2, 3谷K中的湮灭算符，$\bar{n}$标志着谷$K^{'}$与块n的动量相反，$m \neq n$表示块n内的其余谷-K的块。由于自旋和谷自由度被锁定，来自谷K和$K^{'}$的电子具有向上和向下的自旋。在此处，我们假设一个块内动量的差是相互独立的。在四种相互作用外，$\bar{g}_6$项是相同谷块中的密度-密度相互作用。$\bar{g}_2$和$\bar{g}_6^{'}$项表示相反的谷块，而$\bar{h}_3$项是零动量BCS对散射过程，具有层间谷动量转换$Q^{+}$。重要的是，由于自旋-谷锁定，谷间交换散射由于会导致自旋翻转而被禁止。更多的，由于每个块只有一种自旋，相同的具有动量交换$Q^{+}$的谷交换散射变得多余，费米统计给出块间密度-密度相互作用在红外极限的VHS占据数消失。我们因此没有考虑块间密度-密度的相互作用。
+\end{document}
