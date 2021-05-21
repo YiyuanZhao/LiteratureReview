@@ -1,0 +1,76 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Quantum Phases of Transition Metal Dichalcogenide Moire Systems}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+Moire系统为强关联物理提供了丰富的研究平台。近期的过渡族金属双层异质结Moire系统的实验因为掌握了一个三角形晶格中较为简单的延展Hubbard模型的方式而受到关注。由异质TMD moire系统作为固态基底的量子模拟器所启发，我们使用密度矩阵重整化群(DMRG)的方法探索了延展Hubbard模型。更具体地说，我们探索了动能二维相空间相对于相互作用的强度$t/U$，和更远的相互作用强度$V_1/U$。我们发现了费米液体、手性自旋液体、自旋密度波和电荷密度波之间的相互竞争。尤其是我们发现手性相关态的首要远程相互作用给出了纠缠的可能性。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2105.02415}
+\end{description}
+\end{abstract}
+
+\keywords{Charge Order Coexistance}
+
+\maketitle
+
+\section{Introduction}
+由于几何阻挫和量子涨落可以导致诸多的可能性，人们对三角形晶格的Hubbard模型十分感兴趣。先前的DMRG研究在半满填充给出了强烈的金属-绝缘体相变。跟近期地，手性自旋液体(CSL)相出现的可能性已经被预测。其他可能的有序相也被提出。然而，对于相互作用强度和带宽连续调控实验的缺失，使得对这些预言的验证格外困难。根据异质双层TMD Moire系统可以实现三角晶格Hubbard模型的假设，近期在异质TMD Moire系统中确实在半满填充的情况下观察到了Mott绝缘态。更进一步的，对于$U/t$的连续调控成为了可能。然而，由电荷序在分数占据所给出的，由于低电荷密度导致的弱投影，TMD系统具有相当远的相互作用。这些相互作用也可以在实验中被调控，给出了$U/t$和$V_1/U$的二维空间来探索量子相。在比较中，迄今为止计算方面的探究被限制在格点之间的相互作用。
+
+由实验的发展所启发，我们探索了三角晶格下的延展Hubbard模型，并通过调控跃迁与格点间相互作用$t/U$和长程相互作用相对强度$V_1/U$的比值。使用DMRG方法，我们第一次遍历了很大的相空间，而且在标准Hubbard模型极限下进行了验证。通过研究更远距离的相互作用的影响，我们研究了电荷序、手性自旋液体、半满占据条件下的自旋密度波之间的竞争关系。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210521/1}
+    \caption{\label{fig:phaseDiagram} 
+    The system under study and the phase diagram.
+    }
+\end{figure}
+
+\section{Model}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210521/2}
+    \caption{\label{fig:smallV1ULimit} 
+    Small $V_1/U$ limit
+    }
+\end{figure}
+我们考虑三角格子下的Hubbard模型：
+\begin{eqnarray}
+    H = &-&t \sum_{\left\langle ij \right\rangle} \left( c_i^{\dagger}c_j + H.c. \right) + U \sum_i n_{i, \uparrow} n_{i, \downarrow} \nonumber \\
+    &+& V_1 \sum_{\left\langle i j \right\rangle} n_i n_j + V_2 \sum_{\left\langle \left\langle i j \right\rangle \right\rangle} n_i n_j + V_3 \sum_{\left\langle \left\langle  \left\langle i j \right\rangle \right\rangle \right\rangle} n_i n_j
+\end{eqnarray}
+
+在此处$t, U, V_i$代表跃迁、格点间相互作用、第i个最近邻相互作用的强度。我们通过异质TMD双层实验给出了$V_2/V_1 \approx 0.357$，且$V_3/V_1 \approx 0.260$来作为计算参数。给出独立的带宽实验结果和相互作用的范围，我们在相空间中格点间相互作用强度$U/t$、远距离相互作用强度$V_1/U$中研究了基态。我们专注于总自旋$S = 0$条件下的半满占据态。我们在YC4圆柱体进行了大面积DMRG计算，如图\ref{fig:phaseDiagram}(b)所示，我们观察到的相包括手性自旋液体(CSL)、自旋密度波(SDW)、电荷密度波(CDW)、和费米液体(FF)。与标准Hubbard模型相比，长程相互作用进一步丰富了相空间。在缺乏长程相互作用时，大的$U/t$极限下，系统可以通过有效自旋模型良好描述，具有由三角晶格超交换作用驱动的最近邻反铁磁相互作用性质。具有几何阻挫的三角晶格在适中$U/t$下，可能衍生出CSL。更远的相互作用$V_1$可以同时影响自旋和电荷部分。首先，在小的$V_1/U$极限下，$V_1$相互作用增强了自旋交换作用，其因子为$U/(U-V_1)$，同时它也可以映射到最近邻之间的铁磁直接交换相互作用，压制了反铁磁序。我们发现手性序在有限小的$V_1/U$达到峰值，此区间出现在中等$U/t$附近。其次，当长程相互作用强度增加时，电荷序增加，自旋序则被抑制。因此我们可以发现CSL和SDW的消解，当$V_1/U$增加时，CDW出现。相空间的丰富性证明了长程相互作用的重要性。
+\subsection{Small $V_1/U$ limit}
+在小的$V_1/U$极限下($V_1/U \approx 0.0175$)，我们重新计算了Hubbard模型在$V_1/U = 0$下的值。我们通过计算双占据数来探测金属-绝缘体相变(MIT)，$n_d = \left\langle n_{\uparrow} n_{\downarrow} \right\rangle$。在临界点$(U/t)_{MIT} \approx 9.2$处出现了非连续的下降(图\ref{fig:smallV1ULimit}a)。这个现象与先前Hubbard模型在$U/t \approx 9.0$的观察到的MIT一致。其次，我们在MIT之上计算自旋结构因子来分辨CSL相(图\ref{fig:smallV1ULimit}c)和手性关联函数(图\ref{fig:chiral})。我们考虑手性关联函数$\left\langle \chi_m \chi_n \right\rangle$，其中手性序参量为$\chi_i = \vec{S}_i \cdot \left( \vec{S}_j \times \vec{S}_k \right)$围绕格点i，考虑全部的角落格点$i,j,k$。我们发现在图\ref{fig:smallV1ULimit}b中位于$U/t \approx 9.4 \to 10.8$，长程手性关联序的强度比临近相都大。长程手性序的下界$U/t \approx 9.4$符合双占据态观察到的MIT。除此以外，自旋结构因子$\left\langle S_q(\vec{k}) \right\rangle = \frac{1}{N} \sum_{ij} e^{i\vec{k} \cdot \vec{r}_{ij}} \left\langle \vec{S}_i \cdot \vec{S}_j \right\rangle$确定了中等$U/t$绝缘态中磁性序的缺失。注意少许各向异性是由于YC4圆柱体的有限尺寸效应导致的，我们推断MIT只有的绝缘态是CSL。
+
+继续增大$U/t$，我们观察到绝缘相的额外相变。在第二个相变中，自旋结构因子在布里渊区角落格外尖锐，相似的尖峰$\left\langle S_q(\vec{k}) \right\rangle$也在Hubbard模型中被观察到。这些尖峰将其与中等大小$U/t$的CSL相区分开来，自旋密度波在波矢$Q_{SDW} = (\sqrt{3}\pi/2a, \pi/2a)$和$(\sqrt{3}\pi/2a,-\pi/2a)$出现。同时，手性关联消失，预示着非手性自旋密度波态的特性。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210521/3}
+    \caption{\label{fig:chiral} 
+    Chiral correlation function.
+    }
+\end{figure}
+\subsection{Effects of further-range interactions}
+\begin{figure*}[hb]
+    \includegraphics[width=0.8\textwidth]{./img/20210521/4}
+    \caption{\label{fig:Large_U/t_limit} 
+    Large U/t limit.
+    }
+\end{figure*}
+我们研究了由更远距离相互作用驱动的相变，在$U/t = 10$处，与CSL相的中心十分接近。更远距离的相互作用在CSL相具有非单调的影响。在YC4圆柱的长度一半处的手性关联，即在$V_1/U$情况下$l = L_x/2$如图\ref{fig:chiral}(a)所示。与原始Hubbard模型相比，中等大小$V_1/U$手性关联的非单调性得到了相当的增强。继续增加$V_1/U$，系统离开了最佳点，手性关联在$V_1/U \ge 0.07$完全消失。在CSL相中，我们研究了与距离d有关的手性关联强度。如图\ref{fig:chiral}(b)所示，我们发现手性关联是长程的，在CSL相中与d的变化几乎无关。我们从$L_x = 32, 48$情况中给出我们的计算结果。常数变化的区域随着$L_x$的增长而增长，预示着在大$L_x$极限下，存在实际的手性序。当$V_1/U$增长时，SCL消解为费米液体相。这个FF相在CSL, SDW, CDW相之间大量存在。这个相位于电子动能分布中，$n_k = \frac{1}{N} \sum_{ij} e^{-ikr_{ij}} \left\langle c_i^{\dagger} c_j \right\rangle$。对于FF在$V_1/U \approx 0.0175$处的数据如图\ref{fig:chiral}所示。在$U/t = 7.0$我们发现在$q_x/\pi = 0.75$处发生了占据数的迅速下降，代表了类似费米液体的有限残余。与此相反，其他相在布里渊区中都给出了占据数的连续变化。
+
+在大的$U/t$区域，增加$V_1/U$消解了SDW，变成为FF，更进一步促进了CDW的形成。图\ref{fig:Large_U/t_limit}a给出了沿着动量空间切出的自旋结构参量$\left\langle S_q(\vec{k}) \right\rangle$。我们发现其峰值随着$V_1/U$增加而降低，最终峰在$V_1/U \approx 0.2$消失。增加远距离的相互作用强度，我们发现FF在$V_1/U \approx 0.5$的CDW出现时才会消失。我们发现CDW的出现在零波矢的情况下具有一个偏移，从而消除了幅值$N_k = \frac{1}{\sqrt{N}} \sum_i \left( n_i - 1 \right) e^{-ikr}$。如图\ref{fig:Large_U/t_limit}(b)所示，$N_k$中的峰值出现在布里渊区的两个角落，对应于CDW波矢$Q_{CDW} = (0, \pi/a)$。此外，在图\ref{fig:Large_U/t_limit}(c)中，我们发现电荷密度是在时空中的。短方向的电荷密度条纹给出CDW是相互作用驱动的，而不是准1D系统几何的结果。
+\section{Question}
+文章讨论了长程相互作用($L_x = 16, 32, 48$)对体系性质的影响，考虑不同的相互作用会给出不同的相，是否在使用TB来描述体系的时候，也需要更多的跃迁项才能更好的描述体系的性质，即需要更多的跃迁项(>30)才能与DFT结果更为符合？
+\end{document}
