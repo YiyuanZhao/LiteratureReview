@@ -1,0 +1,56 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Hartree-Fock Study of the Moire Hubbard Model for \\
+Twisted Bilayer Transition Metal Dichalcogenides}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+双层扭转过渡族金属二硫化物因为其相互作用强度、载流子浓度、能带结构、由扭转角和门极电压调控的空间反演对称性破缺等特性，产生了强关联的模型。这些材料的低能物理被证明可以使用Hubbard模型增加强的、可调控的SOC和反演对称性破缺来描述（moire Hubbard模型）。在该工作中，我们使用了Hartree-Fock近似来得到平均场近似下moire模型的完整理解。我们确定了磁性和金属-绝缘体相图，并评估了SOC、反演对称性和可调控的VHS所带来的影响。我们也考虑了外加磁场的自旋和轨道效应。
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2105.11883}
+\end{description}
+\end{abstract}
+
+\keywords{Phase diagram}
+
+\maketitle
+
+\section{Introduction}
+扭转双层过渡族金属二硫化物(tTMD)在电子关联系统因为不需要更换设备，就可以在不同门极电压下调控电子属性，而被广为研究。扭转双层WSe$_2$的实验指出，连续的金属-绝缘体相变、差金属性、非费米液体输运等关联电子行为都被发现。与双层扭转石墨烯中，由于仅在魔角发生的不同跃迁路径的相消去而导致的脆弱平带不同，tTMD材料在相当窄的能带中由关联效应所调控，可以在一个范围内的旋转角内实现。除此以外，单组份的tTMD材料同时具有破缺反演对称性和强自旋轨道耦合，预示着tTMD材料也具有上面的性质。在结果上，，自旋哈密顿量包含Dzyaloshinski-Moriya项，描述了强耦合半满填充的能带和门极电压调控的VHS能量位移。SOC同时产生了相对很大(9-13)的g因子，这种现象在很小的能带宽度和大原胞下，极大地增加了其对外加磁场的敏感性。这种实验可实现的大范围可调参数驱动了理论的研究。例如，最近的扭转双层WSe2发现在接近半满的填充数附近出现了新奇的金属特性，可以通过门极电压连续调控的金属-绝缘体相变。先前的工作已经证明，在低能物理中，扭转双层TMD材料可以通过三角格子Hubbard模型的变体来建模，即为moire Hubabrd模型。在本文中我们使用Hartree-Fock计算来实现对于tWSe2在平均场近似下的完整理解。我们研究了磁性、金属-绝缘体相变与相互作用的关系函数。我们发现了可重复进入、由磁场和门极电压在确定载流子浓度下驱动的金属-绝缘体相变，还讨论了门极电压与VHS相图移动的依赖性。
+
+\section{Model}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210528/1}
+    \caption{\label{fig:Brillouin} 
+    Brillouin zones of the top (solid line) and bottom (dashed line) layer components of a twisted WSe2 bilayer.
+    }
+\end{figure}
+WSe2是三角格子的半导体，具有反演对称性破缺和强SOC(尤其是在价带中)。顶端的价带出现在二维单层六角布里渊区的$\vec{K}_0$和$\vec{K}_0^{'}$点。如图\ref{fig:Brillouin}所示，强SOC意味着单粒子本征态具有与平面正交的自旋极化。由于强的反演对称性破缺，最高价带的态从$\vec{K}_0$向下色散的具有向下的自旋，而从$\vec{K}_0^{'}$的则具有向上的自旋，两种自旋具有约0.4 eV的gap。扭转双层WSe2是由晶格相称的第二层WSe2扭转一定角度堆叠在第一层上形成的。因此这个系统仍然具有三角格子，具有很大的"moire"原胞和对应的"moire"布里渊区。上层的$\vec{K}_0$和下层的$\vec{K}_0^{'}$映射到moire布里渊区的$\vec{K}$点上。tWSe2最高价带可以通过色散单层结构每层的$\vec{K}_0/\vec{K_0^{'}}$得到。将他们折叠到moire布里渊区，并将它们使用自旋具有的moire晶格动能$\vec{k}$的对角项杂化起来。单层的自旋-动量锁定和动量平行如图\ref{fig:Brillouin}(a)所示，揭示了自旋向上(下)接近moire $\vec{K}$的态主要来自于上(下)层。单独层之间的反演对称性破缺导致了moire系统的反演对称性破缺。如果两层是相同的，则两层之间具有$C_{2x}$两度旋转对称性。$C_{2x}$和时间反演对称性导致了沿着$\Gamma \rightarrow K$、$K \rightarrow M$高对称路径中出现能带简并。施加位移场在平面间打破了$C_{2x}$对称性，减小了高对称路径的简并度，并且显著改变了能带结构。
+
+即使是零位移场，moire单粒子在广义波矢$\vec{k}$情况下是非简并的本征态。然而，对于小旋转角和弱层内杂化，我们可以关注于非常接近 K点的单层态，因此单层价带剋通过抛物线近似$\epsilon_{\vec{k}} = -(\vec{k} - \vec{K}_0)^2 /2m^{*}$(连续模型)给出。在这种近似下，如果两层相同，moire系统具有新出现的反演对称性($E_{\sigma}(\vec{k}) = E_{\sigma}(-\vec{k})$)，因此考虑时间反演对称性后，在$D = 0$处，任何$\vec{k}$点都是自旋简并的。这种简并由单层能带结构的$\left\lvert \vec{k} - \vec{K}_0 \right\rvert^3$阶数所打破。这些立方项与moire原胞的原子数成反相关，因此作用很小。我们在此处忽略了这些贡献小的项，因此我们研究的模型在位移场$D = 0$情况下具有完全的反演对称性。这种考虑方式的结果是，tWSe2最高价带的电子性质可以通过紧束缚模型的跃迁$c_{i,\sigma}^{\dagger} t_{\sigma}^{i, j} c_{j, \sigma}$来考虑，其中$t_{\sigma}^{i, j} = | t | e^{i \sigma \phi_{i j}}$，相因子$\phi$表征了非零位移场产生的反演对称性破缺。文献给出，我们只需要考虑最近邻跃迁，和第一近邻跃迁的 ~ 20\%的次近邻跃迁。我们最近邻跃迁$\Phi_{i, j}$如图\ref{fig:neighbor}所示。在零位移场下，$t^{i, j}$可能与$\sigma$独立。因为位移场增加，t随着自旋的依赖关系变得愈发明显，同时t的大小也发生变化。先前的工作也预示着来自于格点之间排斥力相互作用的重要影响，因此扭转双层材料通常只考虑最近邻跃迁的广义moire Hubbard模型。
+\begin{equation}
+    H = -\sum_{\vec{k}, \vec{a}_m, \sigma = \pm} 2 |t| \cos(\vec{k} \cdot \vec{a}_m + \sigma \phi)c_{\vec{k}, \sigma}^{\dagger} c_{\vec{k}, \sigma} + U \sum_i n_{i \uparrow} n_{i \downarrow}
+\end{equation}
+此处$\vec{a}_m = 1, 2, 3$是晶格基矢，$\vec{a}_1 = a_M(1, 0)$，$\vec{a}_2 = a_M(- \frac{1}{2}, -\frac{\sqrt{3}}{2})$, $\vec{a}_3 = a_M(- \frac{1}{2}, - \frac{\sqrt{3}}{2})$，$a_M$是moire原胞的晶格常数。从向前的DFT计算，物理上可以达到的D随着$\Phi$的变化范围为$0 \lesssim \phi \lesssim \pm \frac{\pi}{3}$，$|t|$从$t_0$增加到$1.3 t_0$。在我们的工作中，我们设置$|t| = 1$作为能量衡量的尺度，因此U代表格点间的相互作用和跃迁强度$|t|$。在模型中，交换$\phi \rightarrow -\phi$交换了自旋向上和自旋向下，粒子-空穴变换$|t| \rightarrow -|t|$对应于$\phi \rightarrow \phi - \pi$。因此在$0 < \pi < \pi /2$可以通过自旋翻转和粒子-空穴变换完整得到所有的物理性质。
+
+最近邻跃迁模型具有额外的对称性，可以通过将自旋依赖的规范场/位置依赖的自旋关系，考虑自旋依赖的相因子作为自旋依赖的Peierls相因子来理解对称性。抱着这个观点，我们观察到由$\phi$分类的DM场对应于空间上变化的磁场，在每个三角形格子中制造了$\pm 3\phi$的通量。通量与两种自旋方向相反，在两个子格子中改变方向。$|t|e^{i \sigma \phi}$的形式是与这个通量相一致的规范选择。改变$\phi \rightarrow \phi + 2\pi/3$对应于对每一个pattern引入$\pm 2\pi$的通量，不改变光谱。每个链接改变$\pi$的相位等效于进行粒子-空穴变换，因此在$n, \phi$处的光谱与在$2-n, \phi - \pi/3$处的完全相同。
+\begin{figure}[b]
+    \includegraphics[width=0.4\textwidth]{./img/20210528/2}
+    \caption{\label{fig:neighbor} 
+    Sketch of the phase i;j between a given site i and its neighbor site j on a triangular lattice, which is chosen based on symmetry.
+    }
+\end{figure}
+
+\end{document}
