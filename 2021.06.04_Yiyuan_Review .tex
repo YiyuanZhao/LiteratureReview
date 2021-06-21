@@ -1,0 +1,77 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Role of charge doping and strain in the stabilization of in-plane \\
+ferromagnetism in monolayer VSe2 at room temperature}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+我们研究了单层VSe$_2$的面内铁磁源头，主要着眼于电荷掺杂和机械应力的作用。我们从各向异性自旋哈密顿量开始，通过DFT计算评估参数，确定自旋波激发的光谱。我们给出1T-VSe$_2$通过很强的库伦排斥势表征($U \approx 5 eV$)，更倾向于反铁磁基态，与实验相反。我们计算了以电荷掺杂和应力为变量的函数的磁性相图，发现在中等空穴掺杂情况下($\approx 10^{14} cm^2$)，面内easy-axis出现向铁磁的相变。对掺杂单层VSe2的自旋波激发分析给出了由于面内各向异性导致的能隙，使得在高于300K时的出现长程铁磁序。我们的发现揭示了实验中的1T-VSe$_2$单层样品可能是内在/外在掺杂的，这对于其磁性性质的调控提供了可能性。
+
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1088/2053-1583/abf626}
+\end{description}
+\end{abstract}
+
+\keywords{Phase diagram}
+
+\maketitle
+
+\section{Introduction}
+低微磁性在量子和自旋电子学期间领域都具有重要的研究价值。Mermin-Wagner-Hohenberg定理指出各向同性海森堡模型的热涨落会摧毁长程序，在1D和2D有限温度短程相互作用中阻止自发的对称性破缺。近期的2D磁性的发现证明了在适中磁各向异性中的情况，也有可能在实验中克服这种情况的出现。近期外延生长和机械剥离的单层VSe2磁性序的发现，使得室温下实现2D铁磁成为了可能。同时一些作者报道了长程铁磁序在低温下的缺失。磁性的缺失是由于阻挫基态导致的，形成了电荷密度波。这种实验之间的矛盾说明单层VSe2的磁性起源并不寻常，需要更微观的研究。除了室温下的磁性相，有一些实验报道了单层VSe2中出现的CDW。我们相信VSe2实验的基态对实验条件极其敏感(例如压力、掺杂、缺陷)。
+
+广义的说，VSe2属于2D材料TMDs的一种，TMDs在减小维度的同时，会显示出与体块材料不同的杰出性能。TMDs按分类可以形成1T($D_{3d}$群)和2H($D_{3H}$群)的原子构型。TMD家族包括了超过四十种成员，具有广泛的物理性质，例如可控调节的能隙，CDW、超导、谷选择的光学激发等。然而，原始的2D TMDs主要是非磁性材料，在自旋电子学器件中具有的作用有限。据报道所哟的MX$_2$中，只有CrTe$_2$才具有磁性序。然而具有部分填充d壳层的单层TMD(X = V, Cr, Mn, Fe)最有希望显示出长程磁性序。
+
+现有的实验和理论报道给出单层磁性VSe2显示出easy-plane磁性各向异性。正式的讲，具有easy-plane的磁性单层最有希望具有无能隙的热激发，根据Mermin-Wagner定理，从而不能显示出自发的有限温度磁性。这个情况可以通过假设具有确定角度的面内磁各向异性来避免。然而，VSe2磁各向异性的细节仍然没有相关研究。由于1T-VSe2中单离子各向异性的缺失，这个问题与Cr基底的2D磁性相比影响更小。在此处V原子具有$3d^1$的电子构型，可以携带-1/2的有效自旋。
+
+通过第一性原理的计算，单层VSe2的原子构型的基态极度依赖于交换关联泛函、库伦相互作用强度的选取。例如，VSe2和VS2的结构相变已经被报道依赖于Hubbard-U的选取。尽管实验上可行的薄层样品属于1T-相，理论计算证明了这可能是施加的压力和电荷掺杂导致的2H-1T的相变。VSe2对施加压力、电荷掺杂、表面功能化、薄层厚度对于磁性的影响都在理论计算上有报道。近期的DMFT计算给出了动力学电子关联在VSe2磁性序形成上的影响。由上述实验观测和理论计算所启发，我们聚焦于室温铁磁性的起源和其对于电荷掺杂/外界压力的依赖性。我们使用第一性原理与各向异性自旋模型的组合来进行计算。为了抓住单层VSe2的关联效应，我们进行了自旋极化的DFT计算，包含了在线性反应近似的格点之间的库伦排斥(DFT + U)。我们的结果确认了1T是VSe2能量最偏向的结构。与实验的观察相反，原始的无基底1T-VSe2具有反铁磁序。我们计算了以电荷掺杂和应力为函数参数的相图，观察到在中等大小的空穴掺杂下出现的铁磁相基态。我们的第一性原理结果映射到非各向异性Heisenberg自旋模型来分析磁激子对温度的依赖性。最后我们证明了1T-VSe2空穴掺杂相图中多个点的出现都有超过室温的居里温度，与近期的实验相符。
+
+\section{Model}
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210604/1}
+    \caption{\label{fig:Configuration} 
+    Magnetic configurations of monolayer VSe2 considered in this paper to determine parameters of the anisotropic spin Hamiltonian
+    }
+\end{figure*}
+假设VSe2存在天然局域的磁矩，自旋之间的相互作用可以通过广义各向异性的Heisenberg模型给出：
+\begin{eqnarray}
+    H = &-& \frac{J}{2} \sum_{\left\langle i j \right\rangle} \vec{S}_i \cdot \vec{S}_j - \frac{\Gamma}{2} \sum_{\left\langle i j \right\rangle} \left( S_i^x S_j^x - S_i^y S_j^y \right)\\
+    &-& \frac{\delta}{2} \sum_{\left\langle i j \right\rangle} \left( S_i^z S_j^z \right)\label{eqn:Hamiltonian}
+\end{eqnarray}
+在此处，在格点i和j之间的求和因子1/2避免double counting。J表示最近邻Heisenberg各向异性交换常数，正数和负数分别对应铁磁和反铁磁序。第二项描述了xy平面格点间的磁各向异性，在此处$\Gamma$项是对应的相互作用参数。第三项描述了面外的磁各向异性，在此处$\delta$是磁各向异性格点间张量的zz分量的对角项，$\delta > 0$对应于面外的easy axis，而$\delta < 0$对应于在xy平面内的easy axis。单离子各向异性项在我们的哈密顿量中被忽略。与自旋-3/2磁子相反，这个项在磁性序的稳定扮演了重要的角色，VSe2是自旋-1/2系统，单离子各向异性被互相抵消。
+
+自旋模型的参数可以通过将非共线的DFT计算映射到Heisenberg哈密顿公式中：
+\begin{eqnarray}
+    J + \delta &=& (E_{AFM,z} - E_{FM, z}) / 4S^2, \\
+    \delta &=& (E_{FM, y} + E_{FM, x} - 2E_{FM,z})/ 6S^2, \\
+    \Gamma &=& 2(E_{FM, x + 30°} - E_{FM, x}) / 3S^2
+\end{eqnarray}
+在此处S是V原子上的自旋，$E_{FM, \alpha}(E_{AFM, \beta})$是沿着$\alpha(\beta)$方向磁矩FM/AFM构型的能量。参数$\Gamma$描述了在xy平面内自旋的取向，通过共线沿着zigzag和armchair方向的磁性构型的能量差得到(见图\ref{fig:Configuration})。
+
+热稳定性可以通过磁激子的热动力学得到。为了这个目标，我们通过Holstein–Primakoff变换将公式\ref{eqn:Hamiltonian}转换为玻色子的哈密顿量，在面内的easy axis，自旋算子的变换可以写为：
+\begin{eqnarray}
+    S_i^{+} &=& a_i^{\dagger} \sqrt{2S - a_i^{\dagger} a_i} \\
+    s_i^{-} &=& \sqrt{2S - a_i^{\dagger} a_i} a_i \\
+    S_i^{x} &=& a_i^{\dagger} a_i - S
+\end{eqnarray}
+在此处，S是全部自旋磁矩，$S_i^{\pm} = - S_i^z \pm iS_i^y$是传统自旋升降算符。产生和湮灭算符遵循玻色对易关系。一阶Holstein–Primakoff近似中，$S_i^{+} \approx \sqrt{2S} a_i^{\dagger}$和$S_i^{-} \approx \sqrt{2S} a_i$。在傅里叶变化下，哈密顿量可以写为：
+\begin{equation}
+    H = E_0 + \sum_k \hbar \omega_k a_k^{\dagger} a_k + \sum_k \Delta_k \left( a_k a_{-k} + a_k^{\dagger}a_{-k}^{\dagger} \right)
+\end{equation}
+在此处
+\begin{eqnarray}
+    \hbar \omega_k &=& 6S(J + \Gamma) + S(-2J + \Gamma - \delta)f(k) \\
+    \Delta_k &=& -\frac{1}{2} S(\delta + \Gamma) f(k)
+\end{eqnarray}
+\end{document}

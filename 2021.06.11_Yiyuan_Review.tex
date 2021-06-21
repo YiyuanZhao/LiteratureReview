@@ -1,0 +1,78 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Role of charge doping and strain in the stabilization of in-plane \\
+ferromagnetism in monolayer VSe2 at room temperature}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+我们研究了单层VSe$_2$的面内铁磁源头，主要着眼于电荷掺杂和机械应力的作用。我们从各向异性自旋哈密顿量开始，通过DFT计算评估参数，确定自旋波激发的光谱。我们给出1T-VSe$_2$通过很强的库伦排斥势表征($U \approx 5 eV$)，更倾向于反铁磁基态，与实验相反。我们计算了以电荷掺杂和应力为变量的函数的磁性相图，发现在中等空穴掺杂情况下($\approx 10^{14} cm^2$)，面内easy-axis出现向铁磁的相变。对掺杂单层VSe2的自旋波激发分析给出了由于面内各向异性导致的能隙，使得在高于300K时的出现长程铁磁序。我们的发现揭示了实验中的1T-VSe$_2$单层样品可能是内在/外在掺杂的，这对于其磁性性质的调控提供了可能性。
+
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1088/2053-1583/abf626}
+\end{description}
+\end{abstract}
+
+\keywords{Phase diagram}
+
+\maketitle
+
+\section{Results \& discussion}
+\subsection{原始VSe2的结构、电子和磁性性质}
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210611/1}
+    \caption{\label{fig:Hubbard_U} 
+    Structural parameters and magnetic moments for the 2H and 1T phases of VSe2 calculated as a function of the Hubbard U parameter
+    }
+\end{figure*}
+现在为止体块和层状VSe2在实验中仅出现了1T结构，单层VSe$_2$被预言在1T和2H结构都具有稳定性。DFT顶层的Hubbard-U修正已经被证明对单层VSe2稳定性有影响，并可能导致结构相变。在此处，我们使用DFPT估计了无基底单层原始1T-VSe2的Hubbard-U参数，包括晶格优化。主要的想法是计算来自于对应d壳层占据数的总能量变化的自洽U。我们的单点计算给出$U = 4.2$ eV，随后在几步内收敛到$U = 4.7$ eV。得到的值与近期约束随机相位近似得到的方法一致。在实验条件下，有效库伦相互作用因为电介质环境的屏蔽效应(例如基底)会被减少。因此，我们分析了单层VSe2的基本性质与Hubbard-U的函数关系，范围为 0 - 4.7 eV。图\ref{fig:Hubbard_U}给出了同时对于1T/2H单层结构的晶格参数和磁矩。对应原胞的原子结构如图\ref{fig:Hubbard_U}(b)所示。从弛豫的结构可以看到原胞中的三个原子不在同一平面内，V-Se-V的夹角在$U = 0$ eV的情况下为83°。$U$从0 - 4.7的增加导致了1T和2H晶格增加了4.6\%和1.8\%。在$U = 2 ~ 3$ eV与实验的结果相当。1T结构的净磁矩从0.48到$1.28 \mu_B$不等，主要与V原子不断增加的净磁矩有关。Se原子的磁矩具有$0.02 - 0.3 \mu_B$，与V原子的磁矩反平行。对于2H结构，每个原胞的净磁矩约为$1 \mu_B$，与U的大小无关。对于半导体2H相，电子态或者被占满，或者完全为空，使得磁矩完全饱和，为每个原胞$1\mu_B$。然而在金属1T结构下，Hubabrd-U参数平移了能带并改变了自旋向上和自旋向下能带的占据数，导致了不同的净磁矩。
+
+单层VSe2的1T和2H相能量差作为Hubbard-U的函数被给出，2H相在$U \le 2$ eV情况下能量更低，其能量barrier$<75$ meV。从2H到1T的相变出现在Hubbard-U $2 < U < 3$ eV期间，相对能量差在$U \ge 3$ eV时增大，不同能量的差与其他研究一致。为了探究VSe2单层的磁性基态，我们评估了FM和AFM在2x1超胞中的能量差。1T原子构型的基态强烈依赖于Hubabrd-U项。对于$U \ge 2$磁矩具有FM序，但FM与AFM的能量差很小。对应的FM序被分类为很小的交换作用来解释室温下单层VSe2的磁性。FM到AFM的磁性相变在$2 < U < 3$ eV中出现，且$E_{FM} - E_{AFM}$在U = 4 eV的情况下迅速上升到160 meV。在2H构型情况下，则在 U = 3 eV时上升到178 meV。小的$E_{FM} - E_{AFM}$预示着最近邻V原子较小的磁性交换。
+\subsection{电荷掺杂与机械应力的影响}
+\begin{figure*}[b]
+    \includegraphics[width=0.8\textwidth]{./img/20210611/2}
+    \caption{\label{fig:phaseDiagram} 
+    Magnetic phase diagram calculated for monolayer 1T-VSe2 at U =4.7 eV as a function of charge doping and mechanical strain
+    }
+\end{figure*}
+DFT计算假设了单层VSe2处于原始结构。在实验上，样品由于单层和其衬底之间的晶格不匹配，会受到外界压力。除此之外，内在(例如缺陷、掺杂、边界)和外界(表面污染、基底、门电场)都可能使得电荷不平衡，导致电子或空穴掺杂的单层结构。为了减小这些效应，研究空穴在其磁性行为的影响，我们施加了双轴应变，在系统中引入了电荷掺杂。图\ref{fig:phaseDiagram}给出了在不同电子和空穴掺杂情况下，计算得到的单层VSe2相图。在U = 4.7 eV时，原始的1T结构处于AFM态，与FM态具有很大的能量barrier($\approx 250$ meV)。图\ref{fig:phaseDiagram}给出了在空穴掺杂为$10^{14} cm^{-2}$数量级下，可能出现AFM到FM的相变。同时，FM态的稳定性在施加拉伸应力的时候更为稳定。最大能量差$E_{AFM} - E_{FM} \approx 160$ meV出现在$\approx 2 \times 10^{14} cm^{-2}$的空穴掺杂和4\%拉伸应力下。理论预言相似的AFM到FM相变因为电子掺杂已经在2D $Fe_3GeTe_2$中被发现。在电介质屏蔽情况下(较低的U值)降低了FM与AFM构型的能量差。因此，AFM-FM相变发生在小的应力下，降低了电荷掺杂。由于应力通过超交换作用机制，在磁性相互作用上具有直接的影响，因此掺杂VSe2的相变可以归结于以载流子为媒介的磁相互作用，稳定了FM序。
+
+1T和2H的电子性质相当不同。2H项的VSe2是具有磁性的半导体，其电子的能带gap随着Hubabrd-U增加而增加，即U强化了自旋向上和自旋向下能带的分裂。对于$U = 2eV$，价带和导带边缘具有大约1 eV的gap。对于2H相，导带和价带边缘的态主要源自于V原子的d轨道和Se原子的p轨道。这种杂化导致了引入Se原子磁矩的形成，对于非整数磁矩的形成也有影响。我们主要关注于1T原子构型的FM态，考虑相图中的以下点：（1）A1(2\%拉伸应力和$2 \times 10^{14} cm^{-2}$)，（2）A2(无应力，$4 \times 10^{14} cm^{-2}$空穴掺杂)，（3）A3(4\%压缩应力，$4 \times 10^{14} cm^{-2}$空穴掺杂)。A1、A2/A3可以分别看作强/弱FM态。下一步，我们通过声子谱检验了系统在每一个点的动力学稳定性。我们发现对于原始单层1T-VSe2，没有虚频的出现，A1/A2点情况相同。对于高搀杂和高压力点，单层VSe2失去稳定性，即对于A3构型的声子谱出现了虚频。自旋极化、动力学稳定的能带结构和PDOS如图\ref{fig:PDOS}所示，其具有FM基态。FM 1T-VSe2的电子结构展现出金属行为，自旋向上和自旋向下都穿过了费米面。在费米能级，DOS主要源自于V-3d轨道向上的自旋。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210611/3}
+    \caption{\label{fig:PDOS} 
+    Spin-polarized band structure and PDOS calculated for ferromagnetic monolayer 1T-VSe2
+    }
+\end{figure*}
+
+\subsection{磁性色散与温度依赖的磁性关系}
+为了探究磁矩的热行为，我们首先确定了有效各向异性Heisenberg自旋模型。我们使用不同自旋取向进行了非共线DFT计算。磁各向异性参数$\delta, \Gamma$被预估为-49.4和$+1.5 \mu$eV。负的$\delta$意味着磁性的取向更倾向于面内，而正的$\Gamma$表明x方向是其easy-axis。后者于我们选择升降算符的方式一致。各向异性交换相互作用J通过FM和AFM共线计算的能量差给出。从A1和A2得到的J值，在相图中分别为56和113meV。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210611/4}
+    \caption{\label{fig:magmon} 
+    }
+\end{figure}
+磁激子能量沿着BZ的高对称路径的变化关系如图\ref{fig:magmon}所示。我们只能观察到一只声学支，这是由于单层VSe2中每个原胞只有一个磁性离子导致的。A1态磁子模式的能量于A2态相比显著降低。这种降低与各向异性交换作用的差有关。在很大的能量范围内，磁子的色散关系都是线性的，这与典型的铁磁体性质不同。然而，对于$\Gamma$点附近的区域，在很窄的区域内给出了四次方的关系，这与铁磁中时间反演对称性的缺失一致，也在$k \rightarrow 0$时与公式一致。在小的k中，公式可以被展开为$E_{k \rightarrow 0} \approx \sqrt{ak^2 + bk^4}$，此处a和b是数值系数，取决于$J, \delta, \Gamma$。在我们的情况中，$a \gg b$，保证了在不是很小的k中，都具有线性的行为。从公式中，磁子的能量取决于自旋$(E_k^0 \propto S)$，但是与温度无关。为了将温度考虑进来，我们使用了Lado et al，使用了磁子能量的重整化。在Holstein-Primakoff变换中的自旋算符扩展到第二阶，玻色算符退化到平均场近似。结果上，引入温度的磁子激发将自旋从$S$降低到$S - \left\langle n \right\rangle$，在此处$\left\langle n \right\rangle = \left\langle a^{\dagger} a \right\rangle$是在给定温度下磁子的平衡数量。重整化磁子能量可以写成：
+\begin{equation}
+    E_k^T = E_k^0 \left( \frac{S - \left\langle n \right\rangle}{S} \right)
+\end{equation}
+或者：
+\begin{equation}
+    E_k^T = E_k^0 \frac{M(T)}{M_{sat}}
+\end{equation}
+此处$M_{sat}$是饱和磁化强度，$M(T)$是温度依赖的磁化强度。
+\begin{equation}
+    \frac{M(T)}{M_{sat}} = 1 - \frac{1}{S} \sum_k \frac{1}{exp \left( \beta E_k^0 \frac{M(T)}{M_{mat}} - 1 \right)}
+\end{equation}
+\end{document}

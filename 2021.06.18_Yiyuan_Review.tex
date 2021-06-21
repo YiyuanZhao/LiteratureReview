@@ -1,0 +1,86 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Electrostatic control of the trion fine structure \\
+in transition metal dichalcogenide monolayers}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+电荷激子在TMDCs低维掺杂单层结构的光谱具有重要的作用。使用三体哈密顿量的直接对角化，我们探究了四种TMDC单层结构的低占据电荷激子态。我们发现电荷激子的精细结构来自于单粒子能带的自旋-谷精细结构和组成粒子交换相互作用之间的相互作用。我们证明通过调节掺杂和电介质环境，电荷激子能量的精细结构可以被调控，导致了单层TMDC光谱连续出现的明暗反交叉态。
+
+% \begin{description}
+%     \item[DOI] \url{https://doi.org/10.1088/2053-1583/abf626}
+% \end{description}
+\end{abstract}
+
+\keywords{three-body Hamiltonian}
+
+\maketitle
+
+\section{Introduction}
+单层TMDC的2D结构显著强化了库伦相互作用，与体块半导体相比，单层结构给出了更大的激子结合能。2D几何结构同样强化了其他多体态，例如三粒子trion和四粒子双激发。实验和理论计算证明了掺杂TMDC单层的最低能量光学激发与trions紧密结合。位于K和K'点具有两个直接带隙，自旋-谷锁定效应的出现使得实现单层TMDCs的多种电子态成为了可能。共同的说，他们通过自旋和谷量子数区分，与其组合相关，可能出现或亮或暗的态。trion的精细结构确定了光学吸收边缘和PL谱。PL谱强烈依赖于trion基态是明还是暗。单层TMDC中trion的光谱结构仍然是一个具有争议的话题。在单层MoS2中，理论和实验预言了在能谱底部具有多种trion态。这些态具有不同的内禀结构，其中一些是暗的，而其他是亮的。他们在能量上密集的聚集在一起，因此很难分辨。理论分析的结论也较为模糊，不同情况下的计算给出了不同的结果。一些工作将基态归类到暗trion态，其他则认为是亮的态。低占据态结构至关重要，因为它定义了单层的光谱性质。例如，PL谱的温度行为强烈依赖于基态是亮态还是暗态。
+
+在此处，我们通过得到三粒子哈密顿量的直接解，研究了单层TMDC最低能量的trion，以及其对于材料特征参数的依赖关系。我们的计算证明了trion能量态可以通过自旋轨道分裂和多体效应调控，而后者受到掺杂和电介质环境的强烈影响。但自旋轨道分裂很小的时候，会导致反交叉的图样。这种情形在单层MoS2中出现，为这些材料通过简单的门极电压实现光谱的可控提供了可能性。trion态的计算通过将多体模型旋转为两电子多体模型$\left\vert c_1 c_2 v \right\rangle = a_{c_1}^{\dagger} a_{c_2}^{\dagger} a_{v}^{\dagger} \left\vert 0 \right\rangle$，在此处$c_{1,2}$和v是单粒子电子态和空穴态。哈密顿量可以写为：
+\begin{eqnarray}
+    H &=& H_0 + H_{cc} + H_{cv}, H_0 \nonumber\\
+      &=& (\epsilon_{c_1} + \epsilon_{c_2} - \epsilon_v) \delta_{c_1}^{c_1^{'}} \delta_{c_2}^{c_2^{'}} \delta_{v}^{v^{'}}, \nonumber \\
+    H_{cc} &=& + (W_{c_1 c_2}^{c_1^{'} c_2^{'}} - W_{c_1 c_2}^{c_2^{'} c_1^{'}}) \delta_v^{v^{'}}, \nonumber \\
+    H_{cv} &=& -(W_{v^{'} c_1}^{v c_1^{'}} - V_{v^{'} c_1}^{v c_1^{'}}) \delta_{c_2}^{c_2^{'}} - (W_{v^{'} c_2}^{v c_2^{'}} - V_{v^{'} c_2}^{v c_2^{'}}) \delta_{c_1}^{c_1^{'}} \nonumber \\
+    && + (W_{v^{'} c_1}^{v c_2^{'}} - V_{v^{'} c_1}^{v c_2^{'}}) \delta_{c_2}^{c_1^{'}} - (W_{v^{'} c_2}^{v c_1^{'}} - V_{v^{'} c_2}^{v c_1^{'}}) \delta_{c_1}^{c_2^{'}} \label{eqn:Hamiltonian}
+\end{eqnarray}
+在此处，$\epsilon_{c,v}$是单粒子能量，W和V是屏蔽和裸库伦势。后者定义为$V_{ab}^{cd} = V(k_a - k_c) \left\langle u_c \vert u_a \right\rangle \left\langle u_d \vert u_b \right\rangle $，此处$\left\langle u_c \vert u_a \right\rangle$是单粒子Bloch态的交叠，$V(q) = 2 \pi e^2 /q$。对于屏蔽势，我们在Rytova-Keldysh势中减去V(q)。
+\begin{eqnarray}
+    W(q) = V(q) 
+    \begin{cases}
+        \epsilon_{env}^{-1} (1 + r_0 q)^{-1},  &q-intravalley \\
+        \epsilon_{bulk}^{-1}, &q-interavalley
+    \end{cases}
+\end{eqnarray}
+在此处，intravalley代表在相同谷之间的变换，intervalley代表不同谷之间的变换。对于封闭材料，有效电介质参数$\epsilon_{env} = (\epsilon_2 + \epsilon_1)/2$是单层两侧电介质常数的平均值。屏蔽长度为$r_0 = \epsilon_{bulk} d/2$。对于单粒子态，我们假设有质量的$k \cdot p$ Dirac模型具有哈密顿量：
+b\begin{eqnarray}
+    H_D &=& \hbar v_F (\tau k_x \sigma_x + k_y \sigma_y) + \frac{\Delta}{2} s_0 \otimes \sigma_z \nonumber \\
+    &+& \frac{1}{2} \tau s_z \otimes \left( [\lambda_c - \lambda_v] \sigma_z + [\lambda_c - \lambda_v] \sigma_0 \right) \label{eqn:DiracModel}
+\end{eqnarray}
+在此处$\sigma_i$为能带子空间的Pauli矩阵，$s_z$是自旋子空间的Pauli矩阵，$\sigma_0, s_0$是单位矩阵，$\tau = \pm 1$是K和K'的谷序号，$v_F$是有效费米速度，$\Delta$是带隙。公式(\ref{eqn:DiracModel})描述了Zeeman SOC，具有常数$\lambda_{c, v}$。参数$v_F, \Delta, \lambda_{c, v}$通过DFT/GW近似计算的能带结构拟合得到。闭合材料的带隙需要进行修正，例如采用scissor算子修正。最终，掺杂相关的效应可以通过在k空间中的有效网格联系在一起。用来计算trion态震荡强度的偶极子矩阵元素通过得到的trion波函数计算得出。
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210618/1}
+    \caption{\label{fig:EnergyDiagram} 
+    Energy diagram of three-particle states.
+    }
+\end{figure}
+图\ref{fig:EnergyDiagram}给出了能量对掺杂的依赖关系和不同物质无基底单层结构的粒子态计算的震荡强度，注意这里只给出了$\left\vert \tau s_z \right\vert = 1/2$的亮态。在所有的材料中，最低能态都是trion。trion与第一激发trion态之间的能隙$\Delta E$通过SOC确定。在W基的材料中，具有较大的SOC，导致了较大的能隙，$\Delta E \simeq 40 -50$ meV。然而，在MoSe2中具有负值，这与W基材料相反。在MoS2中，SOC较弱，导致四种最低trion态十分接近。这种近简并行为使得通过掺杂和电介质环境来调控相对能量和OS成为可能。我们通过观察到较大的相对能量/OS随着掺杂增加的剧烈变化确认了这一行为，如图\ref{fig:EnergyDiagram}(a)所示。
+
+\begin{figure}[b]
+    \includegraphics[width=0.4\textwidth]{./img/20210618/2}
+    \caption{\label{fig:trionStructure} 
+    Contributions of Dirac single-particle band states in the vicinity of the K and −K points to trions $T_{1–4}$ (panels (a) - (d)).
+    }
+\end{figure}
+trion态的内在结构是其性质的核心。双谷结构和价带/导带之间的强自旋-轨道分裂预先确定了四种trion态的出现。他们的结构如图\ref{fig:trionStructure}所示，给出了单粒子能带态对trion的相对贡献(单粒子密度矩阵)。图中的圆圈标识了单粒子态贡献的中心点，半径给出了其权重。红色和蓝色标识了单粒子态的自旋$s_z$。图\ref{fig:trionStructure}的trion态分裂成多种态的对，$T_{1,2}$具有$\tau s_z = 1/2$，$T_{3, 4}$具有$\tau s_z = -1/2$。在$T_{1,2}$，从单谷 -K 产生了一个空穴，两个谷被不同自旋占据。贡献电子的自旋确定了$T_1$是暗态， $T_2$是亮态。变换$K \leftrightarrow -K$给出了相同的trion态。在$T_{3,4}$态中，两种谷贡献的空穴具有不同的自旋。
+
+\begin{figure}[b]
+    \includegraphics[width=0.4\textwidth]{./img/20210618/3}
+    \caption{\label{fig:doping} 
+    The doping dependence of (a) energies of $T_{1−4}$ trion states of a freestanding MoS2 ML (shifted to have zero mean value), (b) transition energies of the bright $T_{1−4}$ states (trion energy minus single electron  nergy), (b) the relative OS of trion states.
+    }
+\end{figure}
+trion对于掺杂的依赖性如图\ref{fig:doping}所示。$T_1, T_3$具有不同的最低能量，且为暗态。对$T_{1,2}$对于掺杂的依赖性解释了清晰的反交叉行为。对于能量和OS都是如此，在此处态$T_{1, 2}$的亮度发生了交换。其他对$T_{3, 4}$也表现出了反交叉图样，然而交叉点位移到更高的掺杂值，此时$E_F \simeq 40$ meV。
+
+对于反交叉的机制可以通过每个trion对于其他态发生弱耦合，可以通过独立的$2 \times 2$模型哈密顿量的方式来解释。我们可以使用三粒子基的近似来研究，实际trion态如图\ref{fig:trionStructure}所示。因此对于$T_{1, 2}$态我们使用基底的态为$\vert 1 \rangle = \left\vert - K_{\uparrow}, K_{\downarrow}, K_{\uparrow} \right\rangle$(暗态)和$\vert 2 \rangle = \left\vert - K_{\downarrow}, K_{\uparrow}, K_{\uparrow} \right\rangle$(亮态)，此时$k \neq \pm K$的贡献被忽略。矩阵哈密顿量可以通过公式\ref{eqn:Hamiltonian}得到。电子交换相互作用满足对非对角元$W_{cc}$的最大贡献。对角项和单粒子、多粒子项$\epsilon_i = \left\langle i \vert H \vert i\right\rangle = \epsilon_i^{(0)} + \epsilon_i^{(1)}$，对应的差$\Delta = \epsilon_1 - \epsilon_2$确定了反交叉位置。Dirac哈密顿量给出了零阶的解$\Delta^{(0)} = 2\lambda_c$。由于$V_{cv}$存在于$\epsilon_2^{(1)}$而不存在于$\epsilon_1^(1)$，电子-空穴交换相互作用$V_{cv}$给出了这个量的多体修正。这给出了$\Delta = 2\lambda_c + V_{cv}$。哈密顿量对的本征态为：
+\begin{eqnarray}
+    \vert + \rangle &=& \cos(\theta/2) \vert 1 \rangle + \sin(\theta/2) \vert 2 \rangle, \nonumber \\
+    \vert - \rangle &=& \sin(\theta/2) \vert 1 \rangle - \sin(\theta/2) \vert 2 \rangle,
+\end{eqnarray}
+此处$\theta = \arccos(\Delta/D), D = \sqrt{\Delta^2 + 4W_{cc}^2}$，对应的本征值为$2\lambda_{\pm} = \epsilon_1 + \epsilon_2 \pm D$。在$\lambda_c \gg W_{cc}$时更为明显，暗态$\vert 1 \rangle$具有最低能量。这种情况发生在W基的单层中。在相反的情况下，大的负值$\lambda_c$发色会给你在MoSe2中，最低能量则是亮态$\vert 2 \rangle$。在$\lambda_c < 0, \vert 2\lambda_c \vert ~ V_{cv}$的MoS2中，交叉点最接近，trion态最容易通过改变外界参数的方式调整。掺杂和有效电解质常数强烈影响相互作用$V_{cv}$。数值计算确认了$V_{cv}$在更大的掺杂下降低，导致了反交叉点和两个最低trion态$T_{1, 2}$OS交换的出现。
+\end{document}
