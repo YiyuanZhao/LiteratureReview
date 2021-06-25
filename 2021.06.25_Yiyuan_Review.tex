@@ -1,0 +1,53 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Insight into interlayer magnetic coupling in 1T-type \\
+transition metal dichalcogenides based on the stacking of nonmagnetic atoms}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+在2D磁性材料中，层间耦合对于确定2D材料的性质和相关器件的应用至关重要。然而确定层间磁性耦合机制的研究仅在CrI$_3$中被进行，对于过渡族金属二硫化物仍然处于未知情况。在这个工作中，通过第一性远离的计算，我们在2D磁性双层结构中发现，层间磁性耦合方式通过层间非磁原子的堆叠确定，在MnS$_2$中则伴随着半金属和半导体之间的相变。非磁性原子连接了层间耦合，非磁性原子的堆叠方式通过$p_z$轨道成键调控了层间耦合。通过调节双轴应变，也可以调节层间耦合。
+
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1103/PhysRevB.103.224404}
+\end{description}
+\end{abstract}
+
+\keywords{Staking methods}
+
+\maketitle
+
+\section{Introduction}
+通过层间vdW力组合起来的二维材料家族增长迅速，二维磁性由于其实验的实现，逐渐发展成重要的分支。由于2D磁子的弱层间耦合，众多方法已经足够有效控制有效层间耦合。在2D反铁磁CrI3中，电子门极、磁场都可以用来控制层间距耦合，这导致了较大的隧穿磁阻。广义地说，层间耦合被认为与层内超交换作用不同。然而，由于不同的层间相互作用，在确定系统中的机制仍然需要研究。层间vdW力的弱耦合也使得2D材料更加适合堆叠结构。通过将两层原子堆叠成moire结构，可以发生诸如超导、moire激子、量子反常霍尔效应等效应。与其他不同材料的组合可以达到不同性质的叠加，例如量子反常霍尔效应、拓扑超导、多铁等。特别地，堆叠的效果在2D磁性材料中格外重要。近期，堆叠序被发现是调控CrI3层间耦合的有效方法，它具有两种不同堆叠序的相。高压和分子束外延法生长都可以改变平移和旋转变换的堆叠序。通过层间耦合可控堆叠的研究，CrI3被发现通过层间I原子的$p_{xy} - p_z$轨道杂化影响层间耦合。因此，将磁耦合和结构之间建立联系，是理解层间耦合的有效角度。然而堆叠调控的层间耦合尽在CrX3结构中被研究，其居里温度远低于室温。堆叠序在层间耦合中的效应和层间耦合的机制在室温2D磁子中被发现，其结构与CrX3层间电荷分布不同，仍然需要进一步研究。
+
+在我们的第一性原理计算中，我们将填补TMDs层间耦合堆叠效应的空白，展现层间耦合的机制。我们主要使用1T相的MnS2双层作为研究对象。1T-MnS2单层具有层内铁磁耦合，面外easy-axis，居里温度接近室温，这些特征与自旋学器件的要求类似。然而MnS2只有单层结构被细致的研究，通过考虑平移和旋转变换，我们组建了不同的堆叠序。我们发现层间轨道杂化决定了1T-MnS2的层间耦合，这与CrX3、CrSe2不同，层间非磁原子的堆叠序，而不是磁性原子的堆叠序在确定层间磁性耦合中占了主导地位。通过非磁性原子的堆叠方式分析的方式可以应用到其他空间群和磁性/非磁性异质结中。伴随着铁磁到反铁磁耦合的转变，我们观察到半金属到半导体的相变。此外，改变Mn-S ... S-Mn 键角也可以调控层间耦合。
+
+\section{Results \& Discussion}
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210625/1}
+    \caption{\label{fig:interlayerCoupling} 
+    Stacking-dependent interlayer coupling in MnS2
+    }
+\end{figure*}
+1T-MnS2单层空间群为P3m1，Mn-S-Mn键角接近90°，通过Mn-S-Mn的超交换产生层内铁磁耦合。与主要的1T-TMDs相比，MnS2具有面外的easy-axis。通过能带计算，单层MnS2是半金属，自旋向上具有金属通道，自旋向下具有半导体通道。由于对称性和MnS2单层的自身结构，(1/3, 2/3, 0)和(2/3, 1/3, 0)是两个高对称点。因此，通过将上层与下层的高对称点对齐，我们产生了具有不同堆叠序的三种堆叠结构，分别为AA、AB、AC堆叠。不同堆叠序的侧视图如图\ref{fig:interlayerCoupling}(a-c)所示，给出了不同堆叠方式下的磁性基态。通过比较AA、AB、AC堆叠方式的总能量，我们发现不同堆叠方式的能量差很小。将不同层间耦合的总能量进行比较，可以明显的发现，在堆叠方式从AA变为AB、AC时，MnS2双层经历了铁磁的衰减和反铁磁耦合的增强，如图\ref{fig:interlayerCoupling}(g)所示，这预示着堆叠依赖的层间磁性耦合。单考虑旋转和平移变换时，顶层沿着Mn格点旋转180°，平移到AB和AC堆叠的顺序，如上图所示。不同旋转后的堆叠序命名为AA$^R$、AB$^R$、AC$^R$。有趣的是，经过旋转以后，如图\ref{fig:interlayerCoupling}(h)所示，AA$^R$更偏向于反铁磁耦合，而AB$^R$和AC$^R$则偏向于铁磁耦合。这与旋转前结构的结果相反。在\ref{fig:interlayerCoupling}(g, h)中可以看到，SOC的出现在层间耦合能量差上具有可忽视的效应。旋转变换改变了层间S原子的结构，保持了Mn原子堆叠序不变。图\ref{fig:interlayerCoupling}(a-c)给出了层间S原子的AA，AB和AC堆叠方式。AC堆叠和AA$^R$堆叠都具有反铁磁耦合，它们的层间S原子对类似的堆叠结构，此时上层下方的S原子位于下层上方S原子的右上方，如图\ref{fig:interlayerCoupling}(c-d)所示。相反，AA和AB$^R$堆叠则偏向于铁磁耦合，其S原子的层间结构具有相似的性质，下层上方的S原子占据了上层下方S原子构成的三角形的中心，如图\ref{fig:interlayerCoupling}(a, e)所示。
+
+同时考虑平移和旋转，我们创造了三种堆叠方式AA$^R$，AB$^R$，AC$^R$。尽管AA和AA$^R$中的Mn原子具有相似的堆叠序，即上层Mn原子位于下层的右方，导致了层间最近邻和次近邻交换相互作用的数量相同。他们具有相反的层间耦合。相反，在AC和AA$^R$中，尽管Mn原子的堆叠方式不同，导致了不同Mn原子的不同层间交换作用，层间S原子的堆叠是相同的，因此它们都显示出铁磁相互作用。相似的情况可以在其他堆叠情况中发生。因此，通过这些分析，我们可以从与先前工作不一样的角度得出结论，层间耦合可以仅通过层间堆叠来决定。根据上面关系的知道，我们通过在确定的堆叠方式下的两层MnS2层间插入MoS2的方式，构建了MnS$_2$/MoS$_2$/MnS$_2$异质结，并得到了预期的磁性基态。面外easy-axis在不同堆叠序中始终存在，预示着堆叠序对easy-axis不敏感。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210625/2}
+    \caption{\label{fig:strain} 
+    DCD, interlayer exchange mechanism, and band structure of MnS2 in different stacking.
+    }
+\end{figure*}
+我们还计算了自旋依赖的双层MnS2差分电荷密度，来分析层间电荷转移和更进一步的分析层间非磁性原子堆叠依赖的磁性耦合。我们从AA和AC堆叠方式开始，其分别具有铁磁和反铁磁耦合。在所有的堆叠方式中，积累的电子主要余留在层间S原子中，因此层间的耦合通过层间的S原子的准类共价键连接，这在其他2D材料中也被揭示。两层之间的结合能也通过层之间的vdW相互作用主导，预示着层之间相互作用的重要性。MnS2双层的查封电荷密度也与其他1T-TMDs一致。然而，没有观察到足够明显的 s $p_z - p_{xy}$杂化。因此需要一个理解层间耦合的新视角。在AA堆叠中，只有向上的自旋在层之间的区域积累，在S原子的$p_z$轨道附近衰减，预示着层间S原子是简单的叠加，没有形成强化学键，遵循Pauli不相容法则。由于层间S原子沿着z方向分布，导致了自旋向上部分的叠加，在层内超交换作用的协助下，形成了铁磁耦合。相反，在AC堆叠方式中，自旋上下在层间堆积累，在S原子的$p_z$轨道附近衰减，预示着层间成键的形成。在AC堆叠中，层间S原子沿着z方向平行，$p_z$轨道的波函数头对头联系，具有很大的交叠，导致了层间的强成键。因此，自旋上下根据Pauli不相容原理，都应该出现在层间，层间反铁磁就是能量更低的态。考虑旋转变换，AA$^R$堆叠方式与AC堆叠一致，也显示了相似的差分电荷密度与层间$p_z$-$p_z$键。AB$^R$堆叠和AA堆叠和具有类似层间S原子结构都更倾向于铁磁耦合，具有相似的自旋依赖查封电荷密度。我们还计算了自旋依赖的AB、AC$^R$堆叠查封电荷密度，具有一致的结论。因此，层间轨道相互作用的类型被发现决定了1T-MnS2层间耦合方式。$p_z$轨道是否是准化学键，与层间非磁性原子的堆叠方式高度相关，因此改变层间非磁性原子层间距的会导致不同的层间耦合方式。因为我们发现层间耦合直接由非磁性原子贡献，我们也研究了层间的自旋-交换参数，与上述理论一致。
+\end{document}
