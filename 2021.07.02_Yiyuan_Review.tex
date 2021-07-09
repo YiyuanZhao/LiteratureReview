@@ -1,0 +1,68 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report:Multiple charge density wave phases of monolayer VSe2 \\
+manifested by graphene substrates}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+我们使用STM和ARPES结合，对石墨烯基底调控的VSe$_2$中多种CDW相进行研究。在6H-SiC生长的单层石墨烯(SLG)和双层石墨烯(BLG)基底上生长子单层(~0.8 ML)。我们发现ML VSe2与SLG之间的耦合更弱。生长在SLG和BLG上的单层VSe$_2$具有相当不同的STM性质。单层VSe$_2$/BLG给出了不具有方向性的$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$的CDW，ML VSe2/SLG给出了$4 \times 1$与$\sqrt{3} \times 2$、$\sqrt{3} \times \sqrt{7}$相干涉的CDW图样，这种pattern在之前没有被报道过。我们明确给出了$4 \times 1$ CDW的倒空间向量，与ML VSe2的M点附近雪茄形状的费米面长平行区域拟合良好，满足费米面嵌套。由于体块VSe2具有源自$4 \times 4 \times \times 3$费米面嵌套的CDW，因此ML VSe2、SLG中$4 \times 1$的CDW归结于$4 \times 4\times 3$CDW在平面上的投影。我们的结论满足ML VSe2系统中$4 \times 1$CDW的机制，是证明二维过渡族金属二硫化物基底效应的重要例子。
+
+\begin{description}
+    \item[DOI] \url{https://doi.org/10.1088/1361-6528/ac06f3}
+\end{description}
+\end{abstract}
+
+\keywords{Substration effect}
+
+\maketitle
+
+\section{Introduction}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210702/1}
+    \caption{\label{fig:STM} 
+    STM topographic images of ML VSe2 grown on (a) BLG and (c) SLG. (b) and (d) Atomistic images of BLG and SLG substrates exhibit triangular and honeycomb structures as indicated by the red balls.
+    }
+\end{figure}
+尽管TMDCs因为其层状结构具有准二维性质，但是维度对其物理性质具有很大的影响，例如能带带隙类型、CDW、超导等。此外，具有vdW的层状结构允许堆叠构型产生多种异质结表面。这种自由度给修饰TMDCs材料更多的可能性。从这个角度，二维TMDCs因为异质面效应的存在，对于探索新型材料极为重要，且该效应会在二位极限下被强化。广为人知，VSe2具有周期为$4 \times 4 \times 3$的CDW相，这主要由于费米面嵌套。生长在双层石墨烯(BLG)的单层VSe2给出了$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$的CDW相，这与体块中$4 \times 4 \times \times 3$的CDW相完全不同。从另一方面，单层VSe2被希望具有继承于体块的CDW相，因此在二维极限下，$4 \times 4 \times 3$的CDW将会导致具有4a周期性的CDW相。这种相已经在近期被发现，但是在FFT图样中被隐藏，不存在任何对应的模块。因此ML VSe2中，这种类型的CDW是否存在仍然不明确。由于VSe2薄层和基底之间的相互作用可能在CDW相中起到重要作用，这种现象十分有趣。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210702/2}
+    \caption{\label{fig:height} 
+    The height of ML VSe2 films grown on BLG and SLG.
+    }
+\end{figure*}
+
+近期， ML VSe2被广泛研究，通过多种DFT研究确认了铁磁序的出现。Bonilla et al最先报道了室温铁磁的出现。然而内禀铁磁序仍然在ML VSe2中存在争议，其中包括长程铁磁序的缺失、引入Se缺陷的铁磁、邻近引入的铁磁、剥离薄层的铁磁态等。我们也注意到近期2H相VSe2体块表现出室温下的铁磁半导体行为。在此我们制备了两种不同基底SLG和BLG下的ML VSe2。STM下ML VSe2与SLG/BLG之间的距离，SLG大于BLG，预示着SLG基底与材料之间的耦合更弱。与$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$的主要超结构不同，$4 \times 1$CDW在合适的门极电压下可以主导ML VSe2/SLG的拓扑结构。更进一步的STM与ARPES给出$4 \times 1$CDW相是由费米面嵌套所引起的。我们明确给出了$4 \times 1$CDW的倒空间向量。相反地，$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$CDW相则不能通过FS嵌套来解释。考虑通过FS嵌套形成的体块VSe2$4 \times 4 \times 3$的CDW，我们提出观察到的$4 \times 1$CDW可以源自于$4 \times 4 \times 3$的CDW。
+\section{Results and discussion}
+具有0.8ML厚度的薄层在两种不同基底(SLG/BLG)上使用MBE生长。石墨烯的厚度通过改变退火时间来调控。所有VSe2薄层都显示出相似的形貌，包含大面积的ML层。图\ref{fig:STM}(a)和(c)给出了ML VSe2在BLG和SLG上的STM形貌。SLG出现了蜂窝状格子，而BLG给出了三角格子，意味着由于BLG的AB堆叠方式，只测量了两种石墨烯的一种子格子。图\ref{fig:height}给出了图\ref{fig:STM}(a, c)红色和蓝色箭头的高度。有趣的是，在SLG生长的VSe2比在BLG上生长的ML VSe2更高。尽管在样品上施加电压不同，高度差异有较小的变化，SLG基底始终表现出更大的ML VSe2高度。因此，我们认为由于不同的空间间距和电子贡献，ML VSe2对于石墨烯基底的耦合作用，SLG与BLG相比更弱。石墨烯-VSe2异质结如何影响二维VSe2薄层的物理性质，是一个复杂的问题。为了研究石墨烯基底的作用，我们进一步的STM和APRES的测量。图\ref{fig:CDW}(a,c)给出了BLG和SLG在79K时，STM拓扑结构。对应的FFT图样在图\ref{fig:CDW}(b, d)给出。BLG上的STM图样给出了十分有序的条纹状模块，存在$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$周期性。在图\ref{fig:CDW}(b)中，条纹状模块产生了强烈的$q_1$峰。
+
+据报道$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$超结构代表了ML VSe2一种新的CDW相，这与$4 \times 4 \times 3$的CDW完全不同。有趣的是，在另一方面，ML VSe2的拓扑结构与图\ref{fig:CDW}(c)的SLG基底十分不同，代表了沿着对角线方向的干涉条纹。更详细的分析证明了$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$的CDW仍然在ML VSe2/SLG中存在。实际上，图\ref{fig:CDW}(b, d)的FFT图样除了对于SLG而言，具有很强的$q_2$峰以外，其他几乎完全一致。$q_2$峰也在MoS2和BLG基底生长的ML VSe2被发现，但在FFT图样中通常被隐藏，在实空间中没有对应的模式。这阻碍了$q_2$相的进一步理解，因为CDW应该具有清晰的晶格/电荷拓扑结构。额外的超结构明显在拓扑结构中出现，使得其实空间的图样完全不同。
+\begin{figure*}[t]
+    \includegraphics[width=0.8\textwidth]{./img/20210702/3}
+    \caption{\label{fig:CDW} 
+    CDW phases of ML VSe2 films on BLG and SLG.
+    }
+\end{figure*}
+
+为了将$q_2$相从$q_1$中分离出来，图\ref{fig:CDW}(e)给出了傅里叶填充的图样，通过挑出并仅聚焦于六角格子和$q_2$峰，图\ref{fig:CDW}(e)给出了条纹状的调制，这与$q_1$相干涉。图\ref{fig:CDW}(e)中的绿色线条给出条纹图样具有4a的周期性。因此在STM中，ML VSe2/SLG代表$q_1$和$q_2$共存，同时ML VSe2/BLG给出了仅有一个非方向$q_1$相。更多的ML VSe2/SLG和BLG基底给出了相同的行为，改变门极电压也不影响该行为。这种观察到的行为预示着$q_2$调制对应了$4 \times 1$的CDW相，即在SLG基底中占主导CDW态。
+\begin{figure*}[b]
+    \includegraphics[width=0.8\textwidth]{./img/20210702/4}
+    \caption{\label{fig:FSNesting} 
+    Fermi surface nesting in ML VSe2/SLG.
+    }
+\end{figure*}
+APRES测量给出了ML VSe2/SLG在100 K时的费米面。FS具有六个雪茄形状的等高线，预示着位于M点的电子口袋。此外，ML VSe2/BLG给出了与\ref{fig:FSNesting}(a)一致的FS。Chen et al报道了在ML VSe2/BLG中，FS嵌套导在雪茄形状平行的直区域发生嵌套，给出了$\sqrt{3} \times \sqrt{7}$的CDW。我们观察到了$\sqrt{3} \times 2$和$\sqrt{3} \times \sqrt{7}$的CDW。图\ref{fig:FSNesting}(b)的线来自于图\ref{fig:FSNesting}(a)中，沿着布里渊区边界分成三个雪茄状的袋子。袋子的宽度为$0.51 \pm 0.03 A^{{-1}}$。图\ref{fig:FSNesting}(d)将以CDW峰为中心的线连接起来。对应倒空间向量为$q_2: 0.52 \pm 0.02 A^{-1}$和$q_1: 0.82 \pm 0.035 A^{-1}$。这些倒空间向量对于FS嵌套的宽度(~0.51 A)而言太长。相反，对于$q_2$向量，具有偏移角度~ 15°，对于袋的宽度而言拟合良好。大面积的FS可以通过一个倒空间向量联系起来。之后，倒空间向量的长度，可以直接的与晶格CDW的周期性联系起来。
+
+基于这些考虑，我们观察到ML VSe2/SLG的$4 \times 1$CDW相归结于电子能带口袋中$q_2$向量的FS嵌套。考虑到来自区域边界的稍微扭转的嵌套向量，我们提出其可以通过当VSe2系统经历维度从体块到单层极限时FS的变化相关联。体块VSe2是少有的通过FS嵌套形成三维$4 \times 4 \times 3$CDW的例子。我们期望VSe2在二维极限下显示处4a的周期性，即简单的$4 \times 4 \times 3$的CDW投影到二维平面下。然而，具有4a周期的CDW还没有在ML VSe2中发现。由于$4 \times 1$CDW也源自于FS嵌套，这预示着$4 \times 1$CDW相源自于VSe2体块$4 \times 4 \times 3$的CDW。因为ML VSe2/SLG之间的vdW距离比VSe2/BLG更大，这种ML VSe2与SLG之间的干涉耦合与BLG相比应该更弱。解耦合的相干可以帮助ML VSe2从体块中得到$4 \times 1$CDW相。
+\end{document}
