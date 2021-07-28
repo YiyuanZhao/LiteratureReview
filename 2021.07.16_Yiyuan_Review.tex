@@ -1,0 +1,77 @@
+\documentclass[reprint, aps, prb, showkeys]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Report: Identification of a Low Energy Metastable 1T-Type Phase\\ for Monolayer VSe2}
+
+\author{Yiyuan Zhao}
+\affiliation{Department of Physics, Tongji University, Shanghai, 200092 P. R. China}
+\date{\today}
+
+\begin{abstract}
+分析多层过渡族金属二硫化物的多晶形貌和结构与性质之间的相互作用是应用这些材料的主要挑战。我们分辨出一种新型的低能单层VSe$_2$亚稳态，并说明了其磁性和电子性质。这种结构与先前发现的CDW态区分明显。尽管其具有非常不同的性质，其能量与CDW相十分接近，有可能在实验上被实现。重要的是，通过在很大能量区间范围内的电子结构的重组，形成了局域成键不稳定性，这种不稳定性对于畸变格外重要，包含了在八面体坐标笼子中心外的V原子和部分不均匀化的两种不同类型的V原子，这种相不具有铁磁基态。结果证明1T VSe$_2$的物理性质比目前已知的Fermi Surface嵌套不稳定性和局域成键效应的知识更为丰富。
+
+\begin{description}
+    \item[DOI] \url{https://arxiv.org/abs/2107.04363}
+\end{description}
+\end{abstract}
+
+\keywords{New 1T type phase}
+
+\maketitle
+
+\section{Introduction}
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210716/1}
+    \caption{\label{fig:Structure} 
+    Monolayer structure for the 1T (left) and the new phase 1T-d (right).
+    }
+\end{figure}
+过渡族金属二硫化物(TMDCs)的薄层具有实验可行的实现大范围物理性质都与体块结构相差很大的性质。包括能带变化，电荷密度波，磁性，超导和其他多种拓扑和量子电子态。这些材料典型地具有非常不同的性质，例如1T相和2H相，通常源自于两种相的畸变，性质与不同晶相之间具有强烈的相互作用。这些材料中性质与结构的相互作用激发了人们辨别不同晶相和其性质的动机。
+
+VSe$_2$因为其1T结构的高温铁磁性、电荷密度波，在TMDCs中受到了广泛的关注。这种铁磁性与体块1T-VSe$_2$顺磁的性质相矛盾，铁磁性质的来源和其内禀性质目前没有建立起类。广泛的说，嵌套导致了CDW不稳定性和DOS，而DOS通常与磁性关联密切。可以被解释为维度的降低强化了DOS，尤其是在体块变为单层的情况。
+
+体块1T-VSe$_2$具有CDW不稳定性，预示着强烈的电子-声子相互作用。然而其在较小的压力下没有出现超导，在很大压力下出现了压制CDW的超导态。相关的4d和5d TMDs具有结构、CDW和超导之间的相互作用，例如NbSe$_2$和TaSe$_2$也表现出CDW相变和超导。NbSe$_2$额外在单层情况下具有超导态。单层1T VSe$_2$给出了类似体块的CDW，而周期性有所不同。体块的CDW广泛被分辨，在体块1T结构的晶格常数与费米面嵌套一致时，具有$4 \times 4 \times 3$周期性。单层则具有不同的$\sqrt{7} \times \sqrt{3}$的CDW，可以通过费米面嵌套的方式理解。然而，尽管CDW被人们熟知，TMDCs中结构的畸变也可以导致其他的结果，尤其是局域成键不稳定性，例如IrTe$_2$中。因此，畸变可以引入费米面效益的相互作用。正如CDW、局域成键和其他化学效应一样，可能导致复杂的不仅仅基于费米面嵌套的复杂结构。
+
+在体块1T-VSe$_2$中重要的具有CDW的标志是，在温度的铁磁极化率中，经过相变会减小，反映了费米面的部分gapping。类似的，对于单层，标准DFT计算给出CDW与铁磁相互竞争。然而，这些近期有与单层1T-VSe$_2$不同CDW的报告出现。在此我们研究了单层1T-VSe$_2$的结构，找到了导致不同亚稳态多晶相的畸变方式。
+
+我们使用了DFT计算来检验1T单层结构的不稳定性，探究新的多晶态。因此在不同的超胞中检验不稳定性是有帮助的。这种动机来自于1T-VSe$_2$的声子谱对于超胞显然收敛缓慢。这可以通过使用不同超胞结构的研究的单层色散得到。这意味着缓慢收敛的来自于不稳定性的费米面嵌套和其他不稳定性竞争的可能性。开始的1T-VSe$_2$结构如图\ref{fig:Structure}所示。我们使用VASP进行研究。
+
+我们发现理想1T-VSe$_2$的计算在使用较小超胞(小于$3 \times 3\times 1$)时，没有给出声子不稳定性。然而，一旦超胞达到了$4 \times 4 \times 1$，我们就会发现虚频的出现。声子色散与更大超胞具有显著不同。这预示着结构的不稳定性，这也许是不同的源于CDW的结构导致的。我们进行了结构弛豫，导致了与CDW不同的结构，如图\ref{fig:Structure}所示。对称性分析给出了其具有中心对称的$P2_1/m$(No. 11)空间群。我们还研究了畸变1T-d单层结构的声子色散。这可以通过上述的畸变1T-d单层声子谱得到。重要的是，结构具有动力学稳定性。我们检查了更小的$2 \times 2 \times 1$结构，具有相同的结果。
+
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210716/2}
+    \caption{\label{fig:Magmom} 
+    Fixed spin moment total energy for the 1T and 1T-d monolayer phases as a functions of constrained spin magnetization on a per formula unit asis with the LDA. The energy of the non-spin-polarized case was set to zero.
+    }
+\end{figure}
+
+结果上的单层结构与非畸变1T结构在一定程度上相像，过渡族金属的坐标仍然保持八面体形。但具有些许不同。V-Se键与非畸变相不同，从2.35到2.54 A不等，而正常1T单层结构则相等。使用LDA弛豫的Se则为2.47 A。这种畸变说明一个Se更接近于V，这种非对称性坐标说明了Jahn-Teller或其他局域机制的畸变。实际上，我们发现局域成键不稳定性导致了非中心的V，类似于一些V$^{4+}$氧化物系统的V键沿着两种不同化学位点V原子的不均匀性。这意味着在局域成键和费米面嵌套中，存在更加丰富的相互作用。V1位点具有更加不对称的坐标，具有的共价键总数为BVS = 4.64，而V2具有BVS = 4.33。这是连续的不同，预示着部分不均匀性的出现。在理想1T结构中，BVS = 4.21，预示着在1T-d结构中，出现了更多键。包括铁磁在内的计算能量可以与未畸变的结构、报道的CDW结构和1H结构相比较。1T-d结构是一个具有较低能量的亚稳态，可以在实验中被找到，通过调控压力和化学吸附，可以将结构从一种转换为另一种。
+
+与1T相相比，1T-d相给出了更低的磁性趋势。通过给定自旋DFT计算的能量如图\ref{fig:Magmom}所示。对于1T-d结构，没有铁磁不稳定性，这与理想非畸变结构的弱铁磁不稳定性相反。我们探究了不同的磁性构型，包括FM和不同的AFM，如图\ref{fig:MagStructure}所示。对于半核态，我们包括了局域轨道。然而，在LDA近似下，没有构型具有自旋极化的解，意味着1T-d结构是非磁性的。
+
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210716/3}
+    \caption{\label{fig:MagStructure} 
+    Magnetic configurations investigated for the 1T-d phase.
+    }
+\end{figure}
+
+CDW不稳定性是通过费米面嵌套的能隙，降低能量而实现的。如我们前面所讨论的，这是体块和单层1T-VSe$_2$中CDW的形成机制。因此在费米面处降低的DOS会降低内禀Stoner铁磁的趋势。在1T-d结构中更复杂的情况是，在d轨道投影DOS中(如图\ref{fig:DOS}所示)，与理想结构的$N(E_f) = 5.35 eV^{-1}$相比，1T-d结构具有更低的$N(E_f) = 2.09 eV^{-1}$的态密度。这通过Stoner机制解释了铁磁性的缺失。然而通过V的d能带出现了强烈的能带重组，类似IrTe$_2$中发生的那样。例如，在d能带的顶端，具有更高的能量$~ 3.5 eV$。这样的向上偏移的反键态预示着更强的能带相互作用，与共价键总数一致。除此之外，对于1T-d结构，两个不同位点的V原子的d能带显著不同，尤其是在距离费米面2 eV的位置。在任何情况下，改变d能带的外延都是结合局域成键效应扭转的特征，这与费米面嵌套不稳定性相反。
+
+\begin{figure}[t]
+    \includegraphics[width=0.4\textwidth]{./img/20210716/4}
+    \caption{\label{fig:DOS} 
+    V d projections of the electronic density of states on a per V basis or the 1T structure and the two different V sites of the 1T-d phase.
+    }
+\end{figure}
+
+从结论上，我们确认了单层VSe$_2$一种$4 \times 1$结构的亚稳态，这种结构是非磁的，且与目前已知的CDW相都不同。其具有非常接近现有CDW相的能量，暗示这种结构是实验中可能观察到的。重要的是，这种畸变的物理，至少在局域成键不稳定方面，与现有的CDW不同。局域成键不稳定性导致了两个V原子的不均匀分布，和V原子中心之外的八面体Se笼子也有关系。着表示1T VSe$_2$的物理比先前的研究更加丰富，尤其是在费米面相互作用驱动的不稳定性、局域成键效应和性质方面。
+\end{document}

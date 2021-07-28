@@ -1,0 +1,111 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Structural phase transitions in VSe2: energetics, electronic structure and magnetism\cite{C9CP03726H}}
+% \labch{ch:SampleTitle}
+
+\section{Summary Table}
+% \labsec{sec:SummaryTable}
+
+\begin{table}[h]
+    \begin{tabular}{lccc}
+    \hline
+    Item  & Material         & Classification & Topic        \\  \hline
+    Value & VSe2             & DFT            & Magnetic     \\  \hline
+    Item  & Range            & System         & Publish Year \\  \hline
+    Value & Structure+Magmom & Monolayer      & 2019         \\  \hline
+    \end{tabular}
+\end{table}
+
+\section{Background}
+% \labsec{sec:Background}
+ML VSe2 has attracted special attention from the scientific community due to several recent discoveries, including in-plane piezoelectricity, a pseudogap with a Fermi arc at temperatures above the charge density wave transition (220 K for the monolayer), and especially the existence of ferromagnetism in the 2D system. 
+
+Experimental results are rather contradictory. Strong room-temperature ferromagnetism with a huge magnetic moment per formula unit has been reported for monolayer VSe2
+epitaxially grown on graphite. A local magnetic phase contrast has also been observed by magnetic force microscopy at room temperature at the edges of VSe2 flakes exfoliated from a threedimensional crystal. XMCD measurements evidence a spinfrustrated magnetic structure in VSe2 on graphite. Paramagnetism of bulk VSe2 makes these observations more intriguing. In both studies the absence of exchange splitting of the vanadium 3d bands observed in angle-resolved photoemission spectroscopy experiments was reported. This result contradicts other studies that revealed a magnetization value not higher than $5 \mu_B$.
+
+Theoratically, based on these results we can conclude that the influence of the substrate is important for description of the magnetic properties of these materials. It has been proposed that the \textbf{presence of charge density waves} could cause the quenching of monolayer ferromagnetism due to the band gap opening induced by \textbf{Peierls distortion}. This modeling motivates us to study the interplay between magnetism and structural phase transitions in VSe2.
+
+\begin{marginfigure}
+    \includegraphics{./images/10.1039.c9cp03726h_AtomicStructureOfThe2DVSe2Monolayer}
+	\caption[Atomic structure of the 2D VSe2 monolayer in the H phase and in the T phase.]{
+        Atomic structure of the 2D VSe2 monolayer (top and side view) in the H phase (a) and in the T phase (b). Vanadium atoms are denoted with red circles, and the upper and bottom selenium layers are denoted with light green and dark green circles, respectively. The (c and d) Panels represent the corresponding spin-polarized band structures. The red lines correspond to spin up states and the black ones to spin down, the Fermi level corresponds to 0 eV.
+	}
+	\labfig{10.1039.c9cp03726h_AtomicStructureOfThe2DVSe2Monolayer}
+\end{marginfigure}
+\section{Methodology}
+% \labsec{sec:Methodology}
+
+% \subsection{Experiment}
+% Substration: Bilayer graphene.
+
+\subsection{DFT}
+\begin{table}[h]
+    \begin{tabular}{ccccc}
+    \toprule
+    KPOINTS                 & ENCUT  & Pseudopotential & Hubbard-U & Conver.      \\
+    \midrule
+    $10 \times 10 \times 1$ & 400 eV & DFT(PBE)-D2     & Unknown   & $10^{-6}$ eV \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+Other: Vacuum thickness is 10 A. KPOINTS for bulk is $8 \times 8 \times 8$.
+\section{Conclusion}
+% \labsec{sec:Conclusion}
+\begin{marginfigure}
+    \includegraphics{./images/10.1039.c9cp03726h_SchematicVisualization}
+	\caption[Schematic visualization of the plane and arc types of the Se atom rotation]{
+        Schematic visualization of the plane (a and c) and arc (b and d) types of the Se atom rotation. The (a and b) and (c and d) panels correspond to side and top views, respectively. The initial and final positions of Se are presented with orange and green circles, respectively. The intermediate configurations of selenium atoms obtained with a 20 degree step are denoted with light blue circles.
+	}
+	\labfig{10.1039.c9cp03726h_SchematicVisualization}
+\end{marginfigure}
+\subsection{Structure}
+The optimized atomic positions for the T-phase and lattice parameters a = b = 3.31 Å and c = 6.20 Å are in good agreement with experiment.In particular, the corresponding interlayer distance in bulk VSe2 is 3.04 Å. The calculated band structures of the VSe2 monolayer in the T and H phases are in good agreement with previous work.18 The calculated magnetic moment of 0.68 $\mu_B$ for the initial configuration without rotation of the selenium atoms also agrees with the results of previous work. Detailed band structure and atomic structure shows in \reffig{10.1039.c9cp03726h_AtomicStructureOfThe2DVSe2Monolayer}.
+
+\subsection{Rotation Model}
+This paper defines two types of rotation model that construct the routine from T phase to H phase, which could be seen in \reffig{10.1039.c9cp03726h_SchematicVisualization}(Monolayer structure). The phase transition can not be applied in plane model because of divergence of energy difference. The author calculates energy difference and magnetic moment during rotation from T $\rightarrow$ H phase within the arc model in \reffig{10.1039.c9cp03726h_Three-layerVSe2Systems}, which gives the H phase ground state in momolayer structure and T phase ground state in bulk structure.
+
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/10.1039.c9cp03726h_EvolutionOfTheTotalEnergyAndMmagneticMoment}
+	\caption[Evolution of the total energy and magnetic moment during rotation for monolayer/bulk VSe2]{
+		Evolution of the total energy (a) and magnetic moment (b) during rotation of thewhole upper Se layer of the VSe2 within the arc model.
+	}
+	\labfig{10.1039.c9cp03726h_EvolutionOfTheTotalEnergyAndMmagneticMoment}
+\end{figure}
+
+\subsection{Staking Effect}
+\begin{marginfigure}
+    \includegraphics{./images/10.1039.c9cp03726h_SchematicRepresentation}
+	\caption[unit cells used for simulating VSe2 trilayers]{
+        Schematic representation of the unit cells used for simulating VSe2 trilayers characterized by different stacking models.
+	}
+	\labfig{10.1039.c9cp03726h_SchematicRepresentation}
+\end{marginfigure}
+
+Different staking method in sevel layers VSe2 is shown in \reffig{10.1039.c9cp03726h_SchematicRepresentation}. The configuration of the H type corresponds to the structural ground state for all types of stacking in the few-layer case. The energy required for the transition from the T to the H phase is about 0.60 eV for AA- and AB-stacking in the bilayer. In the trilayer the most energetically favorable stacking orders are AAA and ABC (\reffig{10.1039.c9cp03726h_Three-layerVSe2Systems}).
+
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/10.1039.c9cp03726h_Three-layerVSe2Systems}
+	\caption[Total energy and magnetic moment of two- and three-layer VSe2 systems]{
+		Total energy (left panels) and magnetic moment (right panels) of two- (a and b) and three-layer (c and d) VSe2 systems estimated for H, T and intermediate structures.
+	}
+	\labfig{10.1039.c9cp03726h_Three-layerVSe2Systems}
+\end{figure}
+
+\subsection{Phonon dispersion}
+The analysis of the calculated phonon dispersions in \reffig{10.1039.c9cp03726h_PhononDispersions} has demonstrated a principal role of ferromagnetism in stabilization of the atomic structure of the VSe2 monolayer in the H phase and similar systems.
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/10.1039.c9cp03726h_PhononDispersions}
+	\caption[Phonon dispersions calculated for the nonmagnetic and the ferromagnetic state of monolayer and bulk VSe2.]{
+		Phonon dispersions calculated for the nonmagnetic (red dashed line) and the ferromagnetic state (blue solid line) of monolayer and bulk VSe2. Both T and H phase structures are presented.
+	}
+	\labfig{10.1039.c9cp03726h_PhononDispersions}
+\end{figure}
+\section{Defect}
+% \labsec{sec:Defect}
+\begin{enumerate}
+    \item The parameter selected for calculation is not accurate enough (ENCUT/KPOINTS). Reliance is questionable.
+    \item We can't repeat this paper's conclusion.
+\end{enumerate}
+
+\section{Notes}
+% \labsec{sec:Notes}
+Try to repeat calculation, failed.

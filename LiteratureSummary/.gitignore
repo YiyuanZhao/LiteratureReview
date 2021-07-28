@@ -1,0 +1,13 @@
+/images
+main.g*
+main.*g
+main.toc
+main.xdy
+main.nl*
+main.ind
+main.lof
+main.idx
+main.bcf
+main.bbl
+main.mw
+main*.xml

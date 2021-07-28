@@ -1,0 +1,74 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Electronic Structure and Enhanced Charge-Density Wave Order of Monolayer VSe2\cite{doi:10.1021/acs.nanolett.8b01649}}
+% \labch{ch:SampleTitle}
+
+\section{Summary Table}
+% \labsec{sec:SummaryTable}
+
+\begin{table}[h]
+    \begin{tabular}{lccc}
+    \hline
+    Item  & Material         & Classification & Topic        \\  \hline
+    Value & VSe2             & Experiment     & Magnetic+CDW \\  \hline
+    Item  & Range            & System         & Publish Year \\  \hline
+    Value & Structure        & Monolayer      & 2018         \\  \hline
+    \end{tabular}
+\end{table}
+
+\section{Background}
+% \labsec{sec:Background}
+Yet, a consistent picture is still to emerge over how their charge-ordered states evolve when reducing materials thickness down to a single monolayer. In part, this reflects an intrinsic competition, whereby the microscopic interactions that drive such phase formation and the fluctuations that destabilize it are both expected to become strengthened in the two-dimensional limit compared to their bulk three-dimensional counterparts.
+
+\section{Methodology}
+% \labsec{sec:Methodology}
+
+\subsection{Experiment}
+Films are grown usint MBE meghod on epitaxial bilayer graphene/SiC as well as highly oriented pyrolytic graphite (HOPG) substrates. For a typical growth, the substrate is first annealed to 550C for 60 min before cooling to a growth temperature of 300C.
+
+\subsection{DFT}
+Software tools: Wien2k.
+\begin{table}[h]
+    \begin{tabular}{cccc}
+    \toprule
+    KPOINTS                 & ENCUT  & Pseudopotential & Hubbard-U \\
+    \midrule
+    $14 \times 14 \times 2$ & Unknown& PBE             & Unknown   \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+Other parameter: Vacuum thickness 14.85 A.
+\section{Conclusion}
+% \labsec{sec:Conclusion}
+Here, we use angleresolved photoemission to investigate the electronic structure of monolayer VSe2 grown on bilayer graphene/SiC. While the global electronic structure is similar to that of bulk VSe2, we show that,  for the monolayer, pronounced energy gaps develop over the entire Fermi surface with decreasing temperature below $T_c = 140 \pm 5$ K, concomitant with the emergence of charge-order superstructures evident in low-energy electron diffraction.
+
+The nesting vector in monolayer is in stark contrast to bulk VSe2, where gaps are thought to only open over small portions of the Fermi surface that are well-nested. In the monolayer, we find that the flat portions of Fermi surface have a nesting vector along a* of $q_{nest} = 0.54 ± 0.04 Å^{-1}$ , which is close to the ordering wavevector of the CDW. Similarly, we note that the apparently even better Fermi surface nesting along the one-dimensional directions at 30◦ rotation from the a* direction that is evident in \reffig{fig:acs.nanolett.8b0164_ElectronicStructure}i, j does not appear to dominate the CDW ordering vector here, further confirming that nesting is not the driving force of the CDW in monolayer VSe2.
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/acs.nanolett.8b01649_ElectronicStructure}
+	\caption[Normal-state electronic structure of bulk and monolayer VSe2]{
+		Normal-state electronic structure of bulk and monolayer VSe2.
+	}
+	\labfig{fig:acs.nanolett.8b0164_ElectronicStructure}
+\end{figure}
+
+A lack of ferromagnetism here is further supported by measurements of V L2,3-edge X-ray magnetic circular dichroism (XMCD) from our monolayer VSe2 samples, shown in \reffig{fig:acs.nanolett.8b0164_AbsenceOfMagneticOrder}. The absence of an exchange splitting in the electronic structure, discussed above, further allows us to exclude that ferromagnetism develops down to our lowest ARPES measurement temperature of T = 10 K.
+
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/acs.nanolett.8b01649_AbsenceOfMagneticOrder}
+	\caption[Absence of ferromagnetic order]{
+		Absence of ferromagnetic order.
+	}
+	\labfig{fig:acs.nanolett.8b0164_AbsenceOfMagneticOrder}
+\end{figure}
+
+These observations point to a \textbf{charge density wave instability} in the monolayer that is strongly enhanced over that of the bulk. Moreover, our measurements of both the electronic structure and of Xray magnetic circular dichroism reveal \textbf{no signatures of a ferromagnetic ordering}, in contrast to the results of a recent experimental study as well as expectations from density functional theory.
+
+\section{Defect}
+% \labsec{sec:Defect}
+
+\begin{enumerate}
+    \item This research proposed their hypothesis that CDW has competition effect with magnetic order, thus their sample has no signal of magnetic momentum. This paper just raised the question.
+    \item The paper excludes the nesting mechanism of CDW formation, but not raise their explanation.
+\end{enumerate}
+% \section{Notes}
+% % \labsec{sec:Notes}
+% We have some great notes here.

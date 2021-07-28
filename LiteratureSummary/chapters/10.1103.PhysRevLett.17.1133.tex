@@ -1,0 +1,64 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Absence of Ferromagnetism or Antiferromagnetism in One- or Two-Dimensional Isotropic Heisenberg Models\cite{PhysRevLett.17.1133}}
+% \labch{ch:SampleTitle}
+
+\section{Summary Table}
+% \labsec{sec:SummaryTable}
+
+\begin{table}[h]
+    \begin{tabular}{lccc}
+    \hline
+    Item  & Material         & Classification & Topic        \\  \hline
+    Value & 2D Material      & Theroy         & Magnetic     \\  \hline
+    Item  & Range            & System         & Publish Year \\  \hline
+    Value & Magnetic         & 2D Structure   & 1966         \\  \hline
+    \end{tabular}
+\end{table}
+
+\section{Background}
+% \labsec{sec:Background}
+The classical paper which proves that pure 2D isotropic material can not be magnetic.
+
+\section{Methodology}
+% \labsec{sec:Methodology}
+
+% \subsection{Experiment}
+% Substration: Bilayer graphene.
+
+\subsection{Model}
+The proof exploits Bogoliubov's inequality.
+\begin{theorem}
+    Bogoliubov's inequality: \\
+    \begin{equation}
+        \frac{1}{2} \left\langle \left\{ A, A^{\dagger} \right\} \right\rangle \left\langle \left[ \left[ C, H \right], C^{\dagger} \right] \right\rangle 
+        \ge k_B T \left|\langle\left[ C, A \right]\rangle\right|^2
+    \end{equation}
+\end{theorem}
+
+Finally we get the conclusion that:
+\begin{theorem}
+    Mermin-Wagner theorem: \\
+    \begin{eqnarray}
+        s_z^2 &<& \frac{2\pi\rho S(S+1)}{k_0^2} \frac{\omega}{kT} \frac{1}{\ln(1 + \omega/ \left| h s_z \right|)} \labeq{eqn:2D_Case}\\
+        \left| s_z \right|^3 &<& \left| h \right| \omega \left( \frac{S(S+1)}{2kT \tan^{-1}\left[ \omega/ \left| hs_z \right|^{-1/2} \right]} \right) \labeq{eqn:1D_Case}\\
+        \omega &=& \sum_{\vec{k}} S(S+1) k_0^2 R^2 \left| J(\vec{R}) \right| \nonumber
+    \end{eqnarray}
+    \labthm{MerminWagnerTheory}
+\end{theorem}
+Where the 2D case follows \refeq{eqn:2D_Case}, the 1D case follows \refeq{eqn:1D_Case}. $h$ means sufficiently small fields.
+\section{Conclusion}
+% \labsec{sec:Conclusion}
+It is rigorously proved that at any nonzero temperature, a one- or two-dimensional isotropic spin-8 Heisenberg model with finite-range exchange interaction can be neither ferromagnetic nor antiferromagnetic. The method of proof is capable of excluding a variety of types of ordering in one and two dimensions.
+
+\section{Defect}
+% \labsec{sec:Defect}
+There' re some limitation that applies this theory.
+\begin{enumerate}
+    \item If the coupling is anisotropic the argument is inconclusive, but if $J_y = J_z \neq J_x$, then the same conclusions are reached for aligning fields in the $z$ direction.
+    \item Our inequality rules out only spontaneous magnetization or sublattice magnetization. It does not exclude the possibility of other kinds of phase transitions.
+    \item A very similar argument rules out the existence of long-range crystalline ordering in one or two dimensions, without making the harmonic approximation.
+    \item Since our conclusions hold whatever the magnitude of 8, one would expect them to apply to classical spin systems. We can, in fact, prove them directly by purely classical arguments in such cases.
+\end{enumerate}
+% \section{Notes}
+% % \labsec{sec:Notes}
+% We have some great notes here.

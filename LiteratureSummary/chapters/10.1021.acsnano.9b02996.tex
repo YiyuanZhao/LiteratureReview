@@ -1,0 +1,85 @@
+ewwew\setchapterpreamble[u]{\margintoc}
+\chapter{Magnetic Transition in Monolayer VSe2 via Interface Hybridization\cite{doi:10.1021/acsnano.9b02996}}
+% \labch{ch:SampleTitle}
+
+\section{Summary Table}
+% \labsec{sec:SummaryTable}
+
+\begin{table}[h]
+    \begin{tabular}{lccc}
+    \hline
+    Item  & Material         & Classification & Topic        \\  \hline
+    Value & VSe2             & Experiment+DFT & Magnetic     \\  \hline
+    Item  & Range            & System         & Publish Year \\  \hline
+    Value & Magmom           & Monolayer      & 2019         \\  \hline
+    \end{tabular}
+\end{table}
+
+\section{Background}
+% \labsec{sec:Background}
+Bonilla et al. indicated that a ferromagnetic state persists up to room temperature in ML VSe2, but their report has several critical unexplained features. Their most debatable finding is the reported magnetization of $15 \mu_B$ per V atom, which disagrees with the density functional theory (DFT) calculations for ML VSe2.
+
+Subsequently, we obtained the \textbf{first experimental evidence of spin frustration in ML VSe2}, which leads to a highly degenerate ground state and forbids magnetic ordering. Although lacking long-range magnetic order in such a frustrated magnet, perturbations that break the symmetry of the lattice could possibly break the ground-state degeneracy and lead to magnetic order.
+
+\section{Methodology}
+% \labsec{sec:Methodology}
+
+\subsection{Experiment}
+Substration: HOPG. Method: MBE. Temperature: 550 C.
+
+\subsection{DFT}
+\begin{table}[h]
+    \begin{tabular}{cccc}
+    \toprule
+    KPOINTS                 & ENCUT  & Pseudopotential & Hubbard-U \\
+    \midrule
+    $15 \times 15 \times 1$ & 500 eV & PBE             & Unapplied  \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+Vacuum thickness: 12 A, convergence criterion is $10^{-5}$.
+\section{Conclusion}
+% \labsec{sec:Conclusion}
+
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/10.1021.acsnano.9b02996_STMTopographyOfMLVSe2}
+	\caption[STM topography and XA/XMCD spectroscopies of ML VSe2]{
+        STM topography and XA/XMCD spectroscopies of ML VSe2.
+	}
+	\labfig{10.1021.acsnano.9b02996_STMTopographyOfMLVSe2}
+\end{figure}
+
+Step height is ~7 A. XA spectroscopy at the V $L_{2,3}$ edge shows in \reffig{10.1021.acsnano.9b02996_STMTopographyOfMLVSe2}b. These spectral features are akin to those measured from other $3d^1$ vanadium compounds, thus providing a spectroscopic fingerprint of the \textbf{1T phase of the monolayer}. XMCD measurement at the V $L_{2,3}$ edge shows in \reffig{10.1021.acsnano.9b02996_STMTopographyOfMLVSe2}c. The XMCD contrast, within the scale of experimental error, is negligible and thus \textbf{rules out the existence of intrinsic ferromagnetism in the monolayer}, which demonstrating ML VSe2 as a frustrated magnet, in which its spins exhibit subtle correlations albeit in the absence of a long-range magnetic order.
+
+As shown in \reffig{10.1021.acsnano.9b02996_MicroscopicMagneticMoments}, the orbital moment of V, mL,V, carries the opposite sign as the spin moment, mS,V, in agreement with Hund’s rule for a less than half-filled 3d shell. Moreover, the resulting total moment of V, mtot,$V = m_{L,V} + m_{S,V}$, has an opposite sign to that of Co (mtot,Co), confirming an antiferromagnetic coupling between Co and ML VSe2.
+
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/10.1021.acsnano.9b02996_MicroscopicMagneticMoments}
+	\caption[Microscopic Magnetic Moments at the Co/ML VSe2 Interface]{
+        Microscopic Magnetic Moments at the Co/ML VSe2 Interface.
+	}
+	\labfig{10.1021.acsnano.9b02996_MicroscopicMagneticMoments}
+\end{figure}
+
+Through interfacial hybridization with a Co atomic overlayer, a magnetic moment of about $0.4 \mu_B$ per V atom in ML VSe2 is revealed, approaching values predicted by previous theoretical calculations. Promotion of the ferromagnetism in ML VSe2 is accompanied by its antiferromagnetic coupling to Co and a reduction in the spin moment of Co (See in \reffig{10.1021.acsnano.9b02996_XMCDHysteresisLoops}). 
+
+\begin{marginfigure}
+    \includegraphics{./images/10.1021.acsnano.9b02996_XMCDHysteresisLoops}
+	\caption[XMCD hysteresis loops obtained at Co and V $L_3$ edge at 65 K]{
+        XMCD hysteresis loops obtained at Co and V $L_3$ edge at 65 K, which confirms the antiparallel alignment, i.e., antiferromagnetic coupling, between Co and V spins.
+	}
+	\labfig{10.1021.acsnano.9b02996_XMCDHysteresisLoops}
+\end{marginfigure}
+
+In comparison to the absence of this interface-induced ferromagnetism at the Fe/ML MoSe2 interface, these findings at the Co/ML VSe2 interface provide clear proof that the ML VSe2, initially with magnetic disorder, is \textbf{on the verge of magnetic transition}.
+
+\section{Defect}
+% \labsec{sec:Defect}
+\begin{enumerate}
+    \item The accuracy of DFT calculation is not high, as well as the density of KPOINTS.
+    \item The machanism of magnetization is still unclear.
+\end{enumerate}
+
+\section{Notes}
+% \labsec{sec:Notes}
+This paper believes that ML VSe2 is nonmagnetic, while Co/ML VSe2 is ferromagnetic.
