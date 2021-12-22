@@ -1,5 +1,5 @@
 \setchapterpreamble[u]{\margintoc}
-\chapter{Sample Title}
+\chapter{Emergence of a Metal–Insulator Transition and High-Temperature Charge-Density Waves in VSe2 at the Monolayer Limit\cite{doi:10.1021/acs.nanolett.8b01764}}
 % \labch{ch:SampleTitle}
 
 \section{Summary Table}
@@ -9,61 +9,99 @@
     \begin{tabular}{lccc}
     \hline
     Item  & Material         & Classification & Topic        \\  \hline
-    Value & VSe2             & Experiment     & Magnetic+CDW \\  \hline
+    Value & VSe2             & Experiment     & CDW+Phase Transition \\  \hline
     Item  & Range            & System         & Publish Year \\  \hline
-    Value & Structure        & Monolayer      & 2018         \\  \hline
+    Value & Phase Transition & Monolayer+Bulk & 2018         \\  \hline
     \end{tabular}
 \end{table}
 
+\section{Abstract}
+Emergent phenomena driven by electronic reconstructions in oxide heterostructures have been intensively discussed. However, the role of these phenomena in shaping the electronic properties in van der Waals heterointerfaces has hitherto not been established. By reducing the material thickness and forming a heterointerface, we find two types of charge-ordering transitions in monolayer VSe2 on graphene substrates. Angleresolved photoemission spectroscopy (ARPES) uncovers that Fermi-surface nesting becomes perfect in ML VSe2. Renormalization- group analysis confirms that imperfect nesting in three dimensions universally flows into perfect nesting in two dimensions. As a result, the charge-density wave-transition temperature is dramatically enhanced to a value of 350 K compared to the 105 K in bulk VSe2. More interestingly, ARPES and scanning tunneling microscopy measurements confirm an unexpected metal -insulator transition at 135 K that is driven by lattice distortions. The heterointerface plays an important role in driving this novel metal -insulator transition in the family of monolayer transition-metal dichalcogenides. 
+
 \section{Background}
 % \labsec{sec:Background}
-This article focus on the unsolved problem that \dots
+Here, we report systematic studies on the electronic and atomic structures of ML VSe2 epitaxially grown on bilayer graphene (BLG) on silicon carbide (SiC) using both angleresolved
+photoemission spectroscopy (ARPES) and scanning tunneling microscopy (STM). We observe the emergence of a \textbf{metal-insulator transition (MIT)} and a \textbf{high-temperature CDW phase}, associated with heterointerface coupling and reduced dimensionality, respectively. 
+
+Temperature-dependent ARPES measurements reveal that \textbf{perfect FS nesting enhances the CDW transition temperature} , such that $T_{CDW} = 350 \pm 8$ K. Renormalization-group (RG) analysis confirms that the two dimensional (2D) nature of the ML VSe2 drives the perfect FS nesting. STM measurements confirm that the CDW order exists both at 300 and 79 K. We also observe an \textbf{unexpected MIT} with a transition temperature of $T_{MIT} = 135 \pm 10$ K driven by the \textbf{strong lattice distortion} of Se atoms. The lattice distortion is attributed to the dimerization of V atoms, which stabilizes the insulating phase.
 
 \section{Methodology}
 % \labsec{sec:Methodology}
 
 \subsection{Experiment}
-Substration: Bilayer graphene.
+Experiment: MBE. \\
+Substration: bilayer graphene (BLG) on SiC.
 
-\subsection{DFT}
-\begin{table}[h]
-    \begin{tabular}{ccccc}
-    \toprule
-    KPOINTS                 & ENCUT  & Pseudopotential & Hubbard-U & Conver.      \\
-    \midrule
-    $14 \times 14 \times 2$ & Unknown& PBE             & Unknown   & $10^{-6}$ eV \\
-    \bottomrule
-    \end{tabular}
-\end{table}
+\subsection{Theory}
+It turns out that perturbative RG analysis cannot be applied to the present problem in a straightforward manner. When there are FSs, these FS electrons are strongly correlated near quantum phase transitions in 2D, referred to as FS problems.33 Recently, the technique of “graphenization” has been proposed as a way to controllably evaluate Feynman diagrams in the FS problem. Based on this recently developed dimensional regularization technique, we perform the perturbative RG analysis, in which all interaction parameters are renormalized self-consistently.
+% \begin{table}[h]
+%     \begin{tabular}{ccccc}
+%     \toprule
+%     KPOINTS                 & ENCUT  & Pseudopotential & Hubbard-U & Conver.      \\
+%     \midrule
+%     $14 \times 14 \times 2$ & Unknown& PBE             & Unknown   & $10^{-6}$ eV \\
+%     \bottomrule
+%     \end{tabular}
+% \end{table}
 
 \section{Conclusion}
 % \labsec{sec:Conclusion}
-External pressure has great impact on the ground state of TMDCs.
 
 \begin{marginfigure}
-    \includegraphics{./images/10.1021.acsnano.9b02996_XMCDHysteresisLoops}
-	\caption[XMCD hysteresis loops obtained at Co and V $L_3$ edge at 65 K]{
-        XMCD hysteresis loops obtained at Co and V $L_3$ edge at 65 K, which confirms the antiparallel alignment, i.e., antiferromagnetic coupling, between Co and V spins.
+    \includegraphics{./images/10.1021.acs.nanolett.8b01764_Morphology}
+	\caption[Morphology of ML VSe2 on BLG]{
+        Morphology of ML VSe2 on BLG. (a) Top- and side-view schematics of ML VSe2 with a BLG substrate where the green, purple, blue, and gray balls represent the top Se, bottom Se, V, and C atoms, respectively. (b) Topographic STM image of 0.9 ML VSe2 grown on BLG (Vb = -1.2 V, It = 40 pA). (c) Line profile along the arrow in panel b.
 	}
-	\labfig{10.1021.acsnano.9b02996_XMCDHysteresisLoops}
+	\labfig{10.1021.acs.nanolett.8b01764_Morphology}
 \end{marginfigure}
 
+The structure of VSe2 on BLG substration shows in \reffig{10.1021.acs.nanolett.8b01764_Morphology}. The line profile along the arrow in \reffig{10.1021.acs.nanolett.8b01764_Morphology}b shows that the apparent height of the VSe2 film is 6.9 Å, which agrees well with the unit cell height of bulk VSe2 (6.1 Å). Although the lattice mismatch between VSe2 and graphene is quite large, about 26.5\%, their crystal axes are aligned within the rotational misalignment $\theta \le \pm 5$°.
+
+In \reffig{10.1021.acs.nanolett.8b01764_BandStructure}g, we track the electronic gap ($\Delta$) along the dashed line in \reffig{10.1021.acs.nanolett.8b01764_BandStructure}a, which reveals two types of electronic ordering phenomena in ML VSe2. Considering the partial gap opening near $\beta$ in the temperature range from 150 to 300 K and the strong FS nesting, it is suggested that the CDW phase exists above 300 K. At 135 K, the gap is fully opened for all values of k with a minimum gap size of $9 \pm 4$ meV at $\alpha$, directly indicating an MIT with $T_{MIT} = 135 \pm 10$ K. Our RG analysis suggests that the emergence of such perfect FS nesting is universal.
+
 \begin{figure}[ht] 
-    \includegraphics[width=0.8\linewidth]{./images/10.1039.c8nr09258c_TEMImageOfVSe2Nanosheet}
-	\caption[TEM image of a half-hexagonal VSe2 nanosheet on a Cu grid]{
-		TEM image of a half-hexagonal VSe2 nanosheet on a Cu grid.
+    \includegraphics[width=0.8\linewidth]{./images/10.1021.acs.nanolett.8b01764_BandStructure}
+	\caption[Band structure and temperature dependence of ML VSe2]{
+		Band structure and temperature dependence of ML VSe2.
 	}
-	\labfig{fig:10.1039.c8nr09258c_TEMImageOfVSe2Nanosheet}
+	\labfig{10.1021.acs.nanolett.8b01764_BandStructure}
 \end{figure}
+
+Panels a and c of \reffig{10.1021.acs.nanolett.8b01764_STMAnalysis} show filled-state STM images of ML VSe2 obtained at 79 and 300 K, respectively. At a lower temperature of 79 K, the atomic structure drastically changes, giving rise to $\sqrt{3} \times 2$ and $\sqrt{3} \times \sqrt{7}$ superstructures. These observed distortions in \reffig{10.1021.acs.nanolett.8b01764_STMAnalysis}g are related to the formation of Se-Se dimers, which are laterally paired to be ~2.8 Å (12.5\% reduced) with respect to the undistorted Se-Se distance (3.2 Å, 300 K).
+
+\begin{figure}[ht] 
+    \includegraphics[width=0.8\linewidth]{./images/10.1021.acs.nanolett.8b01764_STMAnalysis}
+	\caption[STM analysis of ML VSe2]{
+		STM analysis of ML VSe2.
+	}
+	\labfig{10.1021.acs.nanolett.8b01764_STMAnalysis}
+\end{figure}
+
+\begin{marginfigure}
+    \includegraphics{./images/10.1021.acs.nanolett.8b01764_SchematicPhaseDiagram}
+	\caption[Schematic phase diagram for the electronic reconstruction of VSe2]{
+        Schematic phase diagram for the electronic reconstruction of VSe2. (a) Schematic phase diagram in parameter space defined by thickness, lattice mismatch, and temperature based on both ARPES and STM measurements. Each phase contains the schematic FS model, where solid (dashed) contours correspond to the ungapped (gapped) section in one-sixth of the Brillouin zone. This phase diagram summarizes how strongly correlated electron physics in ML VSe2 emerges from that of weakly interacting electrons in 3D bulk VSe2, both by reducing the film thickness to the ML limit and by introducing a heterointerface with graphene. (b) The renormalization group flow diagram for the Fermion-boson interaction parameter (e) and both electron and order parameter velocities (v and c). All these parameters flow in a zero fixed-point value at low temperatures, which confirms the emergence of perfect FS nesting in 2D.
+    	}
+	\labfig{10.1021.acs.nanolett.8b01764_SchematicPhaseDiagram}
+\end{marginfigure}
+
+we propose a schematic phase diagram for the electronic reconstruction of VSe2 systems in the parameter plane describing film thickness and temperature(\reffig{10.1021.acs.nanolett.8b01764_SchematicPhaseDiagram}) When the sample dimensionality is reduced from 3D to 2D, the weakly nested FS (phase i) is transformed into the perfectly nested FS with elongated parallel sides (phase ii), resulting in a significant increase of TCDW. Lowering the temperature induces partial gap opening in the nested sections (red dashed lines) of the FS for both the 3D (phase iii) and the 2D (phase iv) CDW phases, while their residual parts (blue solid lines) remain ungapped. The further introduction of interfacial effects in the 2D heterostructure, such as a lattice mismatch, opens a complete gap in the FS (phase v, red and blue dashed lines), indicative of an MIT.
 
 \section{Defect}
 % \labsec{sec:Defect}
-The measured data in this paper is contrast with the other paper. Mean field approximation may not be adequate to describe interactions.
-\begin{enumerate}
-    \item item1.
-    \item item2.
-\end{enumerate}
+This paper focus on CDW properties of ML VSe2, not so much magnetic moments are involved.
+% \begin{enumerate}
+%     \item item1.
+%     \item item2.
+% \end{enumerate}
 
 \section{Notes}
 % \labsec{sec:Notes}
-We have some great notes here.
+The ML VSe2 in this research is ferromagnetic. The magnetic hysteresis signal shows in \reffig{10.1021.acs.nanolett.8b01764_MagneticMeasurements}.
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{./images/10.1021.acs.nanolett.8b01764_MagneticMeasurements}
+	\caption[Magnetic measurements of 1.5 ML VSe2]{
+		Magnetic measurements of 1.5 ML VSe2.
+	}
+	\labfig{10.1021.acs.nanolett.8b01764_MagneticMeasurements}
+\end{figure}
